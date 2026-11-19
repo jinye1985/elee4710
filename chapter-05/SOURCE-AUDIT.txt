@@ -1,0 +1,13 @@
+Chapter 05 — Principles of Electromechanical Energy Conversion
+
+The revised 2020 syllabus lists this as the fifth topic. There is no separate fifth-topic PDF in the supplied folder. The opening material in DC Mahines.pdf, pages 3–13, supplies the original electromechanical conversion, linear machine, rotation, and loop exercise. The evidence folder retains both this lecture and the syllabus. No missing standalone chapter is claimed to have been found.
+
+Pages 4–6: motional EMF, conductor force, KVL and Newton's law. Pages 7–10: coupling field, motor/generator energy direction, ideal linear starting and no-load balance. Pages 11–12: angular units, rotational Newton law, work and power. Page 13: rotating-loop exercise, visually inspected and independently checked against a second reviewer.
+
+The p13 curved-pole diagram is treated as an ideal radial air gap. Interpreting its 1 m end span as a diameter gives r=0.5 m. Active sides are 1 m; end connections are assumed outside the active field. These conditions are disclosed in the lab and worked solution. No unique terminal signs or radius are asserted without those assumptions. The original current distribution gives clockwise torque for the displayed view; reversal changes torque, not motional EMF when rotation is prescribed.
+
+The separate uniform-field loop laboratory uses a fully specified area-normal convention. e_generated=NBA*omega*sin(theta), torque=-NBA*i*sin(theta), and torque*omega+e_generated*i=0. It is not confused with the radial-gap exercise. There is no commutator in this laboratory.
+
+Added cases (marked Derived Teaching Example) evaluate checked laws with explicit selected parameters: moving bar, two linear-machine operating points, finite-inductance start, and ideal overlap actuator. Finite L and viscous drag are clearly identified as extensions of the original starting model. Curves are RK4 calculations, not measured traces.
+
+Primary cross-checks opened 2026-11-15: OpenStax University Physics 2 §§11.4,11.5,13.3,13.6; MIT 6.061 Chapter 8, energy/coenergy and force, especially pp2–5. All illustrations are original SVG constructions. No source artwork or material data is copied. Corrections/interpretations are listed in references.json/HTML.

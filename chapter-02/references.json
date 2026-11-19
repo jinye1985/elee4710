@@ -1,0 +1,1681 @@
+{
+  "title": "ELEE 4710 · Chapter 2 — Evidence and Calculation Audit",
+  "accessed": "2026-11-11",
+  "status": "verified for final local chapter",
+  "scope": "Every teaching section is mapped to the supplied lecture and checked external sources. Formula-derived outputs, schematic illustrations and empirical evidence are distinguished.",
+  "source_numbering_note": "The supplied deck calls magnetic circuits Chapter 1 and numbers its exercises 1.0–1.5. This local course places it after the introductory module as Chapter 2. Exercise identifiers are retained for traceability.",
+  "sources": [
+    {
+      "id": "L01",
+      "title": "ELEE 4710 — Magnetic Circuit",
+      "authors": [
+        "Jin Ye"
+      ],
+      "publisher": "University of Georgia, College of Engineering",
+      "url": "course-lecture.pdf",
+      "pages": "36 pages; Spring 2020 course materials",
+      "use": "Primary scope, exercise data, geometry and original worked answers. Source arithmetic checked independently.",
+      "license": "User-supplied course material. Original diagrams are not reproduced in the new teaching visuals."
+    },
+    {
+      "id": "L02",
+      "title": "Summary of magnetic circuit analysis",
+      "authors": [
+        "Course handout"
+      ],
+      "publisher": "ELEE 4710 course materials",
+      "url": "course-summary.pdf",
+      "pages": "2 pages",
+      "use": "Six-step solution structure, segmented geometry and MMF sign conventions; qualifications below correct overbroad statements.",
+      "license": "User-supplied course material. New diagrams are independently drawn."
+    },
+    {
+      "id": "M01",
+      "title": "6.685 Electric Machines — Class Notes 2: Magnetic Circuit Basics",
+      "authors": [
+        "James L. Kirtley Jr."
+      ],
+      "publisher": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/aa1c6b0cf5de1f6f8111ab1a4b39e2d3_MIT6_685F13_chapter2.pdf",
+      "pages": "4–8 (printed pages)",
+      "verifiedClaims": [
+        "Magnetic flux is the surface integral of B; flux entering a junction equals flux leaving it.",
+        "The magnetoquasistatic Ampere loop integral of H equals enclosed free current; a linked N-turn winding supplies NI ampere-turns.",
+        "A uniform small air gap has reluctance g/(mu0 A), neglecting fringing.",
+        "Series sections carry the same flux; their MMF drops add.",
+        "Right-hand orientation determines the signs of current and the magnetic contour."
+      ],
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted; document copyright James L. Kirtley Jr. 2003.",
+      "licenseUrl": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "use": "Equation and concept verification; no copied figure."
+    },
+    {
+      "id": "M02",
+      "title": "6.061 Introduction to Electric Power Systems — Chapter 6: Magnetic Circuit Analog to Electric Circuits",
+      "authors": [
+        "James L. Kirtley Jr."
+      ],
+      "publisher": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/b0be7bc0996b1a78e25504a32819cb6f_MIT6_061S11_ch6.pdf",
+      "pages": "3–8 (printed pages)",
+      "verifiedClaims": [
+        "Uniform linear segments have reluctance l/(mu A).",
+        "Fringing occurs near a gap; the no-fringing approximation is best for small gaps and generally overestimates gap reluctance.",
+        "A symmetric pair of parallel gaps each carries half the common-path flux.",
+        "For a linear one-winding magnetic circuit with fully linked flux, lambda=N Phi and L=N^2/R_total.",
+        "The inductor terminal voltage under passive sign convention is d(lambda)/dt."
+      ],
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted; document copyright James L. Kirtley Jr. 2003.",
+      "licenseUrl": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "use": "Equation and assumption verification; no copied figure."
+    },
+    {
+      "id": "M03",
+      "title": "6.061 Introduction to Electric Power Systems — Chapter 8: Electromagnetic Forces and Loss Mechanisms",
+      "authors": [
+        "James L. Kirtley Jr."
+      ],
+      "publisher": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/c26f6204e05bd4c47875a96452982b6f_MIT6_061S11_ch8.pdf",
+      "pages": "18–22, 24–25 (printed pages); sections 6.2–6.4",
+      "verifiedClaims": [
+        "Ferromagnetic B-H behavior is nonlinear and history-dependent; remanence and coercivity characterize a hysteresis loop.",
+        "For a specified cycle, loss per unit material volume equals the loop integral of H dB.",
+        "Thin steel laminations reduce eddy-current loss; increased resistivity also helps.",
+        "For sinusoidal, fully penetrating flux parallel to a thin sheet, classical eddy loss density scales with frequency squared, peak flux density squared, and sheet thickness squared.",
+        "Measured material loss data are needed for practical prediction; incremental permeability is dB/dH."
+      ],
+      "license": "MIT OCW CC BY-NC-SA 4.0 except third-party material. Steel data/graphs are credited to U.S. Steel and used by permission; do not copy those graphs.",
+      "licenseUrl": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/",
+      "use": "Physics verification only; no empirical curves reproduced."
+    },
+    {
+      "id": "M04",
+      "title": "6.622 Power Electronics — Lecture 9: Magnetics, Part 1 (typed notes)",
+      "authors": [
+        "David Perreault"
+      ],
+      "publisher": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/mit6_622_s23_lec09.pdf",
+      "pages": "1–3",
+      "verifiedClaims": [
+        "For fixed linear geometry, L=N^2 mu A/l and lambda=L i.",
+        "With a gap, total reluctance includes both core and air-gap terms.",
+        "When gap reluctance dominates, inductance is less sensitive to core permeability.",
+        "For a linear gapped structure, much of the magnetic field energy can reside in the gap."
+      ],
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted.",
+      "licenseUrl": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "use": "Cross-check only. Typed transcription contains typographical errors; use verified physical definitions rather than copying its wording."
+    },
+    {
+      "id": "M05",
+      "title": "University Physics Volume 2, section 12.7: Magnetism in Matter",
+      "authors": [
+        "Samuel J. Ling",
+        "William Moebs",
+        "Jeff Sanny"
+      ],
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/12-7-magnetism-in-matter",
+      "pages": "Ferromagnetic Materials; Figures 12.24–12.27",
+      "verifiedClaims": [
+        "Domains can rotate and aligned domains can grow under an applied magnetic field.",
+        "Ferromagnetic response saturates and depends on previous magnetization.",
+        "Remanent magnetization may remain after the applied field is removed.",
+        "Magnetic field lines form closed loops."
+      ],
+      "license": "Current web edition states CC BY-NC-SA 4.0; third-party elements may have separate notices.",
+      "licenseUrl": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "use": "Concept verification; original schematic drawings, no reproduced textbook artwork."
+    },
+    {
+      "id": "M06",
+      "title": "University Physics Volume 2, section 13.1: Faraday’s Law",
+      "authors": [
+        "Samuel J. Ling",
+        "William Moebs",
+        "Jeff Sanny"
+      ],
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+      "pages": "Equations 13.1–13.3; Figures 13.2–13.5",
+      "verifiedClaims": [
+        "Phi is the surface integral of B dot n dA.",
+        "Induced emf around an oriented closed loop is minus the time derivative of linked magnetic flux.",
+        "A stationary field with fixed geometry does not generate a Faraday emf."
+      ],
+      "license": "Current web edition states CC BY-NC-SA 4.0.",
+      "licenseUrl": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "use": "Equation verification; no copied figure."
+    },
+    {
+      "id": "M07",
+      "title": "University Physics Volume 2, section 14.2: Self-Inductance and Inductors",
+      "authors": [
+        "Samuel J. Ling",
+        "William Moebs",
+        "Jeff Sanny"
+      ],
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/14-2-self-inductance-and-inductors",
+      "pages": "Equations 14.8–14.10",
+      "verifiedClaims": [
+        "For a linear coil with common linked flux, N Phi=L I.",
+        "Self-induced emf opposes change in current, not necessarily current itself.",
+        "A constant current gives zero self-induced emf for fixed geometry and material state."
+      ],
+      "license": "Current web edition states CC BY-NC-SA 4.0.",
+      "licenseUrl": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "use": "Equation verification; no copied figure."
+    },
+    {
+      "id": "M08",
+      "title": "University Physics Volume 2, section 14.3: Energy in a Magnetic Field",
+      "authors": [
+        "Samuel J. Ling",
+        "William Moebs",
+        "Jeff Sanny"
+      ],
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/14-3-energy-in-a-magnetic-field",
+      "pages": "Equations 14.18–14.22",
+      "verifiedClaims": [
+        "A fixed linear inductor stores magnetic energy W=0.5 L I^2.",
+        "Vacuum magnetic energy density is B^2/(2 mu0)."
+      ],
+      "license": "Current web edition states CC BY-NC-SA 4.0.",
+      "licenseUrl": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "use": "Equation verification with constant-L limitation made explicit."
+    },
+    {
+      "id": "M09",
+      "title": "Electrical Machines and Drives — Lecture 02: Maxwell’s Equations and Magnetic Circuits",
+      "authors": [
+        "TU Delft OpenCourseWare"
+      ],
+      "publisher": "Delft University of Technology",
+      "url": "https://ocw.tudelft.nl/course-lectures/2-maxwells-equations-and-magnetic-circuits/",
+      "pdfUrl": "https://ocw.tudelft.nl/wp-content/uploads/ET4117_Electrical_Machines_and_Drives_lecture2.pdf",
+      "pages": "Slides 3–9, 14–20",
+      "verifiedClaims": [
+        "Core and gap MMF drops sum to NI; common flux satisfies Bc Ac=Bg Ag.",
+        "Magnetic-circuit and resistor-circuit analogies do not imply physical charge-like transport of flux.",
+        "Flux linkage connects the magnetic circuit to winding terminal voltage.",
+        "Hysteresis and eddy currents are separate core-loss mechanisms."
+      ],
+      "license": "CC BY-NC-SA 4.0 stated on lecture page.",
+      "licenseUrl": "https://ocw.tudelft.nl/course-lectures/2-maxwells-equations-and-magnetic-circuits/",
+      "use": "Independent formula cross-check. Optional video page available; site warns of migration after 2026."
+    },
+    {
+      "id": "M10",
+      "title": "SIFERRIT Material N87 — Ferrites and Accessories",
+      "authors": [
+        "TDK Electronics AG"
+      ],
+      "publisher": "TDK Electronics AG",
+      "url": "https://www.tdk-electronics.tdk.com/download/540216/d6940b239127a8bab71b22168746021b/pdf-n87.pdf",
+      "pages": "2–4; June 2025 revision",
+      "verifiedClaims": [
+        "A real magnetic-material datasheet specifies temperature, field, and frequency when reporting flux density and losses.",
+        "The N87 table reports initial permeability 2200 +/-25% at 25 C.",
+        "At H=1200 A/m and f=10 kHz, the table lists flux density 490 mT at 25 C and 390 mT at 100 C."
+      ],
+      "license": "Copyright TDK Electronics AG 2025; no open reuse license. External link only; do not reproduce charts or datasheet.",
+      "licenseUrl": "https://www.tdk-electronics.tdk.com/download/540216/d6940b239127a8bab71b22168746021b/pdf-n87.pdf",
+      "use": "Optional external evidence showing real material test conditions. Not the material model used in any animation."
+    },
+    {
+      "id": "M11",
+      "title": "2022 CODATA Recommended Values — Complete Listing",
+      "authors": [
+        "NIST",
+        "CODATA"
+      ],
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+      "pages": "vacuum mag. permeability entry",
+      "verifiedClaims": [
+        "Vacuum permeability is approximately 4 pi x 10^-7 H/m; use an approximation sign rather than presenting it as an exact modern SI definition."
+      ],
+      "license": "U.S. government numerical reference data; cite NIST/CODATA.",
+      "licenseUrl": "https://www.nist.gov/open/license",
+      "use": "Constants check."
+    },
+    {
+      "id": "M12",
+      "title": "6.013 Electromagnetics and Applications — Chapter 2: Introduction to Electrodynamics",
+      "authors": [
+        "David H. Staelin"
+      ],
+      "publisher": "MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/MIT6_013S09_chap02.pdf",
+      "pages": "Section 2.7.1, printed pages 56–57; equation 2.7.8",
+      "verifiedClaims": [
+        "For a linear, lossless medium with fixed scalar permeability, magnetic energy density is mu H^2/2, equivalently BH/2 or B^2/(2 mu)."
+      ],
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted.",
+      "licenseUrl": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+      "use": "Energy-density equation verification only; source predates the 2019 SI redefinition, so its old exact-mu0 statement is not reused."
+    },
+    {
+      "id": "M13",
+      "title": "Using Differential Inductance and Coils in COMSOL Multiphysics",
+      "authors": [
+        "Walter Frei"
+      ],
+      "publisher": "COMSOL",
+      "url": "https://www.comsol.com/blogs/using-differential-inductance-and-coils-in-comsol-multiphysics/",
+      "pages": "A Brief Review of the Theory; published July 15, 2024",
+      "verifiedClaims": [
+        "When flux linkage is a single-valued function of instantaneous current, differential inductance is its derivative with respect to current; secant inductance is the flux-linkage/current ratio.",
+        "These coincide for a linear coil with no bias flux; the chain rule connects differential inductance to the time derivative of current."
+      ],
+      "license": "COMSOL copyright; no open reuse license claimed. External citation only; no copied artwork.",
+      "licenseUrl": "https://www.comsol.com/blogs/using-differential-inductance-and-coils-in-comsol-multiphysics/",
+      "use": "Primary technical explanation from a simulation-software developer. Verify the distinction only; do not copy its voltage sign convention without stating the chapter convention."
+    },
+    {
+      "id": "N01",
+      "title": "University Physics Volume 2, section 14.1: Mutual Inductance",
+      "authors": [
+        "Samuel J. Ling",
+        "Jeff Sanny",
+        "William Moebs"
+      ],
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/14-1-mutual-inductance",
+      "pages": "Equations 14.1–14.5",
+      "verifiedClaims": [
+        "Mutual inductance relates one coil’s flux linkage to current in the other coil; total linkage includes self and mutual contributions."
+      ],
+      "license": "Current web edition declares CC BY-NC-SA; no artwork or text passage reproduced.",
+      "use": "Mutual-linkage definition and distinction from self-inductance."
+    },
+    {
+      "id": "N02",
+      "title": "Theory of Electrical Engineering — Mutually Coupled Inductors",
+      "authors": [
+        "Boris Evstatiev"
+      ],
+      "publisher": "University of Ruse",
+      "url": "https://www.uni-ruse.bg/disciplines/TE/Lecture%20notes/Lectures%20notes%20Mutually%20coupled%20inductors.pdf",
+      "pages": "Section 6.1.1, PDF pp.1–2; section 6.2, p.6",
+      "verifiedClaims": [
+        "Series-aiding/opposing dot convention; Lseries=L1+L2±2M; ideal coupling k=1."
+      ],
+      "license": "No open reuse license identified. Equations and conventions checked; no figure copied.",
+      "use": "Independent coupling-sign and equivalent series inductance verification."
+    },
+    {
+      "id": "N03",
+      "title": "NIST Guide to the SI — Rules for Printing and Using Units",
+      "authors": [
+        "National Institute of Standards and Technology"
+      ],
+      "publisher": "NIST Special Publication 811",
+      "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-6-rules-and-style-conventions-printing-and-using",
+      "pages": "Section 6.2.3: Inseparability of prefix and unit",
+      "verifiedClaims": [
+        "A power applies to both the prefix factor and its unit. Thus a square centimeter is (10^-2 m)^2 = 10^-4 m²."
+      ],
+      "license": "NIST government reference guidance; facts and unit rules cited.",
+      "use": "Unit-conversion verification, opened and checked 2026-11-11. Area conversion is the algebraic consequence of the stated SI-prefix rule."
+    }
+  ],
+  "sections": [
+    {
+      "id": "01",
+      "title": "Field direction and Ampere’s law",
+      "claims": [
+        {
+          "id": "C01",
+          "claim": "Conventional current fixes magnetic-field orientation through the right-hand rule. Reversing current reverses the field.",
+          "equations": "∮ H·dl = Σ signed Nₖiₖ",
+          "sources": [
+            "L01 pp.3–7",
+            "M01 pp.4–5"
+          ],
+          "qualification": "Magnetostatic / magnetoquasistatic model. Animated marks indicate field direction, not moving magnetic particles."
+        },
+        {
+          "id": "C02",
+          "claim": "For a uniform mean path, the loop equation reduces to Hl=Ni; for a toroid H depends on radius.",
+          "equations": "H ≈ Ni/l; H(r) = Ni/(2πr)",
+          "sources": [
+            "L01 pp.5–7",
+            "M01"
+          ],
+          "qualification": "A mean-path rectangular-core approximation is different from an exact full-field solution."
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "H, B, flux and linkage",
+      "claims": [
+        {
+          "id": "C03",
+          "claim": "H is magnetic field intensity, B is flux density, Φ is magnetic flux and λ is flux linkage.",
+          "equations": "B = μH; μ = μ₀μᵣ; Φ = ∫ B·dA; λ = NΦ",
+          "sources": [
+            "L01 p.8",
+            "M01",
+            "M06 Eq.13.1"
+          ],
+          "qualification": "B=μH uses a linear constitutive model. λ=NΦ assumes the same flux links every turn."
+        },
+        {
+          "id": "C04",
+          "claim": "For uniform normal flux, Φ=BA. The quantities have different physical units and must not be conflated.",
+          "equations": "H: A/m; B: T; Φ: Wb; λ: Wb-turn; μ: H/m; 1 cm² = (10⁻² m)² = 10⁻⁴ m²",
+          "sources": [
+            "L01 p.8",
+            "M06",
+            "N03"
+          ],
+          "qualification": "Use Φ=BA only for the stated uniform-field approximation. Apply the square to the centimeter conversion factor as well as the length unit."
+        },
+        {
+          "id": "C05",
+          "claim": "The course calculation value of vacuum permeability is an excellent instructional approximation.",
+          "equations": "μ₀ ≈ 4π × 10⁻⁷ H/m",
+          "sources": [
+            "L01 p.8",
+            "M11"
+          ],
+          "qualification": "The approximation sign avoids treating this as an exact modern SI defining constant."
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "MMF, reluctance and circuit analogy",
+      "claims": [
+        {
+          "id": "C06",
+          "claim": "A winding supplies MMF Ni; a uniform linear segment has reluctance l/(μA).",
+          "equations": "ℱ = Ni; ℜ = l/(μA); Φ = ℱ/ℜ",
+          "sources": [
+            "L01 pp.11–12",
+            "M02"
+          ],
+          "qualification": "Reluctance is not an electrical resistance and its presence does not itself imply Joule loss."
+        },
+        {
+          "id": "C07",
+          "claim": "Series magnetic sections share flux; MMF drops add. Branch fluxes obey continuity at a junction.",
+          "equations": "Σ ℱ = Σ Φⱼℜⱼ; Σ signed Φⱼ = 0",
+          "sources": [
+            "L01 pp.15–17,27–29",
+            "M01",
+            "M09"
+          ],
+          "qualification": "No leakage is included in the lumped circuit. Use the correct topology before summing reluctances."
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Air gaps and MMF allocation",
+      "claims": [
+        {
+          "id": "C08",
+          "claim": "Core and gap reluctances add along one series flux path; their MMF drops can differ greatly.",
+          "equations": "ℜc = lc/(μ₀μᵣAc); ℜg = g/(μ₀Ag); Ni = Hc lc + Hg g",
+          "sources": [
+            "L01 p.15,pp.18–24",
+            "M02",
+            "M09"
+          ],
+          "qualification": "The core’s μᵣ must not be inserted into the air-gap reluctance."
+        },
+        {
+          "id": "C09",
+          "claim": "Fringing spreads the field near a gap. Equal gap and core face areas are a simplifying approximation.",
+          "equations": "Φ = BcAc = BgAg",
+          "sources": [
+            "L01 p.15",
+            "M02 pp.3–4"
+          ],
+          "qualification": "The simulator uses Ag=Ac and neglects fringing/leakage. Any fringing drawing is qualitative, not a finite-element result."
+        },
+        {
+          "id": "C10",
+          "claim": "In a mixed core-gap path, dividing total Ni by each separate segment length gives the wrong local field.",
+          "equations": "Hⱼ = Bⱼ/μⱼ; ΣHⱼlⱼ = Ni",
+          "sources": [
+            "L02 p.2",
+            "M01",
+            "M09"
+          ],
+          "qualification": "Ampere’s law remains valid; it is the full-loop balance, not an instruction to assign all MMF to every segment."
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Geometry and unequal cross sections",
+      "claims": [
+        {
+          "id": "C11",
+          "claim": "Reluctance depends on mean path length and the area normal to flux, including core depth.",
+          "equations": "A = depth × limb thickness; ℜtotal = Σlⱼ/(μⱼAⱼ)",
+          "sources": [
+            "L01 pp.18–26",
+            "L02 p.1"
+          ],
+          "qualification": "Mean core lengths exclude gap length. Example 1.4 directly supplies core length and must not have its gap subtracted again."
+        },
+        {
+          "id": "C12",
+          "claim": "The same series flux can produce different flux densities in sections with different areas.",
+          "equations": "B₁ = Φ/A₁; B₂ = Φ/A₂",
+          "sources": [
+            "L01 pp.25–26",
+            "L02 p.1"
+          ],
+          "qualification": "In Example 1.2 the horizontal yokes have area 0.010 m²; the vertical limbs have area 0.015 m². Both are core, not air-gap sections."
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Branched magnetic networks",
+      "claims": [
+        {
+          "id": "C13",
+          "claim": "In the interactive flux divider, common-limb flux divides between two return branches with equal branch MMF drop.",
+          "equations": "Φ = Φ₁ + Φ₂; Φ₁ℜ₁ = Φ₂ℜ₂; ℜeq = ℜc + ℜ₁ℜ₂/(ℜ₁+ℜ₂)",
+          "sources": [
+            "M01",
+            "M02"
+          ],
+          "qualification": "This is an illustrative one-source network, distinct from the supplied two-source Example 1.3. Branch reluctances include their return yokes."
+        },
+        {
+          "id": "C14",
+          "claim": "The lower-reluctance parallel path carries more flux. The divider follows from continuity and loop balance.",
+          "equations": "Φ₁ = Φℜ₂/(ℜ₁+ℜ₂); Φ₂ = Φℜ₁/(ℜ₁+ℜ₂)",
+          "sources": [
+            "M01",
+            "M02"
+          ],
+          "qualification": "The supplied reluctances are positive, constant teaching values. There is no inferred cross section or measured material from the schematic geometry."
+        },
+        {
+          "id": "C26",
+          "claim": "The supplied two-source Example 1.3 instead combines two loop fluxes through a shared gapped center limb.",
+          "equations": "Φg=Φ₁+Φ₂; (ℜo+ℜm)Φ₁+ℜmΦ₂=ℱ₁; ℜmΦ₁+(ℜo+ℜm)Φ₂=ℱ₂",
+          "sources": [
+            "L01 pp.27–29",
+            "M01"
+          ],
+          "qualification": "Here ℜm includes center-core plus gap reluctances. Corrected source arithmetic is recorded in the exercise audit."
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Inductance, voltage and energy",
+      "claims": [
+        {
+          "id": "C15",
+          "claim": "A single winding in a fixed linear common-flux model has L=N²/ℜ.",
+          "equations": "λ = NΦ = Li; L = N²/ℜ",
+          "sources": [
+            "L01 pp.30–32",
+            "M02",
+            "M07"
+          ],
+          "qualification": "L describes the winding/core system. It is not a separate property of the gap alone."
+        },
+        {
+          "id": "C16",
+          "claim": "Induced emf opposes a change in linked flux; passive terminal voltage uses the corresponding positive derivative convention.",
+          "equations": "ℰ = −dλ/dt; v = dλ/dt = L di/dt for constant L",
+          "sources": [
+            "M06",
+            "M07",
+            "M02"
+          ],
+          "qualification": "Different sign conventions must not be mixed. Fixed DC current with fixed geometry does not produce a Faraday emf."
+        },
+        {
+          "id": "C17",
+          "claim": "A linear inductor stores magnetic energy; in a gapped high-permeability structure a large share can be in the gap.",
+          "equations": "W = ½Li²; u = B²/(2μ) = BH/2; gap energy share = ℜg/(ℜc+ℜg) for equal-area series segments",
+          "sources": [
+            "M08",
+            "M04",
+            "M12"
+          ],
+          "qualification": "These formulas assume a reversible linear model. The gap-share expression follows by integrating energy density over each segment volume; it is 6/7≈85.7% for the stated inductor. With p=vi=dW/dt, negative power returns energy and a full ideal cycle has zero net transfer."
+        },
+        {
+          "id": "C27",
+          "claim": "For a nonlinear linkage curve, a local derivative generally differs from the linkage-to-current ratio.",
+          "equations": "Ldiff = dλ/di; Lsec = λ/i",
+          "sources": [
+            "M13"
+          ],
+          "qualification": "This local distinction assumes a specified linkage-current curve or material state. It is not a complete model of arbitrary hysteresis history."
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Two coupled series coils",
+      "claims": [
+        {
+          "id": "C18",
+          "claim": "The two supplied series coils can aid or oppose according to their winding/current orientation.",
+          "equations": "ℱ = (Na ± Nb)i; Φ = (Na ± Nb)i/ℜ",
+          "sources": [
+            "L01 pp.33–35",
+            "L02 p.1"
+          ],
+          "qualification": "The series current is common. A signed flux-linkage convention is required for terminal inductance."
+        },
+        {
+          "id": "C19",
+          "claim": "Self-inductance and mutual inductance separate the effects of each coil’s current.",
+          "equations": "La = Na²/ℜ; Lb = Nb²/ℜ; |M| = NaNb/ℜ; Lseries = La+Lb ± 2M = (Na ± Nb)²/ℜ",
+          "sources": [
+            "L01 pp.33–35 (geometry only)",
+            "N01",
+            "N02"
+          ],
+          "qualification": "These formulas use a linear, fully linked common-flux model. With both current references into the dots, λa=Laia+Mib and λb=Mia+Lbib. The course’s NaΦ/i under simultaneous excitation is a linkage/current ratio, not La in isolation."
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Real magnetic materials",
+      "claims": [
+        {
+          "id": "C20",
+          "claim": "Ferromagnetic materials are nonlinear and history-dependent; fixed μᵣ cannot be extrapolated through saturation.",
+          "equations": "Secant permeability B/H differs from incremental permeability dB/dH.",
+          "sources": [
+            "L01 pp.13–14",
+            "M03",
+            "M05"
+          ],
+          "qualification": "The source’s 2.5 T and 3.9 T outputs follow ideal exercise assumptions, not a verified material curve."
+        },
+        {
+          "id": "C21",
+          "claim": "Remanence and coercivity describe a hysteresis loop; loop area represents cycle loss per unit volume.",
+          "equations": "wcycle = ∮ H dB",
+          "sources": [
+            "M03",
+            "M05"
+          ],
+          "qualification": "Any analytic curve in the lesson is explicitly schematic and is not fitted manufacturer data."
+        },
+        {
+          "id": "C22",
+          "claim": "Thin insulated laminations constrain circulating currents and reduce eddy-current heating; this mechanism differs from hysteresis.",
+          "equations": "Changing magnetic flux induces currents; electrical resistance dissipates their energy.",
+          "sources": [
+            "M03",
+            "M06",
+            "M09"
+          ],
+          "qualification": "Sheet planes run parallel to the main flux. Current paths are schematic; no quantitative efficiency or core-loss estimate is displayed."
+        },
+        {
+          "id": "C23",
+          "claim": "Real material specifications must identify test conditions rather than a universal saturation number.",
+          "equations": "Example only: N87 data depend on H, frequency and temperature.",
+          "sources": [
+            "M10"
+          ],
+          "qualification": "The linked TDK datasheet is an external evidence example. It is not the material used by the interactive models."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Worked examples and knowledge check",
+      "claims": [
+        {
+          "id": "C24",
+          "claim": "Examples 1.0–1.5 retain the supplied numerical inputs; all displayed solutions are recomputed in SI units.",
+          "equations": "See the calculation audit below.",
+          "sources": [
+            "L01 pp.9–10,18–29,31–35"
+          ],
+          "qualification": "Small differences from the slides reflect unrounded arithmetic. Actual source errors are documented separately."
+        },
+        {
+          "id": "C25",
+          "claim": "The five quiz answers follow the same cited equations and assumptions as the teaching sections.",
+          "equations": "1: Same series Φ. 2: Lower gap permeability. 3: v=0 at a smooth sinusoidal-current peak. 4: Lseries=0 for equal perfectly coupled opposing turns. 5: Sum signed Hℓ drops.",
+          "sources": [
+            "L01 pp.3–35",
+            "M01",
+            "M02",
+            "M07",
+            "N01",
+            "N02"
+          ],
+          "qualification": "Questions test the stated ideal model. Ideal common-flux cancellation excludes real leakage inductance."
+        },
+        {
+          "id": "C28",
+          "claim": "The electric-circuit bridge solves the original two-source network using KCL and checks each loop using KVL.",
+          "equations": "(5000−V)/2000 + (5000−V)/1000 = V/5000; V=4411.764706 V; i₁=5/17 A; i₂=10/17 A; i₃=15/17 A",
+          "sources": [
+            "L01 pp.16–17"
+          ],
+          "qualification": "The original lecture gives this circuit without a worked answer. The displayed solution is an independently checked completion of that problem."
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "source_id": "1.0",
+      "source_pdf_pages": [
+        9,
+        10
+      ],
+      "title": "Uniform closed core",
+      "inputs_SI": {
+        "N_turns": 200,
+        "i_A": 5,
+        "area_m2": 0.005,
+        "mean_length_m": 1,
+        "mu_r": 2000
+      },
+      "geometry_read_from_figure": "Uniform rectangular closed-core schematic; dimensions are specified in problem text, not geometric measurements of image.",
+      "source_printed_results": {
+        "H_A_per_m": 1000,
+        "B_T": 2.5,
+        "Phi_Wb": 0.0125
+      },
+      "recomputed_results_SI": {
+        "F_At": 1000,
+        "H_A_per_m": 1000,
+        "B_T": 2.5132741228718345,
+        "Phi_Wb": 0.012566370614359173
+      },
+      "notes": [
+        "Question (a) calls H magnetic field density; correct term is magnetic field intensity. B is magnetic flux density.",
+        "2.5 T follows given constant-permeability model only. No material name/B-H data are supplied; do not present it as a realistic unsaturated operating point."
+      ]
+    },
+    {
+      "source_id": "1.1",
+      "source_pdf_pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "title": "Single air gap and inverse current design",
+      "inputs_SI": {
+        "N_turns": 200,
+        "i_A": 5,
+        "depth_m": 0.05,
+        "gap_length_m": 0.02,
+        "mu_r": 2000,
+        "target_B_T": 0.2
+      },
+      "geometry_read_from_figure": {
+        "window_width_m": 0.2,
+        "window_height_m": 0.3,
+        "limb_thickness_m": 0.1,
+        "outer_width_m": 0.4,
+        "outer_height_m": 0.5,
+        "core_mean_path_m": 1.38,
+        "mean_path_derivation": "2[(.20+.10)+(.30+.10)]-.02=1.38 m",
+        "core_and_gap_area_m2": 0.005
+      },
+      "source_printed_results": {
+        "Rc_At_per_Wb": 110000.0,
+        "Rg_At_per_Wb": 3180000.0,
+        "Phi_Wb": 0.0003,
+        "Bcore_and_gap_T": 0.06,
+        "i_for_target_A": 16.5
+      },
+      "recomputed_results_SI": {
+        "Rc_At_per_Wb": 109816.91073340777,
+        "Rg_At_per_Wb": 3183098.8618379068,
+        "Rtotal_At_per_Wb": 3292915.7725713146,
+        "Phi_Wb": 0.00030368222847653874,
+        "Bcore_T": 0.06073644569530775,
+        "Bgap_T": 0.06073644569530775,
+        "Hcore_A_per_m": 24.16626389560174,
+        "Hgap_A_per_m": 48332.52779120348,
+        "MMFcore_At": 33.3494441759304,
+        "MMFgap_At": 966.6505558240697,
+        "i_for_target_A": 16.464578862856573
+      },
+      "notes": [
+        "Source p20 expression mixes displayed cm values and m result without displaying the ×0.01 factor; use explicitly converted SI quantities.",
+        "No fringing correction is included even though gap is 2 cm relative to 10 cm × 5 cm face. New diagram may show qualitative fringing, but computation must remain labeled no-fringing approximation.",
+        "H and MMF split are checked derivations added for explanatory animation; not printed as worked answers in source."
+      ]
+    },
+    {
+      "source_id": "1.2",
+      "source_pdf_pages": [
+        25,
+        26
+      ],
+      "title": "Same series flux through unequal areas",
+      "inputs_SI": {
+        "N_turns": 300,
+        "i_A": 1,
+        "mu_r": 2000,
+        "depth_m": 0.1,
+        "target_Phi_Wb": 0.012
+      },
+      "geometry_read_from_figure": {
+        "window_width_m": 0.25,
+        "window_height_m": 0.25,
+        "vertical_limb_thickness_m": 0.15,
+        "horizontal_yoke_thickness_m": 0.1,
+        "horizontal_mean_length_each_m": 0.4,
+        "vertical_mean_length_each_m": 0.35,
+        "horizontal_segment_total_length_m": 0.8,
+        "vertical_segment_total_length_m": 0.7,
+        "horizontal_area_m2": 0.01,
+        "vertical_area_m2": 0.015
+      },
+      "source_printed_results": {
+        "R1_horizontal_At_per_Wb": 31800.0,
+        "R2_vertical_At_per_Wb": 18600.0,
+        "Phi_Wb": 0.0059,
+        "B1_horizontal_T": 0.59,
+        "B2_vertical_T": 0.393,
+        "i_for_target_A": 2
+      },
+      "recomputed_results_SI": {
+        "R1_horizontal_At_per_Wb": 31830.98861837907,
+        "R2_vertical_At_per_Wb": 18568.076694054456,
+        "Rtotal_At_per_Wb": 50399.06531243352,
+        "Phi_Wb": 0.005952491343643819,
+        "B1_horizontal_T": 0.5952491343643819,
+        "B2_vertical_T": 0.3968327562429213,
+        "H1_horizontal_A_per_m": 236.8421052631579,
+        "H2_vertical_A_per_m": 157.8947368421053,
+        "i_for_target_A": 2.015962612497341
+      },
+      "notes": [
+        "P26 inverse-current numerator prints 10^-4; must be 10^4. Correct full expression i=.012×(1.8568+3.1831)×10^4/300≈2.016 A.",
+        "H values are requested on p25 but omitted on p26; provided corrected results are direct checked derivations H=B/(mu0 mu_r).",
+        "Do not call B1 and B2 core versus gap: both are core segments. R1 groups both horizontal yokes, R2 groups both vertical limbs."
+      ]
+    },
+    {
+      "source_id": "1.3",
+      "source_pdf_pages": [
+        27,
+        28,
+        29
+      ],
+      "title": "Symmetric two-window core with shared gapped center limb",
+      "inputs_SI": {
+        "N1_turns": 500,
+        "N2_turns": 500,
+        "i1_A": 10,
+        "i2_A": 10,
+        "mu_r": 1200,
+        "area_m2": 0.0004,
+        "gap_length_m": 0.005
+      },
+      "geometry_read_from_figure": {
+        "figure_dimension_unit": "cm, inferred unambiguously from p28 conversions, although p27 figure does not explicitly print a unit legend",
+        "each_window_width_m": 0.5,
+        "window_height_m": 0.5,
+        "limb_thickness_m": 0.02,
+        "outer_branch_mean_length_m": 1.56,
+        "outer_branch_length_derivation": "3×(.50+.02)=1.56 m",
+        "center_core_mean_length_m": 0.515,
+        "center_length_derivation": ".50+.02-.005=.515 m",
+        "equal_gap_area_m2": 0.0004,
+        "flux_topology": "Flux Phi1 enters center from left outer loop; Phi2 enters from right outer loop; center/gap flux is Phi1+Phi2. Both source polarities + toward top central node."
+      },
+      "source_printed_results": {
+        "F1_At": 5000,
+        "F2_At": 5000,
+        "Rleft_and_right_At_per_Wb": 2580000.0,
+        "Rcenter_core_At_per_Wb": 820000.0,
+        "Rgap_At_per_Wb": 9940000.0,
+        "system_diagonal_At_per_Wb": 13340000.0,
+        "system_off_diagonal_At_per_Wb": 10760000.0,
+        "Phi1_and_Phi2_Wb": 0.0002067,
+        "PhiGap_Wb": 0.0004134,
+        "Bgap_T": 1.034,
+        "Hgap_A_per_m": 822000.0
+      },
+      "recomputed_results_SI": {
+        "Rleft_and_right_At_per_Wb": 2586267.8252432994,
+        "Rcenter_core_At_per_Wb": 853799.9551283969,
+        "Rgap_At_per_Wb": 9947183.943243457,
+        "system_diagonal_At_per_Wb": 13387251.723615153,
+        "system_off_diagonal_At_per_Wb": 10800983.898371853,
+        "Phi1_Wb": 0.00020671205945484595,
+        "Phi2_Wb": 0.00020671205945484595,
+        "PhiGap_Wb": 0.0004134241189096919,
+        "Bgap_T": 1.0335602972742297,
+        "Hgap_A_per_m": 822481.1514736123
+      },
+      "notes": [
+        "P28 center-core reluctance is an arithmetic error: .515/(mu0×1200×.0004)=.853800e6 At/Wb, not .82e6.",
+        "P29 displayed coefficients follow the erroneous rounded .82e6 value, but its printed flux result is close to the correct unrounded geometry solution. Solve the corrected system, do not reuse 13.34e6/10.76e6.",
+        "Correct equations: (Router+Rcenter)Phi1+Rcenter Phi2=5000; Rcenter Phi1+(Router+Rcenter)Phi2=5000; Rcenter includes center-core plus gap.",
+        "Symmetry simplifies Phi1=Phi2=5000/(Router+2Rcenter). The effective circuit is not three reluctances all in series."
+      ]
+    },
+    {
+      "source_id": "1.4",
+      "source_pdf_pages": [
+        31,
+        32
+      ],
+      "title": "Inductance of a gapped single-coil core",
+      "inputs_SI": {
+        "N_turns": 400,
+        "mu_r": 3000,
+        "mean_core_length_m": 0.5,
+        "gap_length_m": 0.001,
+        "i_A": 1,
+        "area_m2": 0.0015
+      },
+      "geometry_read_from_figure": "Source explicitly calls lc=.50 m mean core length; p32 uses .50 m directly in Rc. Do not subtract .001 m again.",
+      "source_printed_results": {
+        "Rc_At_per_Wb": 88420,
+        "Rg_At_per_Wb": 530515,
+        "Bgap_T": 0.4309,
+        "L_H": 0.25852,
+        "Phi_from_L_expression_Wb": 0.0006463,
+        "Phi_typo_in_B_expression_Wb": 6.463e-05
+      },
+      "recomputed_results_SI": {
+        "Rc_At_per_Wb": 88419.41282883075,
+        "Rg_At_per_Wb": 530516.4769729845,
+        "Rtotal_At_per_Wb": 618935.8898018153,
+        "Phi_Wb": 0.0006462704887384717,
+        "Bcore_and_gap_T": 0.43084699249231445,
+        "lambda_Wb_turn": 0.25850819549538867,
+        "L_H": 0.25850819549538867
+      },
+      "notes": [
+        "P32 B numerator prints .6463×10^-4 Wb but then reports .4309 T. Correct numerator is .6463×10^-3 Wb, consistent with its own L expression lower on page.",
+        "PPTX includes an isolated -3 text shape on slide32, suggesting an attempted correction; the rendered PDF still shows the incorrect -4 numerator. Use corrected arithmetic.",
+        "Question says inductance in the air gap. Inductance is a property of the coil/core magnetic system; B and H can be evaluated in the gap."
+      ]
+    },
+    {
+      "source_id": "1.5",
+      "source_pdf_pages": [
+        33,
+        34,
+        35
+      ],
+      "title": "Two series-connected coils, aiding and opposing",
+      "inputs_SI": {
+        "Na_turns": 350,
+        "Nb_turns": 150,
+        "i_A": 10,
+        "mu_r": 3000,
+        "gap_length_m": 0.0015,
+        "area_m2": 0.0004,
+        "target_B_T": 3
+      },
+      "geometry_read_from_figure": {
+        "window_width_m": 0.06,
+        "window_height_m": 0.06,
+        "limb_thickness_m": 0.02,
+        "depth_m": 0.02,
+        "mean_core_length_m": 0.3185,
+        "length_derivation": "4(.06+.02)-.0015=.3185 m",
+        "diagram_dimension_unit": "cm (depth label is 2 cm; other dimension numbers follow same unit)"
+      },
+      "source_printed_results": {
+        "Rc_At_per_Wb": 211000.0,
+        "Rg_At_per_Wb": 3000000.0,
+        "Rtotal_At_per_Wb": 3211000.0,
+        "aiding_Phi_Wb": 0.00156,
+        "aiding_B_T": 3.9,
+        "aiding_La_labeled_H": 0.055,
+        "aiding_Lb_labeled_H": 0.023,
+        "opposing_Phi_Wb": 0.000624,
+        "opposing_B_T": 1.56,
+        "i_for_B3T_aiding_A": 7.7,
+        "i_for_B3T_opposing_A": 19.25
+      },
+      "recomputed_results_SI": {
+        "Rc_At_per_Wb": 211211.87239486942,
+        "Rg_At_per_Wb": 2984155.182973037,
+        "Rtotal_At_per_Wb": 3195367.0553679066,
+        "self_La_H": 0.03833675376799416,
+        "self_Lb_H": 0.007041444569631581,
+        "mutual_M_magnitude_H": 0.016430037329140355,
+        "cases": {
+          "series_aiding": {
+            "effective_turns": 500,
+            "Ftotal_At": 5000,
+            "Phi_Wb": 0.001564765459918129,
+            "B_T": 3.9119136497953226,
+            "L_series_equivalent_H": 0.07823827299590645,
+            "lambdaA_magnitude_Wb_turn": 0.5476679109713452,
+            "lambdaB_magnitude_Wb_turn": 0.23471481898771937,
+            "lambdaA_over_i_magnitude_H": 0.05476679109713452,
+            "lambdaB_over_i_magnitude_H": 0.023471481898771938,
+            "i_for_B3T_A": 7.668880932882977
+          },
+          "series_opposing": {
+            "effective_turns": 200,
+            "Ftotal_At": 2000,
+            "Phi_Wb": 0.0006259061839672517,
+            "B_T": 1.564765459918129,
+            "L_series_equivalent_H": 0.012518123679345032,
+            "lambdaA_magnitude_Wb_turn": 0.21906716438853807,
+            "lambdaB_magnitude_Wb_turn": 0.09388592759508775,
+            "lambdaA_over_i_magnitude_H": 0.021906716438853807,
+            "lambdaB_over_i_magnitude_H": 0.009388592759508775,
+            "i_for_B3T_A": 19.17220233220744
+          }
+        }
+      },
+      "notes": [
+        "Source La=Na Phi/i and Lb=Nb Phi/i under simultaneous series excitation are flux-linkage/current ratios under that connection, not standalone self-inductances.",
+        "For ideal common-flux linear model, self La=Na²/R, self Lb=Nb²/R, M=Na Nb/R; Lseries=La+Lb±2M=(Na±Nb)²/R. For opposing connection terminal linkage has opposite sign for coil B; do not add unsigned ratios.",
+        "Source omits opposing inductance values. Series equivalent inductances here are checked extensions, requiring an external coupled-inductor source for new explanatory content.",
+        "3.9 T and target 3 T follow an imposed constant μr. No actual material curve is provided; do not suggest a practical core achieves these with μr=3000.",
+        "Rounded source Rg=3e6 is ≈0.53% above unrounded 2.984155e6. This explains slightly different inverse currents, not a formula error."
+      ]
+    }
+  ],
+  "display_example_map": [
+    {
+      "display_label": "Example 1",
+      "source_example": "1.0",
+      "title": "Uniform closed core"
+    },
+    {
+      "display_label": "Example 2",
+      "source_example": "1.1",
+      "title": "Single air gap and inverse current design"
+    },
+    {
+      "display_label": "Example 3",
+      "source_example": "1.2",
+      "title": "Same series flux through unequal areas"
+    },
+    {
+      "display_label": "Example 4",
+      "source_example": "1.3",
+      "title": "Symmetric two-window core with shared gapped center limb"
+    },
+    {
+      "display_label": "Example 5",
+      "source_example": "1.4",
+      "title": "Inductance of a gapped single-coil core"
+    },
+    {
+      "display_label": "Example 6",
+      "source_example": "1.5",
+      "title": "Two series-connected coils, aiding and opposing"
+    },
+    {
+      "display_label": "Example 7",
+      "source_example": "Electric-circuit review, lecture p.17",
+      "title": "Electric-circuit review: KCL and KVL"
+    }
+  ],
+  "electric_review": {
+    "pages": [
+      16,
+      17
+    ],
+    "source_parameters": {
+      "U1_V": 5000,
+      "U2_V": 5000,
+      "R1_ohm": 2000,
+      "R2_ohm": 1000,
+      "R3_ohm": 5000
+    },
+    "orientation": "Both voltage source positive terminals at top; i1 and i2 enter central top node, i3 exits downward through R3.",
+    "correct_derived_solution": {
+      "node_voltage_V": 4411.764705882352,
+      "i1_A": 0.29411764705882354,
+      "i2_A": 0.5882352941176471,
+      "i3_A": 0.8823529411764706
+    },
+    "note": "Source page17 is unsolved. Calculated answer is a derived completion, not printed source result."
+  },
+  "model_assumptions": [
+    "Steady-current / magnetostatic lumped magnetic-circuit model.",
+    "Core relative permeability is held constant at the exercise-given value; calculated high B does not validate that approximation for a real unspecified material.",
+    "Uniform B across each segment area and H approximately uniform along each segment mean path.",
+    "Leakage flux neglected, and all relevant turns link the modeled flux.",
+    "Fringing neglected; effective air-gap area equals adjacent core face area.",
+    "Core path lengths exclude air gaps unless lc is explicitly given as mean core length (Example 1.4).",
+    "All calculations use SI units and unrounded intermediate quantities; source final answers often use rounded intermediates."
+  ],
+  "errata": [
+    {
+      "source": "L01 p.26, Example 1.2",
+      "issue": "The inverse-current numerator prints 10⁻⁴.",
+      "resolution": "Use 10⁴. Recomputed i for Φ=0.012 Wb is 2.015963 A. The requested H values are supplied by H=B/(μ₀μᵣ)."
+    },
+    {
+      "source": "L01 pp.28–29, Example 1.3",
+      "issue": "Center-core reluctance is printed as 0.82×10⁶ At/Wb, creating inconsistent loop coefficients.",
+      "resolution": "Use 0.853800×10⁶ At/Wb. Correct system diagonal/off-diagonal are 13.387252×10⁶ and 10.800984×10⁶ At/Wb. The gap flux is 0.413424 mWb."
+    },
+    {
+      "source": "L01 p.32, Example 1.4",
+      "issue": "The numerator in the B expression prints 0.6463×10⁻⁴ Wb.",
+      "resolution": "The correct exponent is −3, consistent with the source’s own inductance expression. B≈0.430847 T and L≈0.258508 H."
+    },
+    {
+      "source": "L01 pp.33–35; L02 p.2",
+      "issue": "Individual NΦ/i ratios with both coils excited are labeled inductances, and the handout rejects N²/ℜ too broadly.",
+      "resolution": "Distinguish self-inductance, mutual inductance and series equivalent inductance. With ideal common flux, Lseries=(Na±Nb)²/ℜ."
+    },
+    {
+      "source": "L02 p.2",
+      "issue": "The handout says not to use Ampere’s law for local H.",
+      "resolution": "Ampere’s law still governs the complete loop. The invalid step is assigning the total MMF independently to each segment."
+    },
+    {
+      "source": "L01 pp.9–10,31–32",
+      "issue": "H is called “magnetic field density”; the exercise asks for “inductance in the air gap.”",
+      "resolution": "Use magnetic field intensity for H. Inductance belongs to the winding/core system; B and H may be evaluated in the gap."
+    },
+    {
+      "source": "L01 pp.10,34–35",
+      "issue": "Fixed-permeability calculations give high B without an identified real core material.",
+      "resolution": "Retain the exercise result but identify the constant-μᵣ approximation. Do not treat it as a practical unsaturated operating prediction."
+    }
+  ],
+  "visual_provenance": [
+    {
+      "id": "A01",
+      "visual": "Current and field direction",
+      "kind": "Original schematic SVG/CSS animation",
+      "basis": [
+        "C01",
+        "C02"
+      ],
+      "limitations": "Motion shows orientation. No transport speed, field propagation time or particle trajectory is represented."
+    },
+    {
+      "id": "A02",
+      "visual": "Core, gap and electrical analogy",
+      "kind": "Original schematic geometry and calculated overlays",
+      "basis": [
+        "C06",
+        "C08",
+        "C09"
+      ],
+      "limitations": "Mean-path uniform-field model, no leakage or fringing. Diagrams are not physical-scale field-solver outputs."
+    },
+    {
+      "id": "A03",
+      "visual": "Unequal-area and branch networks",
+      "kind": "Original SVG geometry from supplied exercise dimensions",
+      "basis": [
+        "C11",
+        "C12",
+        "C13",
+        "C14"
+      ],
+      "limitations": "Numeric panels use the stated linear reluctance model. All source dimensions are retained; erroneous intermediate arithmetic is corrected."
+    },
+    {
+      "id": "A04",
+      "visual": "Inductance, energy and coupled coils",
+      "kind": "Original plots and diagrams calculated from cited equations",
+      "basis": [
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "limitations": "Constant linear permeability, fixed geometry, ideal linkage. Inductance ratios are not reused as standalone self-inductance."
+    },
+    {
+      "id": "A05",
+      "visual": "Saturation, hysteresis and laminations",
+      "kind": "Original qualitative teaching illustration",
+      "basis": [
+        "C20",
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "limitations": "Schematic material behavior is not manufacturer measurement, a B-H fit or a practical design guarantee."
+    }
+  ],
+  "model_manifests": {
+    "root-models.json": {
+      "title": "Root lesson models and verified scope",
+      "implementation": "chapter.html / chapter.js; original vector artwork",
+      "models": [
+        {
+          "id": "C2-R01",
+          "title": "Wire right-hand-rule view",
+          "sources": [
+            "L01",
+            "M01"
+          ],
+          "formula": "Field direction follows conventional-current right-hand rule. Ideal long wire circular field, amplitude not encoded quantitatively.",
+          "parameters": {
+            "radii_in_svg_pixels": [
+              54,
+              91,
+              128
+            ],
+            "current_direction": [
+              -1,
+              1
+            ]
+          },
+          "assumptions": [
+            "End view of a long straight wire away from ends",
+            "Circular field guide lines and arrows represent direction, not material particles",
+            "Out of page is counterclockwise; into page is clockwise"
+          ],
+          "checks": [
+            "At rightmost point, out-of-page current requires upward B; computed arrow angle is -90 deg in SVG coordinates."
+          ],
+          "parameter_origin": "Current direction follows the supplied right-hand-rule lesson. SVG circle radii and arrow spacing are drawing choices with no assigned physical length or field magnitude."
+        },
+        {
+          "id": "C2-R02",
+          "title": "Gap laboratory",
+          "sources": [
+            "L01",
+            "M01",
+            "M02"
+          ],
+          "formula": "lc=1.4-g; Rc=lc/(mu0 mur A); Rg=g/(mu0 A); Phi=Ni/(Rc+Rg); B=Phi/A; Hc=B/(mu0 mur); Hg=B/mu0 when g>0; Fk=Phi Rk",
+          "parameters": {
+            "N": 200,
+            "A_m2": 0.005,
+            "total_mean_path_m": 1.4,
+            "gap_mm_range": [
+              0,
+              20
+            ],
+            "gap_mm_default": 20,
+            "current_A_range": [
+              0,
+              10
+            ],
+            "current_A_default": 5,
+            "relative_permeability_options": [
+              500,
+              2000,
+              5000
+            ],
+            "relative_permeability_default": 2000
+          },
+          "assumptions": [
+            "Linear constant permeability, no leakage or fringing correction",
+            "Core length decreases as air gap replaces core within fixed total mean path",
+            "Fringing overlay is qualitative only and never changes numbers",
+            "At zero current flux and all MMF drops vanish; bar shows reluctance proportions only",
+            "At zero gap there is no air H value",
+            "Field opacity/width conveys relative strength with visual clipping, not calibrated magnitude",
+            "High-B notice at 1.5T is a teaching prompt to consult material data, not a universal saturation threshold"
+          ],
+          "checks": [
+            "Default Phi=0.303682228476539 mWb, B=0.060736445695308 T",
+            "Core/gap MMF=33.3494441759304 / 966.650555824070 At, sum1000 At",
+            "N=200,I=5,g=0,mur=2000 => B=1.79519580205131 T",
+            "Current0 => Phi0 and drops0; g0 => Rg0",
+            "Core-front current to right gives upward left-limb field and clockwise loop."
+          ],
+          "parameter_origin": "Reset values reproduce original Example 1.1. Slider ranges and alternative constant relative permeabilities are explicit teaching choices. The fixed total mean path is derived from the original centerline dimensions; replacing core with an adjustable gap is a declared model extension."
+        },
+        {
+          "id": "C2-R03",
+          "title": "Unequal-area series laboratory",
+          "sources": [
+            "L01",
+            "L02",
+            "M01",
+            "M02"
+          ],
+          "formula": "R1=.8/(mu0*2000*.01); R2=.7/(mu0*2000*A2); Phi=300/(R1+R2); Bk=Phi/Ak; Hk=Bk/(mu0*2000)",
+          "parameters": {
+            "horizontal_pair_mean_length_m": 0.8,
+            "vertical_pair_mean_length_m": 0.7,
+            "horizontal_area_m2": 0.01,
+            "vertical_area_cm2_range": [
+              50,
+              200
+            ],
+            "vertical_area_default_cm2": 150,
+            "N": 300,
+            "current_A": 1,
+            "mu_r": 2000
+          },
+          "assumptions": [
+            "No gap/leakage; constant permeability",
+            "Mean lengths fixed as one cross section varies; not a scaled mechanical transformation",
+            "At reset original window25x25cm, horizontal thickness10cm, vertical15cm, depth10cm"
+          ],
+          "checks": [
+            "Default Phi5.952491343644 mWb; B1=.595249134364T; B2=.396832756243T",
+            "H1=236.842105263A/m;H2=157.894736842A/m;sumH*l=300At",
+            "B1/B2=A2/A1;equal areas give equal densities"
+          ],
+          "parameter_origin": "Reset geometry and excitation reproduce original Example 1.2. The adjustable vertical cross-section range is an illustrative experiment holding mean path lengths fixed, not a mechanical scaling of the original core."
+        },
+        {
+          "id": "C2-R04",
+          "title": "Sinusoidal current, flux, terminal voltage and energy",
+          "sources": [
+            "L01",
+            "M02",
+            "M06",
+            "M12",
+            "M13"
+          ],
+          "formula": "Rc=.5/(mu0*3000*.0015);Rg=.001/(mu0*.0015);L=400^2/(Rc+Rg);i=Ipk sin(theta);v=2pi f L Ipk cos(theta);Phi=400i/R;W=.5Li²;P=vi;Wg=.5Phi²Rg",
+          "parameters": {
+            "N": 400,
+            "mu_r": 3000,
+            "core_length_m": 0.5,
+            "gap_m": 0.001,
+            "area_m2": 0.0015,
+            "frequency_Hz": 1,
+            "playback_cycle_seconds": 8,
+            "peak_current_A_range": [
+              0.2,
+              2
+            ],
+            "default_peak_current_A": 1,
+            "default_phase_deg": 45
+          },
+          "assumptions": [
+            "Uniform linear lossless material, no copper/core loss, no leakage/fringing",
+            "Core length given separately, do not subtract gap again",
+            "Current imposed by ideal source; terminal passive sign convention v=+dλ/dt, counter-emf=-dλ/dt",
+            "Waveforms normalized separately; voltage is not plotted against ampere units",
+            "Energy bar relative to selected-current peak; numerical energy changes as Ipk²",
+            "Not a material-specific saturation model; μr is the exercise assumption"
+          ],
+          "checks": [
+            "L=.258508195495389H",
+            "At theta90deg,Ipk1:Phi=.646270488738472mWb,B=.430846992492314T,W=.129254097747694J,v=0",
+            "At theta0:current/flux/energy0, voltage=2piL=1.624254895722V",
+            "Wg/W=6/7=.857142857142857 for nonzero current",
+            "Integrate vi over0..2pi gives zero; derivative W equals vi."
+          ],
+          "parameter_origin": "Core geometry and turn count reproduce original Example 1.4. A 1 Hz sinusoidal current, adjustable peak and 8-second visual playback are added teaching inputs; they are not a measured device or an original course test condition."
+        }
+      ],
+      "new_artwork": [
+        "Hero wound gapped core",
+        "Wire circles and directional arrows",
+        "Gap adjustable core and qualitative fringe overlay",
+        "Variable-area core",
+        "Inductor field diagram and normalized phase plot"
+      ],
+      "general_scope": "All vector drawings are newly implemented teaching graphics based on checked field laws. No source figure or empirical material curve was copied."
+    },
+    "networks-models.json": {
+      "title": "Chapter 2: branched magnetic circuits and coupled windings — model evidence",
+      "verified_on": "2026-11-11",
+      "sources": [
+        {
+          "id": "MIT-KIRTLEY-MAGNETIC-CIRCUITS",
+          "title": "6.685 Electric Machines: Class Notes 2, Magnetic Circuit Basics",
+          "author": "James L. Kirtley Jr., Massachusetts Institute of Technology",
+          "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/aa1c6b0cf5de1f6f8111ab1a4b39e2d3_MIT6_685F13_chapter2.pdf",
+          "checked": "PDF pp. 4–6, sections 3.1–3.4; flux continuity, Ampere loop balance, reluctance, NI source, uniform-area assumptions.",
+          "supports": [
+            "Sum of signed branch fluxes is zero",
+            "Sum of H times path length equals enclosed ampere-turns",
+            "Uniform linear segment reluctance is length divided by permeability and area",
+            "The electrical circuit is an analogy, not an identification of flux with current"
+          ],
+          "usage": "Facts and equations verified; no source figure copied. Both module diagrams are newly drawn SVGs."
+        },
+        {
+          "id": "OPENSTAX-14-1-MUTUAL",
+          "title": "University Physics, Volume 2, section 14.1: Mutual Inductance",
+          "author": "Samuel J. Ling, Jeff Sanny, William Moebs / OpenStax",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/14-1-mutual-inductance",
+          "checked": "Equations 14.1–14.5; mutual linkage is due to current in the other coil; self induction is an additional contribution.",
+          "supports": [
+            "Mutual inductance relates flux linkage of one coil to the current producing it in the other",
+            "Self and mutual induction both contribute to a coil's total linkage",
+            "Reciprocal mutual inductance for the stated linear stationary system"
+          ],
+          "usage": "Facts and equations verified; original explanatory wording and SVG. Current OpenStax webpage declares CC BY-NC-SA; no artwork or text passage reproduced."
+        },
+        {
+          "id": "RUSE-EVSTATIEV-COUPLED",
+          "title": "Lecture notes in Theory of electrical engineering: Mutually coupled inductors",
+          "author": "Boris Evstatiev, University of Ruse",
+          "url": "https://www.uni-ruse.bg/disciplines/TE/Lecture%20notes/Lectures%20notes%20Mutually%20coupled%20inductors.pdf",
+          "checked": "Section 6.1.1, PDF pp. 1–2: Figure 6.1 and derivations L_E = L1 + L2 + 2M and L_E = L1 + L2 − 2M; section 6.2 p. 6 definition k = M / sqrt(L1 L2), ideal coupling k = 1.",
+          "supports": [
+            "Series aiding and opposing dot conventions",
+            "Equivalent series inductance includes two mutual terms",
+            "Perfect coupling is an ideal limit"
+          ],
+          "usage": "Equations and conventions verified only; no figure copied. Licensing unspecified, so no assets reproduced. Scope of use excludes unrelated claims and examples in this PDF."
+        }
+      ],
+      "claims": [
+        {
+          "id": "C2N-01",
+          "section": "branches",
+          "knowledge": "At a junction Φtotal = Φ1 + Φ2. For parallel return paths, Φ1 R1 = Φ2 R2. For each complete loop, NI = Φtotal Rc + Φbranch Rbranch.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS"
+          ],
+          "classification": "Magnetostatic circuit approximation"
+        },
+        {
+          "id": "C2N-02",
+          "section": "branches",
+          "knowledge": "The equivalent reluctance is Rc + R1 R2/(R1+R2); the inverse-reluctance flux divider follows from continuity and equal branch MMF drop.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS"
+          ],
+          "classification": "Algebraic consequence of the cited network laws"
+        },
+        {
+          "id": "C2N-03",
+          "section": "branches",
+          "knowledge": "Each local B is branch flux divided by local cross section; local H = B/μ only for the assumed linear medium.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS"
+          ],
+          "classification": "Uniform-field, constant-permeability model"
+        },
+        {
+          "id": "C2N-04",
+          "section": "coupled",
+          "knowledge": "Both currents referenced into corresponding dots produce reinforcing common-path flux. Series-aiding uses B1-to-A2; series-opposing B1-to-B2 with the shown fixed physical dot positions.",
+          "sources": [
+            "RUSE-EVSTATIEV-COUPLED"
+          ],
+          "classification": "Dot and winding polarity convention"
+        },
+        {
+          "id": "C2N-05",
+          "section": "coupled",
+          "knowledge": "For a linear common path with no leakage, L1=N1²/R, L2=N2²/R and M=N1N2/R. Thus Lseries = L1+L2±2M = (N1±N2)²/R.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS",
+            "OPENSTAX-14-1-MUTUAL",
+            "RUSE-EVSTATIEV-COUPLED"
+          ],
+          "classification": "Derived from cited equations under stated perfect-coupling assumptions"
+        },
+        {
+          "id": "C2N-06",
+          "section": "coupled",
+          "knowledge": "For dotted-current references λ1 = L1 i1 + M i2 and λ2 = M i1 + L2 i2. λ1/i1 with both coils excited is generally not L1. In the series model, λseries=(N1±N2)Φ and Lseries is defined by its linear coefficient even when i=0.",
+          "sources": [
+            "OPENSTAX-14-1-MUTUAL",
+            "RUSE-EVSTATIEV-COUPLED"
+          ],
+          "classification": "Superposition and terminal linkage; corrects the source handout's overbroad λ/i instruction"
+        }
+      ],
+      "models": [
+        {
+          "id": "C2N-BRANCH",
+          "title": "Three-limb flux divider",
+          "parameters": {
+            "N_turns": 200,
+            "current_A": 1,
+            "Rc_At_per_Wb": 80000,
+            "R1_At_per_Wb": 120000,
+            "R2_At_per_Wb": {
+              "default": 240000,
+              "minimum": 60000,
+              "maximum": 600000,
+              "step": 10000
+            }
+          },
+          "parameter_origin": "Explicit illustrative teaching values chosen to expose flux division, not copied measurements or specifications of a manufactured core.",
+          "formulas": [
+            "Rp=R1*R2/(R1+R2)",
+            "Φtotal=NI/(Rc+Rp)",
+            "Fbranch=Φtotal*Rp",
+            "Φ1=Fbranch/R1",
+            "Φ2=Fbranch/R2"
+          ],
+          "assumptions": [
+            "Constant linear positive reluctances",
+            "Leakage omitted",
+            "Each return branch's reluctance includes its corresponding yoke portions",
+            "Core picture is schematic and is not used to infer physical dimensions or permeability"
+          ],
+          "checks": [
+            {
+              "case": "Default R2=240000 At/Wb",
+              "expected": {
+                "Rp": 80000,
+                "total_Wb": 0.00125,
+                "left_Wb": 0.0008333333333333334,
+                "right_Wb": 0.0004166666666666667,
+                "common_mmf_At": 100,
+                "branch_mmf_At": 100
+              }
+            },
+            {
+              "case": "Equal branches R2=120000 At/Wb",
+              "expected": {
+                "total_Wb": 0.0014285714285714286,
+                "left_Wb": 0.0007142857142857143,
+                "right_Wb": 0.0007142857142857143
+              }
+            },
+            {
+              "case": "R2=600000 At/Wb",
+              "expected": {
+                "total_Wb": 0.0011111111111111111,
+                "left_Wb": 0.0009259259259259259,
+                "right_Wb": 0.00018518518518518518,
+                "left_to_right_ratio": 5
+              }
+            },
+            "Across the slider sweep, total-left-right ≈ 0 and NI-total*Rc-branch*Rbranch ≈ 0 for each loop. Rounded node values use ≈ in the visible display."
+          ],
+          "visual_semantics": "Arrows are stationary chevrons with pulsing opacity. No material particles are drawn. Width/opacity compare flux, not physical speed or conductor current. Core center arrows point up and outer arrows point down.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS"
+          ]
+        },
+        {
+          "id": "C2N-COUPLED",
+          "title": "Series-aiding/opposing coils on a common core",
+          "parameters": {
+            "N1_turns": 350,
+            "N2_turns": 150,
+            "reluctance_At_per_Wb": 1000000,
+            "current_A": {
+              "default": 1,
+              "minimum": -2,
+              "maximum": 2,
+              "step": 0.05
+            },
+            "connection_s": [
+              1,
+              -1
+            ]
+          },
+          "parameter_origin": "Turn counts mirror the lecture's two-winding illustration; reluctance and current range are explicitly teaching values. This is not the lecture's high-flux-density numerical geometry or a measured device.",
+          "formulas": [
+            "F1=N1*i",
+            "F2=s*N2*i",
+            "Φ=(F1+F2)/R",
+            "Neff=N1+s*N2",
+            "λseries=Neff*Φ",
+            "L1=N1²/R",
+            "L2=N2²/R",
+            "M=N1*N2/R",
+            "Lseries=(N1+s*N2)²/R"
+          ],
+          "assumptions": [
+            "Linear, stationary magnetic system",
+            "A single common flux links every turn of both coils",
+            "No leakage; k=1",
+            "No winding resistance, core saturation or hysteresis",
+            "Positive series current enters A1. Dot currents are i1=i and i2=s*i",
+            "Positive common flux is clockwise in the drawing"
+          ],
+          "checks": [
+            {
+              "case": "Aiding at +1 A",
+              "expected": {
+                "F1_At": 350,
+                "F2_At": 150,
+                "net_At": 500,
+                "phi_Wb": 0.0005,
+                "lambda_Wb_turn": 0.25,
+                "L_H": 0.25
+              }
+            },
+            {
+              "case": "Opposing at +1 A",
+              "expected": {
+                "F1_At": 350,
+                "F2_At": -150,
+                "net_At": 200,
+                "phi_Wb": 0.0002,
+                "lambda_Wb_turn": 0.04,
+                "L_H": 0.04
+              }
+            },
+            {
+              "case": "Both connections",
+              "expected": {
+                "L1_H": 0.1225,
+                "L2_H": 0.0225,
+                "M_H": 0.0525,
+                "k": 1
+              }
+            },
+            "At zero current, flux/linkage and both MMFs are zero; inductance is still 250 mH or 40 mH, with no division by zero.",
+            "Reversing current reverses flux, linkage and both MMFs while leaving inductance positive and unchanged.",
+            "Series linkage equals λ1+s*λ2; Lseries equals L1+L2+2*s*M."
+          ],
+          "visual_semantics": "The physical windings and their dotted A terminals stay fixed. The circuit reverses the displayed terminal order of coil 2 when switching to opposing. Positive current entering A rises in the dashed back-side winding segment, then descends in the bright front-side segment. Downward front-side current across the horizontal top limb gives a rightward field along that limb and clockwise core flux. With x right, y up and z toward the viewer, the current circulation tangent at the front is x-hat cross z-hat = minus y-hat, consistent with the right-hand rule. Upper arrows are explicitly labeled MMF directions; the loop arrows show the net field direction. All arrows indicate directions, not field transport.",
+          "sources": [
+            "MIT-KIRTLEY-MAGNETIC-CIRCUITS",
+            "OPENSTAX-14-1-MUTUAL",
+            "RUSE-EVSTATIEV-COUPLED"
+          ]
+        }
+      ],
+      "new_artwork": [
+        {
+          "id": "C2N-ART-01",
+          "title": "Three-limb physical core and reluctance network",
+          "format": "Original inline SVG",
+          "basis": "MIT Kirtley magnetic circuit laws; topology and teaching parameters as documented above",
+          "copied_source_artwork": false
+        },
+        {
+          "id": "C2N-ART-02",
+          "title": "Two physical coils with fixed dot terminals and switched series circuit",
+          "format": "Original inline SVG",
+          "basis": "Dot convention and coupled-inductor series formula verified against Evstatiev §6.1.1",
+          "copied_source_artwork": false
+        }
+      ]
+    },
+    "materials-models.json": {
+      "section": "09 / Real magnetic materials",
+      "files": [
+        "materials.html",
+        "materials.css",
+        "materials.js"
+      ],
+      "sources": [
+        "M03",
+        "M05",
+        "M10"
+      ],
+      "curveStatus": "Original normalized schematic drawing, not measured data, not fitted to a material, and not a predictive hysteresis simulation.",
+      "initialMagnetization": {
+        "drawingParameter": "p ranges from 0 to 1",
+        "drawingCoordinates": "h=p; b=[0.92 tanh(3.2 p^2)+0.08p]/[0.92 tanh(3.2)+0.08]",
+        "physicalRole": "Qualitative first magnetization from a demagnetized state, showing diminishing response at high excitation. No units or material values are assigned."
+      },
+      "hysteresis": {
+        "drawingParameter": "p ranges from 0 to 1 along a complete illustrative major loop; t=2 pi p",
+        "drawingCoordinates": "h=-cos(t); branch=+1 for sin(t)>=0 and -1 otherwise; offset=0.34 branch (1-h^2); b=[0.92 tanh(2.5(h-offset))+0.08h]/[0.92 tanh(2.5)+0.08]",
+        "physicalRole": "Lower branch from negative to positive excitation; upper branch on return. At p=0.75, h=0 and b is positive. The negative coercive-field label is numerically located at the descending-branch zero crossing.",
+        "limits": "No predicted minor loops, actual Hc, Br, Bs, loss, temperature response, or frequency response. The phase slider traverses a specified geometric path; it does not solve arbitrary history-dependent magnetization.",
+        "shownPhysicalFormula": "The dimensional physical loop area integral H dB is energy loss per unit volume per cycle. No number is calculated from the normalized drawing."
+      },
+      "eddyCurrents": {
+        "construction": "Schematic cross section perpendicular to the main flux. Main B points into/out of the screen, parallel to sheet planes. Insulation appears as narrow gaps between vertical sheets.",
+        "solid": "Three nested schematic circulating-current paths.",
+        "laminated": "Nine separate sheet-local paths; no current crosses insulating boundaries.",
+        "excitation": "For visual timing only, main B sign follows sin(phase), current visibility follows abs(cos(phase)), and dash motion reverses with the flux derivative. No field amplitude or frequency in physical units is assigned.",
+        "limits": "No solved current density, temperature, dissipation or efficiency. Edge effects, skin effect, and interlaminar faults are not modeled."
+      },
+      "actualMaterialReference": "TDK N87 is linked as external evidence of measured material specifications and test conditions only. The animation does not represent N87.",
+      "verification": [
+        "JavaScript syntax check passed.",
+        "Headless Chrome on file:// passed desktop interaction checks and a 390px viewport overflow check.",
+        "Remanence sign and location checked at cycle phase 75%.",
+        "Global pause stops both tracer and eddy-current motion; manual slider input still works.",
+        "Desktop and mobile screenshots inspected; no clipped controls or horizontal page overflow."
+      ]
+    }
+  },
+  "optional_videos": [
+    {
+      "id": "V01",
+      "title": "Lecture 9: Magnetics, Part 1",
+      "instructor": "David Perreault",
+      "course": "MIT 6.622 Power Electronics, Spring 2023",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/resources/mit6_622s23_lecture_09_mp4/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Z4iE3aaNeTM",
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted",
+      "relevance": "Magnetic circuits, MMF, reluctance, and inductor modeling.",
+      "verification": "Official OCW page and embedded video target verified; no full playback test performed.",
+      "recommended": true
+    },
+    {
+      "id": "V02",
+      "title": "Lecture 12: Magnetics, Part 4",
+      "instructor": "David Perreault",
+      "course": "MIT 6.622 Power Electronics, Spring 2023",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/resources/mit6_622s23_lecture_12_mp4/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=cf7JLEqw8Os",
+      "license": "MIT OCW CC BY-NC-SA 4.0 except otherwise noted",
+      "relevance": "Core and winding losses; optional further study beyond the introductory magnetic-circuit model.",
+      "verification": "Official OCW page and embedded video target verified; no full playback test performed.",
+      "recommended": true
+    }
+  ],
+  "verification_notes": [
+    "All listed technical sources were opened and inspected on 2026-11-11.",
+    "No manufacturer curve was digitized or fitted.",
+    "External sources supplement, rather than replace, the supplied ELEE4710 lecture as the scope and example source.",
+    "Reference wording should distinguish mathematical derivations, illustrative exercise inputs, schematic qualitative visuals, and empirical data.",
+    "Access date follows the client environment date.",
+    "All six supplied magnetic-circuit exercises were recomputed independently from their diagram dimensions. No original textbook, lecture or manufacturer figure is copied into the newly drawn teaching visuals."
+  ],
+  "pending": []
+}

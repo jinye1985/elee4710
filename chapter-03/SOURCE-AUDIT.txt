@@ -1,0 +1,13 @@
+Chapter 03 — Review of AC Circuit Analysis
+Source: supplied AC circuits and ac power.pdf (49 pages), Jin Ye / ELEE 4710.
+
+All 49 pages were text-extracted. Image-only exercise, circuit, solution and three-phase pages were rendered for inspection. Coverage:
+3–7 complex numbers, reciprocal and polar division; 8–9 Kirchhoff laws and the two-source network; 10–16 phasors and ideal R/L/C; 17–20 series RLC exercise; 21–23 parallel RL exercise; 24–30 real/reactive/complex power; 31–37 original power examples; 38–45 positive-sequence Y/Delta networks; 46–48 power balance and system interpretation. Title, blank and closing pages add no separate knowledge point.
+
+All original numerical examples were independently recalculated in complex arithmetic, without adopting handwritten rounded answers. The original qualitative R/L/C phasor exercise is Example 4. The extra balanced Y/Delta numerical comparison is explicitly labeled a derived teaching example.
+
+Corrections are in references.json/HTML: parallel-RL magnitude/current arithmetic; negative reactive-power triangle direction; Delta line/branch-current labels; I=V/Z notation. The unsupported universal fuel-to-electricity fraction is replaced with an explicit energy-boundary principle. The LinkedIn beer illustration is not reused.
+
+Independent primary verification: MIT 6.061 Chapter 2 (complex numbers, impedance, phasors and power), Chapter 3 (polyphase networks and balanced conversion), and OpenStax University Physics 2 §15.4 (RMS and average power). All external pages were opened using the web tool on 2026-11-15. MIT's Fourier complex-amplitude notation is not substituted for this course's RMS convention.
+
+All course diagrams are original SVG teaching illustrations; no remote image is required to run the page. Graphs are evaluations of the equations shown in the knowledge panels, not experimental measurements. Source locations remain in the separate evidence companion.

@@ -1,0 +1,80 @@
+CHAPTER 06 — DC MACHINES
+Audit date: 2026-11-15
+
+DELIVERABLE
+8 sections, 7 interactive demonstrations (8 authored SVG panels), 8 worked examples.
+English-only, no inline source-location tags, no server dependency, no external media dependency.
+Theory/definition blocks explicitly labeled Knowledge Point. Large expandable Example 1–8 cards.
+Chapter6 module exports window.C06_MODELS; global COURSE_PAUSED and course-motion respected.
+
+SOURCE REVIEW
+Read the full52-page supplied DC Mahines.pdf through extracted text and rendered pages.
+Rendered all52 pages at90dpi. Contact sheets and original problem/answer pages examined.
+The opening foundations pp3–13 are allocated to Chapter5 by the course assembler.
+Construction p14 onward is fully addressed in Chapter6. Coverage map is in references.json.
+Checked official MIT OCW, OpenStax, NJIT, Northwestern University and SJCET course sources.
+No web images copied. All visual assets are native SVG derived from the declared models.
+No video is added merely to fill space; two verified university reading links are supplied.
+
+MAJOR SOURCE CORRECTIONS
+1. The averaged/radial-gap constant2rlB used in the original single-loop numerical exercise must
+   not be confused with the sinusoidal emf of one isolated coil rotating in a uniform field.
+   These models are distinguished explicitly in both text and the demonstration assumptions.
+2. Self-excited generator half-speed answer55V requires fixed flux. At fixed field resistance,
+   field current changes too; a new magnetization-curve intersection is required. The source
+   graph is insufficient to support a precise corrected self-excited numerical answer, so none
+   is invented.55.5V is shown only as a fixed-flux estimate.
+3. Maintaining1A field current at50V needs50ohm, incompatible with the given80ohm winding
+   plus a nonnegative series rheostat.500rpm result is explicitly conditional on independent
+   field excitation or an altered field circuit.
+4. Generator reference Ia6A and If1.01A is not external no-load: external output current4.99A.
+5. Generator rotational-loss arithmetic corrected to1200−100.6×6=603.6W; efficiencies updated.
+6. Motor half-current source typo0.4ohm corrected to0.1ohm; angular-speed units clarified.
+7.120A full-load armature current is an explicit exercise convention, not inferred from a
+   12kW motor-output rating and100V alone.
+8. Source instantaneous-current results neglect inductance. Exact finite-La current at t0+
+   is continuous; a separate fast electrical estimate is calculated at approximately unchanged
+   shaft speed. The field weakening example also notes finite actual field response.
+9. Added-resistor exercise wording corrected from voltage reduced to resistor inserted.
+10. All calculations retain full precision until the final displayed answer.
+
+PHYSICAL ORIENTATION AUDIT
+Commutator demo uses B along+x, positive rotation counterclockwise as viewed, conductor A
+at (r cos(theta),r sin(theta)). Therefore vA×B has z component−omega*r*B*cos(theta).
+At theta0, A motional emf points into page and B out. Positive left brush touches B. At
+theta180, A emf points out and left positive brush now touches A. Brush voltage remains
+positive, with zero at90/270degrees. Colors follow the rotor/segment pair. Dots/crosses mark
+emf direction, not assumed load current; the figure explicitly says no load current shown.
+The motor explanation separately states F=I l×B and appropriate supply polarity. Signed
+equivalent-circuit current points into the top positive armature terminal when motoring and
+reverses when generating. Positive angular speed is unchanged while electromagnetic torque
+opposes rotation in the generating case.
+Compound short shunt is connected after the series coil (series current=line current);
+long shunt is before it (series current=armature current). Separately excited loops isolated.
+
+MODEL AUDIT
+Saturating magnetization curve is explicitly illustrative: E=(n/1000)[3+120tanh(1.4If)].
+It is not a measured dataset and not digitized source graph; it cannot replace Example3 data.
+Torque-speed current ceiling100A is explicitly illustrative, not a machine nameplate claim.
+Starting graph is quasi-steady current versus speed, not a fabricated time-domain response.
+Power bars are proportional to total input and include field, armature and rotational losses.
+Rotational loss assumed constant only for the exercise models; physical dependence noted.
+
+VERIFICATION
+Node syntax check passed.
+Headless Chrome opened the fully assembled file:// chapter06 without a server.
+376 numerical checks passed: signed power identity across121 speeds, shunt motor/generator
+balances across115 currents each, source benchmark results, starting resistance, control
+step speeds and16 magnetization intersections.
+All13 input/select controls exercised at bounds / every option. No NaN, Infinity or undefined.
+All8 native SVG panels populated;135 MathJax containers; no MathJax errors or JS page errors.
+No Chinese characters in rendered body. All example cards opened successfully.
+390,1100,1440,1920px widths checked: no horizontal page overflow; max main diagram widths
+300,358.39,490,490px respectively. Mobile reading view visually inspected.
+Global motion state verified: animation advances, pauses, then resumes correctly.
+Screenshots of construction, connections, magnetization, losses and torque-speed labs inspected.
+See qa-results.json for machine-readable results and qa-*.png for screenshots.
+
+FINAL MODULE CHANGES AFTER INITIAL ASSEMBLY
+Normalize numerical negative zero in readouts; add source turn/coil/winding definitions.
+Assembler should rebuild Chapter6 from the latest content.html/chapter.js.

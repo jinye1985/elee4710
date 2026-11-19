@@ -1,0 +1,317 @@
+{
+  "sources": [
+    {
+      "id": "L03",
+      "title": "ELEE 4710 — AC circuits and ac power",
+      "author": "Jin Ye, University of Georgia, supplied 2020 course material",
+      "url": "course-lecture.pdf",
+      "checked": "2026-11-15",
+      "license": "User-supplied course material; retained for private course study. No general redistribution license asserted."
+    },
+    {
+      "id": "MIT2",
+      "title": "6.061 Class Notes Chapter 2 — AC Power Flow in Linear Networks",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/9cf8de165233601f547b284cee5c2131_MIT6_061S11_ch2.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0; original vector drawings in this chapter, no copied source figures."
+    },
+    {
+      "id": "MIT3",
+      "title": "6.061 Class Notes Chapter 3 — Polyphase Networks",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/c6393a58319200a5344752de0cf47ec4_MIT6_061S11_ch3.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0; original redrawings only."
+    },
+    {
+      "id": "OS15",
+      "title": "University Physics Volume 2, 15.4 — Power in an AC Circuit",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-4-power-in-an-ac-circuit",
+      "checked": "2026-11-15",
+      "license": "CC BY-NC-SA 4.0; no source figure copied."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C03-1",
+      "section": "c03-complex",
+      "knowledge": "Complex arithmetic, conjugates, rectangular/polar conversion and reciprocal",
+      "sources": [
+        "L03",
+        "MIT2"
+      ],
+      "scope": "Supplied lecture PDF pages 3–7. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-2",
+      "section": "c03-kirchhoff",
+      "knowledge": "KCL/KVL signed node/loop balance and original network",
+      "sources": [
+        "L03"
+      ],
+      "scope": "Supplied lecture PDF pages 8–9. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-3",
+      "section": "c03-phasors",
+      "knowledge": "RMS cosine phasors, sinusoidal time functions and ideal element phase relations",
+      "sources": [
+        "L03",
+        "MIT2",
+        "OS15"
+      ],
+      "scope": "Supplied lecture PDF pages 10–16. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-4",
+      "section": "c03-series",
+      "knowledge": "RLC impedances, series combination, current division by impedance and derived resonance condition",
+      "sources": [
+        "L03",
+        "MIT2"
+      ],
+      "scope": "Supplied lecture PDF pages 11–20. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-5",
+      "section": "c03-parallel",
+      "knowledge": "Admittance, branch-current addition and parallel RL exercise",
+      "sources": [
+        "L03",
+        "MIT2"
+      ],
+      "scope": "Supplied lecture PDF pages 12,21–23. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-6",
+      "section": "c03-power",
+      "knowledge": "Instantaneous, real, reactive, apparent and complex power, passive signs and sinusoidal PF",
+      "sources": [
+        "L03",
+        "MIT2",
+        "OS15"
+      ],
+      "scope": "Supplied lecture PDF pages 24–37. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-7",
+      "section": "c03-threephase",
+      "knowledge": "Positive sequence, Y/Delta line/branch relations, balanced power and equivalent load conversion",
+      "sources": [
+        "L03",
+        "MIT3"
+      ],
+      "scope": "Supplied lecture PDF pages 38–45. Numerical illustrative parameters are identified in the page."
+    },
+    {
+      "id": "C03-8",
+      "section": "c03-system",
+      "knowledge": "Real-power balance, efficiency, one-line interpretation and derived 3I²R loss model",
+      "sources": [
+        "L03",
+        "MIT3"
+      ],
+      "scope": "Supplied lecture PDF pages 46–48. Numerical illustrative parameters are identified in the page."
+    }
+  ],
+  "models": [
+    {
+      "id": "complex",
+      "title": "Complex vector operations",
+      "formula": "x=m cosθ; y=m sinθ; reciprocal=conjugate/|z|²",
+      "parameters": "|z1|=.2..2; |z2|=.8",
+      "assumptions": "Dimensionless; nonzero denominator",
+      "checks": "z*(1/z)=1",
+      "sources": [
+        "L03",
+        "MIT2"
+      ]
+    },
+    {
+      "id": "node",
+      "title": "Two-source node",
+      "formula": "Vn=(U1/R1+U2/R2)/(1/R1+1/R2+1/R3)",
+      "parameters": "U1=5000V,R1=2000Ω,R2=1000Ω",
+      "assumptions": "Ideal DC circuit",
+      "checks": "i1+i2-i3=0, default currents .2941176,.5882353,.8823529A",
+      "sources": [
+        "L03"
+      ]
+    },
+    {
+      "id": "phasor",
+      "title": "Sinusoidal phasor projection",
+      "formula": "v=√2 Vcosθ; i=√2 Icos(θ−φ)",
+      "parameters": "V=120V,I=5A,f=60Hz",
+      "assumptions": "RMS sinusoidal steady state; slowed playback",
+      "checks": "Peak/RMS ratio√2; pure L current lags90°",
+      "sources": [
+        "L03",
+        "OS15"
+      ]
+    },
+    {
+      "id": "series",
+      "title": "Series RLC",
+      "formula": "Z=R+j(ωL−1/ωC); I=V/Z",
+      "parameters": "V=50∠30°,L=.02H,C=50μF",
+      "assumptions": "Linear ideal sinusoidal model",
+      "checks": "400Hz Z=25+j42.3077353; f0=159.154943Hz",
+      "sources": [
+        "L03",
+        "MIT2"
+      ]
+    },
+    {
+      "id": "parallel",
+      "title": "Parallel RL",
+      "formula": "Y=1/R+1/(jωL); Z=1/Y",
+      "parameters": "R=25Ω,L=.02H,V=50∠30°",
+      "assumptions": "No capacitor; voltage same across branches",
+      "checks": "60Hz |I|=6.926485991A, Zmag=7.21866760Ω",
+      "sources": [
+        "L03",
+        "MIT2"
+      ]
+    },
+    {
+      "id": "power",
+      "title": "Complex and instantaneous power",
+      "formula": "S=VI*; p=VI[cosφ+cos(2θ−φ)]",
+      "parameters": "V=120V,I=5A",
+      "assumptions": "Passive sinusoidal load",
+      "checks": "P²+Q²=|S|²; numerical cycle meanp=P",
+      "sources": [
+        "L03",
+        "OS15"
+      ]
+    },
+    {
+      "id": "three",
+      "title": "Balanced three-phase loads",
+      "formula": "Vph=VL/√3(Y) or VL(Delta); IL=Iph(Y) or√3Iph(Delta)",
+      "parameters": "|Z|=20Ω",
+      "assumptions": "Balanced positive sequence, same physical Z each connection",
+      "checks": "sumv=0; sump=3VphIphcosφ; Pdelta=3Py",
+      "sources": [
+        "L03",
+        "MIT3"
+      ]
+    },
+    {
+      "id": "system",
+      "title": "One-line current and losses",
+      "formula": "IL=P/(√3VLPF); loss=3IL²R",
+      "parameters": "100kW,400V,.05Ω/line",
+      "assumptions": "Fixed receiving voltage; conductor loss only",
+      "checks": "Pin=Pout+loss; PF1 loss3125W",
+      "sources": [
+        "L03",
+        "MIT3"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "E03-1",
+      "title": "Reciprocal",
+      "given": "1/(1+j)",
+      "result": "0.5−j0.5",
+      "source": "L03 p5",
+      "verification": "Multiply by denominator;1exact"
+    },
+    {
+      "id": "E03-2",
+      "title": "Polar division",
+      "given": "50∠30/(25−j45.51)",
+      "result": "0.9629354285∠91.2186953°",
+      "source": "L03 pp6–7",
+      "verification": "Python complex division; no units specified"
+    },
+    {
+      "id": "E03-3",
+      "title": "Two-source node",
+      "given": "5000V each;2kΩ,1kΩ,5kΩ",
+      "result": "Vn4411.7647059V; currents.2941176471,.5882352941,.8823529412A",
+      "source": "L03 p9",
+      "verification": "Nodal balance and both KVL equations"
+    },
+    {
+      "id": "E03-4",
+      "title": "Ideal element phasors",
+      "given": "R,L,C with common current reference",
+      "result": "V angles0,+90,−90°",
+      "source": "L03 pp14–16",
+      "verification": "Derivatives of sinusoidal current/voltage"
+    },
+    {
+      "id": "E03-5",
+      "title": "Series400Hz",
+      "given": "50∠30V;25Ω;20mH;50μF",
+      "result": "I1.017457858∠−29.42079863A",
+      "source": "L03 pp17–19",
+      "verification": "Independent Python full precision, I*Z=V"
+    },
+    {
+      "id": "E03-6",
+      "title": "Parallel RL",
+      "given": "60Hz;50∠30V;25Ω||20mH",
+      "result": "Z2.084366477+j6.911192249Ω;I6.926485991∠−43.21706211A",
+      "source": "L03 pp21–22",
+      "verification": "Branch KCL; corrected source magnitude arithmetic"
+    },
+    {
+      "id": "E03-7",
+      "title": "Series60Hz power",
+      "given": "50∠30V;25Ω,20mH,50μF",
+      "result": "P23.17968759W,Q−42.19799571var,|S|48.14528803VA",
+      "source": "L03 pp31–33",
+      "verification": "S=VI*=|I|²Z; corrected triangle orientation"
+    },
+    {
+      "id": "E03-8",
+      "title": "Complex load",
+      "given": "V120∠0,Z20∠−30",
+      "result": "I6∠30A;P623.5382907W,Q−360var",
+      "source": "L03 pp34–36",
+      "verification": "S720∠−30VA"
+    },
+    {
+      "id": "E03-9",
+      "title": "Y/Delta comparison",
+      "given": "400V line;20∠30Ω per branch",
+      "result": "Y P6928.20323W;DeltaP20784.60969W",
+      "source": "Derived from L03 pp38–45;MIT3",
+      "verification": "Two independent formulas3VphIphcosφ and√3VLILcosφ"
+    }
+  ],
+  "errata": [
+    {
+      "source": "L03 p22",
+      "issue": "Handwriting converts2.08+j6.91 to7.7Ω and current6.5A.",
+      "correction": "Full precision magnitude7.2186676Ω; current6.926486A. The argument is73.2171°."
+    },
+    {
+      "source": "L03 p33",
+      "issue": "Numerical Q is negative, but hand-drawn triangle extends upward.",
+      "correction": "Capacitive Q leg must point below the real axis."
+    },
+    {
+      "source": "L03 pp44–45",
+      "issue": "Delta line/branch labels and magnitude relation are interchanged.",
+      "correction": "With branch currents Iab,Ibc,Ica and lineIa into nodea: Ia=Iab−Ica and |Ia|=√3|Iab| for a balanced set."
+    },
+    {
+      "source": "L03 p19",
+      "issue": "Current equation handwriting uses V/R while denominator is complex impedance.",
+      "correction": "Use I=V/Z."
+    },
+    {
+      "source": "L03 p48",
+      "issue": "One-third fuel-to-customer energy statement lacks system/year/technology boundary.",
+      "correction": "Do not present as universal/current fact; teach explicit boundary and energy balance instead."
+    }
+  ]
+}

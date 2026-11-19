@@ -1,0 +1,33 @@
+{
+  "course": "IPEM Lab | ELEE 4710",
+  "verified_on": "2026-11-15",
+  "transport": "Direct file:// browser opening",
+  "chapters": 8,
+  "sections": 65,
+  "interactive_labs": 53,
+  "worked_example_panels": 43,
+  "viewports": [
+    390,
+    1100,
+    1440,
+    1920
+  ],
+  "passed": true,
+  "checks": [
+    "All eight chapters linked from the course index; previous/next/home navigation resolves.",
+    "Every internal relative link and HTML anchor resolves; no duplicate HTML IDs.",
+    "All chapter initial states have finite readouts; controls, presets and automatic motion were exercised.",
+    "No page overflow at the four checked viewport widths.",
+    "MathJax renders offline without error; zero HTTP requests while opening lesson content.",
+    "English-only visible lesson text; IPEM Lab is present in every chapter header/footer.",
+    "Knowledge labels persist after dynamic updates; calculation and demonstration regions are separated.",
+    "Primary source checks, original exercise recomputation, model assumptions and source corrections recorded in each reference companion.",
+    "Independent mathematical verification includes conservation laws, complex arithmetic, limiting cases, coenergy finite differences and closed-form comparisons of numerical trajectories.",
+    "PNG export checked visually at scrolled chapter locations, with annotation alignment and readable equations."
+  ],
+  "limitations": [
+    "Interactive results use the stated idealizations and selected parameters. They are not measured material or machine data.",
+    "External reference/video destinations require internet access when visited.",
+    "Browser-local annotation persistence can vary by browser profile and local-file storage behavior."
+  ]
+}

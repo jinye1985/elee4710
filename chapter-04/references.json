@@ -1,0 +1,429 @@
+{
+  "chapter": 4,
+  "title": "Transformers",
+  "sources": [
+    {
+      "id": "L04",
+      "title": "ELEE 4710 — Transformers (38-page course lecture)",
+      "author": "User-provided ELEE 4710 course material; authorship not identified in the file",
+      "url": "course-lecture.pdf",
+      "checked": "2026-11-15; all 38 pages extracted; calculation and figure pages visually inspected",
+      "license": "User-supplied study source. No public reuse license asserted. Original slide artwork is not redistributed in the chapter.",
+      "file": "Transformers.pdf"
+    },
+    {
+      "id": "O15",
+      "title": "University Physics Volume 2, §15.6: Transformers",
+      "author": "Samuel J. Ling, William Moebs and Jeff Sanny; OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers",
+      "checked": "2026-11-15; voltage/current ratios, power conservation, transmission-loss motivation and current license footer read",
+      "license": "Current page states CC BY-NC-SA (footer dated June 11, 2026); used as independent factual verification and linked further reading. No source prose, illustrations or exercises reproduced."
+    },
+    {
+      "id": "M03",
+      "title": "6.061 Class Notes, Chapter 3: Polyphase Networks, §5 Transformers, pp. 11–12",
+      "author": "James L. Kirtley Jr.; MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/c6393a58319200a5344752de0cf47ec4_MIT6_061S11_ch3.pdf",
+      "checked": "2026-11-15; equations 33–36 and Figure 14 reference directions checked",
+      "license": "MIT OpenCourseWare CC BY-NC-SA; independent verification of standard circuit relations. No original figure is copied."
+    },
+    {
+      "id": "M06",
+      "title": "6.061 Class Notes, Chapter 6: Magnetic Circuit Analog to Electric Circuits",
+      "author": "James L. Kirtley Jr.; MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/b0be7bc0996b1a78e25504a32819cb6f_MIT6_061S11_ch6.pdf",
+      "checked": "2026-11-15; primary-source supplementary magnetic-circuit reading inspected",
+      "license": "MIT OpenCourseWare CC BY-NC-SA; linked source only; no copied figures."
+    },
+    {
+      "id": "EAT",
+      "title": "Distribution Transformers: Mineral Oil-Immersed, Self-Cooled, 60 Hertz Voltages and Connections, TC202001EN, pp. 3–4",
+      "author": "Eaton / Cooper Power series",
+      "url": "https://www.eaton.com/content/dam/eaton/products/medium-voltage-power-distribution-control-systems/cooper-power-series-transformers/distribution-transformers-mineral-oil-immersed-self-cooled-60-hertz-voltages-and-connections-information-tc202001en.pdf",
+      "checked": "2026-11-15; polarity and parallel-connection guidance checked",
+      "license": "Manufacturer copyright; linked and used for factual verification. No copyrighted illustrations reproduced."
+    }
+  ],
+  "claims": [
+    {
+      "id": "c04-K01",
+      "section": "c04-induction",
+      "knowledge": "Transformer purpose; primary/secondary; shared flux; ideal assumptions; frequency unchanged",
+      "sources": [
+        "L04",
+        "O15"
+      ],
+      "scope": "L04 pp. 2–7, 16; sinusoidal steady state"
+    },
+    {
+      "id": "c04-K02",
+      "section": "c04-induction",
+      "knowledge": "Faraday/Lenz law; passive voltage vs induced-EMF sign; derivative relationship and 90-degree flux/voltage relation",
+      "sources": [
+        "L04",
+        "M06"
+      ],
+      "scope": "L04 pp. 3–6; sinusoidal flux derivative independently calculated"
+    },
+    {
+      "id": "c04-K03",
+      "section": "c04-induction",
+      "knowledge": "Steady DC cannot sustain normal transformer action; higher voltage reduces I-squared-R line loss for fixed power and PF",
+      "sources": [
+        "L04",
+        "O15"
+      ],
+      "scope": "Faraday derivative from L04 pp. 3–6; transmission motivation checked against OpenStax. DC saturation is explicitly outside animation model."
+    },
+    {
+      "id": "c04-K04",
+      "section": "c04-ideal",
+      "knowledge": "Turns/voltage/current ratios; dot-reference current sign; conservation of complex power; step-up/down",
+      "sources": [
+        "L04",
+        "M03",
+        "O15"
+      ],
+      "scope": "L04 pp. 6–7; MIT equations 33–35, currents reconciled with entering/leaving-dot references"
+    },
+    {
+      "id": "c04-K05",
+      "section": "c04-ideal",
+      "knowledge": "Referring voltage, current and impedance; square turns-ratio impedance rule",
+      "sources": [
+        "L04",
+        "M03"
+      ],
+      "scope": "L04 pp. 8, 18–19; MIT equation 36"
+    },
+    {
+      "id": "c04-K06",
+      "section": "c04-matching",
+      "knowledge": "Resistive source maximum power transfer; optimum reflected resistance; 50-percent source-to-load efficiency at matching",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 9–11; analytical derivation from given resistive equivalent circuit, derivative of load-power expression"
+    },
+    {
+      "id": "c04-K07",
+      "section": "c04-ac-loads",
+      "knowledge": "RMS phasors, inductive/capacitive current angles, complex power and input PF preservation",
+      "sources": [
+        "L04",
+        "M03"
+      ],
+      "scope": "L04 pp. 12–15; direct recalculation of all three original cases"
+    },
+    {
+      "id": "c04-K08",
+      "section": "c04-practical",
+      "knowledge": "Copper loss, leakage reactance, core-loss resistance, magnetizing reactance, placement of exact excitation branch and laminations",
+      "sources": [
+        "L04",
+        "M06"
+      ],
+      "scope": "L04 pp. 16–19; steady-state lumped equivalent circuit"
+    },
+    {
+      "id": "c04-K09",
+      "section": "c04-practical",
+      "knowledge": "Primary-/HV-referred equivalent resistance/reactance; excitation branch approximation",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 18–19; assumes excitation current small relative to load current"
+    },
+    {
+      "id": "c04-K10",
+      "section": "c04-practical",
+      "knowledge": "Operating-point limitations; real vs reactive elements; omitted nonlinear/thermal/frequency behavior",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 16–21 and explicit boundaries of the constant-parameter sinusoidal model, not new empirical claims"
+    },
+    {
+      "id": "c04-K11",
+      "section": "c04-tests",
+      "knowledge": "Open-circuit assumptions and extraction of Rc/Xm from rms V,I,P; phasor rather than scalar current subtraction",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 20, 22–24; independent current triangle and real power calculations"
+    },
+    {
+      "id": "c04-K12",
+      "section": "c04-tests",
+      "knowledge": "Short-circuit assumptions and Req/Zeq/Xeq extraction; admissible P<=VI",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 21–25; algebraic verification against original test readings"
+    },
+    {
+      "id": "c04-K13",
+      "section": "c04-polarity",
+      "knowledge": "Dot convention and reversed winding reference; parallel compatibility includes polarity and matching magnitude",
+      "sources": [
+        "L04",
+        "EAT",
+        "M03"
+      ],
+      "scope": "L04 p. 28; Eaton pp. 3–4; only single-phase polarity compatibility discussed"
+    },
+    {
+      "id": "c04-K14",
+      "section": "c04-polarity",
+      "knowledge": "Open-terminal comparison gives 0 V for equal in-phase sources, 440 V for opposing 220 V sources; circulating-current implication",
+      "sources": [
+        "L04",
+        "EAT"
+      ],
+      "scope": "L04 p. 28 diagram; arithmetic derived from two equal 220 V source phasors, no fault-current magnitude asserted"
+    },
+    {
+      "id": "c04-K15",
+      "section": "c04-regulation",
+      "knowledge": "Loaded-denominator voltage regulation definition; complete approximate-circuit phasor sum",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 29–33; each load comparison holds supply fixed between loaded/unloaded states"
+    },
+    {
+      "id": "c04-K16",
+      "section": "c04-regulation",
+      "knowledge": "First-order lagging/leading regulation formula and possibility of negative regulation",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 30–33; first-order formula independently derived from real part of I(Req+jXeq)"
+    },
+    {
+      "id": "c04-K17",
+      "section": "c04-efficiency",
+      "knowledge": "Real output, fixed core loss, quadratic copper loss and efficiency in the stated model",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 pp. 34–37; current and resistance use same referred side"
+    },
+    {
+      "id": "c04-K18",
+      "section": "c04-efficiency",
+      "knowledge": "Maximum efficiency at equal copper/core losses; optimum current fraction and PF dependence",
+      "sources": [
+        "L04"
+      ],
+      "scope": "L04 p. 34; differentiated eta(k) at fixed nonzero PF, voltage and frequency"
+    },
+    {
+      "id": "c04-K19",
+      "section": "c04-review",
+      "knowledge": "Solution workflow and five review answers",
+      "sources": [
+        "L04",
+        "M03"
+      ],
+      "scope": "Synthesis of the sourced laws and calculations above; 2:1 12-ohm review result derived using a^2 R"
+    }
+  ],
+  "models": [
+    {
+      "id": "c04-flux",
+      "title": "Common flux and induced voltage",
+      "formula": "Phi/Phi_peak = sin(theta); v1/v1_peak = cos(theta); v2/v1_peak = (N2/N1) cos(theta)",
+      "parameters": "N2/N1 = 0.5..2; phase = 0..360 deg",
+      "assumptions": "Ideal coupling, no saturation/leakage, sinusoidal flux, arbitrary normalized amplitude; animation speed is illustrative. Symbolic winding loops are not exact turn counts.",
+      "checks": "Derivative of sin is cos; voltage zero at flux extrema; secondary/primary ratio remains N2/N1.",
+      "sources": [
+        "L04",
+        "O15"
+      ]
+    },
+    {
+      "id": "c04-ideal",
+      "title": "Ideal transformer with resistive load",
+      "formula": "a=N1/N2; V2=120/a; I2=V2/R; I1=I2/a; Zin=a^2R; P=V2I2",
+      "parameters": "a = 0.25..3; R = 10..120 ohm",
+      "assumptions": "Ideal, sinusoidal 120 V rms, resistive load, no physical current/thermal rating asserted.",
+      "checks": "V1I1=V2I2, V1/I1=a^2R across full range. Course point a=0.5,R=40 -> V2=240,I2=6,I1=12,P=1440.",
+      "sources": [
+        "L04",
+        "M03"
+      ]
+    },
+    {
+      "id": "c04-match",
+      "title": "Speaker matching and source power budget",
+      "formula": "n=N2/N1; Zin=9/n^2; I1=10/(1+Zin); Pload=I1^2Zin; Ploss=I1^2; n_opt=3",
+      "parameters": "n = 0.5..6; source 10 V rms and 1 ohm internal; speaker 9 ohm",
+      "assumptions": "Single-frequency resistive speaker approximation, ideal transformer; no acoustical output power assertion.",
+      "checks": "Direct-equivalent n=1 ->9 W; matched n=3 ->25 W; source watts equal load plus internal loss.",
+      "sources": [
+        "L04"
+      ]
+    },
+    {
+      "id": "c04-ac",
+      "title": "Complex loads and their current/power phasors",
+      "formula": "V2=100 rms; Z=50+jX; I2=V2/Z; I1=2I2; S=V2 conjugate(I2)",
+      "parameters": "X=0,+50,-50 ohm",
+      "assumptions": "Ideal 100:200 transformer. Phasor current and voltage have distinct visual scales, normalized waveform peaks; RMS calculations are exact.",
+      "checks": "R:200+j0 VA; RL:100+j100 VA; RC:100-j100 VA; input/output complex power equal.",
+      "sources": [
+        "L04",
+        "M03"
+      ]
+    },
+    {
+      "id": "c04-equiv",
+      "title": "Approximate equivalent circuit and reference-side change",
+      "formula": "Z_LV=Z_HV/a^2; a=10",
+      "parameters": "HV R=10.4,X=31.3,Rc=48400,Xm=8940 ohm",
+      "assumptions": "Rounded source example values; excitation branch moved to input. Referring a circuit does not physically move a winding.",
+      "checks": "All LV impedances exactly 1/100 HV; rated V^2/Rc=100 W on both sides.",
+      "sources": [
+        "L04"
+      ]
+    },
+    {
+      "id": "c04-test",
+      "title": "OC/SC parameter extraction with explicitly illustrative scaling",
+      "formula": "OC Rc=V^2/P,Ic=P/V,Im=sqrt(I^2-Ic^2),Xm=V/Im; SC R=P/I^2,Z=V/I,X=sqrt(Z^2-R^2)",
+      "parameters": "OC:220 V,2.5 A,100 W LV; SC:150 V,4.55 A,215 W HV; demonstration scaling 0.5..1",
+      "assumptions": "Original data at100%; V and I scale by k, P by k^2 at other settings, which are calculated, not measured. Positive power and P<=VI.",
+      "checks": "OC Rc_L=484,Xm_L=89.4916316577; SC R_H=10.3852191764,X_H=31.2885360045. Scaling and side-referring preserve recovered constants consistently.",
+      "sources": [
+        "L04"
+      ]
+    },
+    {
+      "id": "c04-polarity",
+      "title": "Open-terminal comparison of two equal secondary voltages",
+      "formula": "V_difference=|220 - s*220|; s=+1 same,-1 reversed",
+      "parameters": "Two 220 V rms sources; lower terminals joined, upper connection open",
+      "assumptions": "Equal frequency/magnitude ideal sources and high-impedance voltmeter. Only voltage compatibility tested; no prospective current prediction.",
+      "checks": "Same0 V, reversed440 V.",
+      "sources": [
+        "L04",
+        "EAT"
+      ]
+    },
+    {
+      "id": "c04-reg",
+      "title": "Regulation from the complete series-drop phasor",
+      "formula": "I=k(10000/2200)(PF +/- j sqrt(1-PF^2)); E=2200+I(10.4+j31.3); VR=(|E|-2200)/2200*100",
+      "parameters": "k=0..1; PF=0.2..1; plus current-imaginary for leading, minus for lagging",
+      "assumptions": "All values HV-referred, loaded voltage fixed2200V to solve required supply, no-load voltage approximated by E; source held fixed for each loaded/unloaded comparison. Excitation current omitted.",
+      "checks": "k=.75,PF=.6 -> +4.8596354678% lagging / -2.8224458286% leading; k0 ->0; leading/lagging coincide at unityPF.",
+      "sources": [
+        "L04"
+      ]
+    },
+    {
+      "id": "c04-eff",
+      "title": "Loss-based efficiency curve and optimum current fraction",
+      "formula": "PcuN=(10000/2200)^2*10.4; Pout=k10000PF; eta=Pout/(Pout+100+k^2PcuN); kopt=sqrt(100/PcuN)",
+      "parameters": "k=0..1; PF=0.2..1",
+      "assumptions": "Constant rated voltage/frequency and core loss; fixed winding resistance, no thermal/stray/excitation copper-loss correction. Curve calculated, not measured.",
+      "checks": "PcuN=214.8760330579 W; eta(.75,.6)=95.3214582695%; kopt=.68219104024; atopt Pcu=Pc=100W; no-load eta0.",
+      "sources": [
+        "L04"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "c04-E01",
+      "title": "Ideal120 V50:100turn transformer40-ohm load",
+      "given": "V1=120 Vrms,N1=50,N2=100,Rload40ohm",
+      "result": "a.5; V2=240V; I1=12A; I2=6A; reflected10ohm; P1440W",
+      "source": "L04 p.8",
+      "verification": "Direct RMS Ohm law, turns ratios and P1=P2."
+    },
+    {
+      "id": "c04-E02",
+      "title": "Speaker impedance matching",
+      "given": "10Vrms source,1ohm internal resistance,9ohm speaker; transformer1:3",
+      "result": "Direct9W; matched25W; matched source loss25W, primary5Vrms,secondary15Vrms,secondary current5/3A",
+      "source": "L04 pp.9–11",
+      "verification": "Independent Thevenin circuit solution and power budget50=25+25W; derivative maximizes at reflected1ohm."
+    },
+    {
+      "id": "c04-E03",
+      "title": "Three complex-load cases",
+      "given": "v1=50sqrt(2)cos(wt),N1=100,N2=200; loads50,50+j50,50-j50ohm",
+      "result": "V2rms100; currents/powers tabulated in chapter:200W unityPF,100+j100VA,100-j100VA",
+      "source": "L04 pp.12–15",
+      "verification": "Complex division, complex-power multiplication and RMS/peak conversion independently checked."
+    },
+    {
+      "id": "c04-E04",
+      "title": "OC/SC equivalent parameters",
+      "given": "10kVA2200:220V60Hz; OC LV220V2.5A100W; SC HV150V4.55A215W",
+      "result": "HV Rc48400ohm,Xm8949.16316577ohm,Req10.3852191764ohm,Xeq31.2885360045ohm",
+      "source": "L04 pp.22–25",
+      "verification": "Recomputed from raw readings without early rounding; reconstructed meter readings and parameter-side conversion."
+    },
+    {
+      "id": "c04-E05",
+      "title": "75% current and0.6PF regulation",
+      "given": "Loaded HV2200V; I=.75*(10000/2200)A; Req10.4ohm,Xeq31.3ohm",
+      "result": "Lag E2306.911980V,VR4.859635%; lead E2137.906192V,VR-2.822446%",
+      "source": "L04 pp.30–33",
+      "verification": "Recomputed complex phasor sums with exact rated current and stated rounded circuit values; source rounded result agrees4.86%/-2.82%."
+    },
+    {
+      "id": "c04-E06",
+      "title": "Efficiency at75% and0.6PF",
+      "given": "10kVA;Pc100W;ReqHV10.4ohm;ratedHV2200V",
+      "result": "Pout4500W; Pcu120.8677686W; eta95.3214583%; derived optimum68.2191040% current",
+      "source": "L04 pp.34–37",
+      "verification": "Power balance and differentiating eta(k). Optimum extension explicitly calculated, not measured."
+    }
+  ],
+  "errata": [
+    {
+      "source": "L04 pp.14–15",
+      "issue": "Reactive power is labeled S in places; rms numerical values are used despite m subscripts; early-rounded reactive-case power is shown as99.7W/var.",
+      "resolution": "Use S=P+jQ, |S| in VA, P in W and Q in var, with explicit rms phasors. Exact given loads yield P100W and Q=+/-100var. Instantaneous currents are reconstructed with sqrt(2) times rms magnitude."
+    },
+    {
+      "source": "L04 p.25",
+      "issue": "Printed SC relation appears as Zeq=V1/R1.",
+      "resolution": "Corrected to Zeq=Vsc/Isc, dimensions ohms. R=V/R has current units and cannot be impedance."
+    },
+    {
+      "source": "L04 pp.3,6",
+      "issue": "Both negative induced-EMF and positive terminal-voltage derivative forms appear without a complete reference explanation.",
+      "resolution": "Body distinguishes induced loop EMF -dλ/dt from passive winding terminal voltage +dλ/dt."
+    },
+    {
+      "source": "L04 p.20",
+      "issue": "The OC current subtraction is a phasor relationship; an ambiguous scalar subtraction is shown/questioned.",
+      "resolution": "Use Im=sqrt(Ioc²-Ic²) for orthogonal component magnitudes."
+    },
+    {
+      "source": "L04 p.24",
+      "issue": "Rounding Ic,H to0.045 A and Im,H to0.246 A gives Xm,H≈8940ohm.",
+      "resolution": "Full precision raw-data result8949.163ohm in extraction; circuit inspector uses supplied rounded8940ohm clearly labeled as a chosen parameter set."
+    },
+    {
+      "source": "L04 pp.30–33",
+      "issue": "Loaded2200V held as reference; the lagging and leading cases solve different primary supply magnitudes.",
+      "resolution": "Do not imply both loaded cases use a common2200V primary. Each regulation comparison holds its separately computed primary supply fixed while unloading."
+    },
+    {
+      "source": "L04 pp.22,32,37",
+      "issue": "Measured SC4.55A is rounded and is not exactly the nameplate rated current10000/2200=4.5454545A.",
+      "resolution": "Extraction preserves measured4.55A; loading examples use exact rated current with stated rounded series parameters. Result differences are rounding only."
+    }
+  ],
+  "media": {
+    "artwork": "All SVG engineering diagrams and plots newly drawn from the cited laws and stated parameters; no external images copied.",
+    "animation": "Common-flux animation, normalized sinusoidal waveforms; all other controls update the physical models interactively.",
+    "video": "None added: no suitable additional openly licensed video was necessary for full lecture coverage."
+  }
+}

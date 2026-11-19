@@ -1,0 +1,593 @@
+{
+  "chapter": 6,
+  "title": "DC Machines",
+  "checked": "2026-11-15",
+  "sources": [
+    {
+      "id": "C06-S01",
+      "title": "ELEE 4710 · DC Machines (52-slide course lecture)",
+      "author": "User-supplied ELEE 4710 Spring 2020 course materials; instructor attribution not printed in the supplied extract",
+      "url": "course-lecture.pdf",
+      "file": "DC Mahines.pdf",
+      "checked": "2026-11-15",
+      "license": "User-provided teaching material. Original diagrams are not redistributed; native HTML/SVG illustrations are independently redrawn."
+    },
+    {
+      "id": "C06-S02",
+      "title": "6.061 Class Notes, Chapter 11: DC (Commutator) and Permanent Magnet Machines",
+      "author": "James L. Kirtley Jr., Massachusetts Institute of Technology",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/22956cb93817f9edabecd0731b51dd1b_MIT6_061S11_ch11.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA; consulted for equations and physical explanations. No external figures copied."
+    },
+    {
+      "id": "C06-S03",
+      "title": "University Physics Volume 2, 13.6 Electric Generators and Back Emf",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-6-electric-generators-and-back-emf",
+      "checked": "2026-11-15",
+      "license": "Current OpenStax page: CC BY-NC-SA 4.0; consulted for fact verification, no source prose or figures reproduced."
+    },
+    {
+      "id": "C06-S04",
+      "title": "University Physics Volume 2, 11.5 Force and Torque on a Current Loop",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/11-5-force-and-torque-on-a-current-loop",
+      "checked": "2026-11-15",
+      "license": "Current OpenStax page: CC BY-NC-SA 4.0; consulted for fact verification, no source prose or figures reproduced."
+    },
+    {
+      "id": "C06-S05",
+      "title": "ECE 342 Experiment 8: Load Test of DC Generator",
+      "author": "New Jersey Institute of Technology, ECE Undergraduate Laboratories",
+      "url": "https://ecelabs.njit.edu/ece342/lab8.php",
+      "checked": "2026-11-15",
+      "license": "Public university laboratory manual; no explicit open license relied on. Link and factual cross-check only."
+    },
+    {
+      "id": "C06-S06",
+      "title": "Brushed DC Motor Theory",
+      "author": "Northwestern University Mechatronics Wiki",
+      "url": "https://hades.mech.northwestern.edu/index.php/Brushed_DC_Motor_Theory",
+      "checked": "2026-11-15",
+      "license": "University instructional resource; no external images copied. Link and equation cross-check only."
+    },
+    {
+      "id": "C06-S07",
+      "title": "DC Machines and Transformers · armature winding and machine equations",
+      "author": "St. Joseph’s College of Engineering and Technology, EEE Department; Dr. K. Chithambaraiah Setty",
+      "url": "https://sjcet.ac.in/uploads/deptcourse/19022024-DC%20MACHINES%20AND%20TRANSFORMER.pdf",
+      "checked": "2026-11-15",
+      "license": "University-hosted course notes; no explicit reuse permission assumed. Facts and equation cross-check only."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C06-K01",
+      "section": "c06-construction",
+      "knowledge": "Stator field, rotating armature, commutator, brushes and shaft; coil polarity reversal and pulsating DC at the brushes.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S03"
+      ],
+      "scope": "Conventional brushed DC machine. Demo is an ideal single uniform-field coil; practical distributed windings reduce ripple.",
+      "lecture_pages": [
+        14,
+        15,
+        21,
+        22
+      ]
+    },
+    {
+      "id": "C06-K02",
+      "section": "c06-construction",
+      "knowledge": "Conductor force I l cross B; motional emf integral of v cross B; commutation keeps motor torque unidirectional; one coil has dead points.",
+      "sources": [
+        "C06-S01",
+        "C06-S03",
+        "C06-S04"
+      ],
+      "scope": "Field orientation and vector direction explicitly defined. Commutation intervals and load current are omitted in the generator drawing.",
+      "lecture_pages": [
+        4,
+        5,
+        14,
+        15
+      ]
+    },
+    {
+      "id": "C06-K03",
+      "section": "c06-construction",
+      "knowledge": "Turn, coil and winding hierarchy; electrical angle = pole pairs times mechanical angle. Simplex lap a=p and simplex wave a=2. Ka=pZ/(2 pi a).",
+      "sources": [
+        "C06-S01",
+        "C06-S07"
+      ],
+      "scope": "Winding path counts are explicitly restricted to simplex windings; omega in rad/s, flux in Wb per pole.",
+      "lecture_pages": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": "C06-K04",
+      "section": "c06-conversion",
+      "knowledge": "Ea=k omega, Te=k Ia, converted power=Ea Ia=Te omega; signed motor/generator regimes and armature KVL.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ],
+      "scope": "Averaged/radial-gap model with fixed flux. Sign convention is stated; regeneration requires a receptive DC source.",
+      "lecture_pages": [
+        17,
+        18,
+        19,
+        20,
+        25,
+        26,
+        28
+      ]
+    },
+    {
+      "id": "C06-K05",
+      "section": "c06-connections",
+      "knowledge": "Separate, shunt, series, compound short-shunt and long-shunt connections; cumulative and differential MMF.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S05"
+      ],
+      "scope": "Schematic is motor current convention. Compound field polarity is not implied by an unlabeled winding symbol.",
+      "lecture_pages": [
+        27
+      ]
+    },
+    {
+      "id": "C06-K06",
+      "section": "c06-connections",
+      "knowledge": "Shunt motor It=Ia+If, V=Ea+IaRa; generator IL=Ia−If, Ea=V+IaRa; steady field current V/Rf.",
+      "sources": [
+        "C06-S01",
+        "C06-S05"
+      ],
+      "scope": "Positive mode-specific current magnitudes, separate from the signed current used in the reversible-mode lab.",
+      "lecture_pages": [
+        28,
+        30,
+        32
+      ]
+    },
+    {
+      "id": "C06-K07",
+      "section": "c06-connections",
+      "knowledge": "Unsaturated series motor torque approximately proportional to Ia squared; light-load speed hazard; fixed-flux straight-line model is not generally valid for series excitation.",
+      "sources": [
+        "C06-S01",
+        "C06-S02"
+      ],
+      "scope": "Primary-source extension to interpret the lecture topology. Saturation changes proportionality. No unsupported contemporary application claims.",
+      "lecture_pages": [
+        27,
+        41
+      ]
+    },
+    {
+      "id": "C06-K08",
+      "section": "c06-excitation",
+      "knowledge": "Fixed-speed open-circuit curve, saturation, residual excitation, correct field connection, field-resistance intersection and critical-resistance tangent; speed changes self-excited field current.",
+      "sources": [
+        "C06-S01",
+        "C06-S05"
+      ],
+      "scope": "Course graph readings are approximate; no measured numerical curve is invented. Demo uses an explicitly illustrative analytic curve.",
+      "lecture_pages": [
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "id": "C06-K09",
+      "section": "c06-losses",
+      "knowledge": "Armature and field copper losses; converted power versus shaft power; motor and generator efficiency boundaries and rotational losses.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ],
+      "scope": "Brush and stray-load losses omitted; rotational loss held constant only as the exercise approximation. Generator arithmetic corrected.",
+      "lecture_pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "id": "C06-K10",
+      "section": "c06-speed-control",
+      "knowledge": "Constant-flux torque-speed equation and effects of armature voltage, series resistance, field flux and constant load intersection.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ],
+      "scope": "Steady state. Root is a mathematical operating point; current, thermal and mechanical limits must be checked.",
+      "lecture_pages": [
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "id": "C06-K11",
+      "section": "c06-speed-control",
+      "knowledge": "Approximate constant-torque operation below base speed and constant-power field-weakening operation above base speed.",
+      "sources": [
+        "C06-S01",
+        "C06-S02"
+      ],
+      "scope": "Fixed current limit, armature voltage limit, negligible resistance drop/loss approximation. Not unlimited field weakening.",
+      "lecture_pages": [
+        42,
+        43
+      ]
+    },
+    {
+      "id": "C06-K12",
+      "section": "c06-starting",
+      "knowledge": "Full electrical and mechanical differential equations; finite inductance implies continuous current; finite inertia implies continuous speed; starting resistor and fast-current approximations.",
+      "sources": [
+        "C06-S01",
+        "C06-S06"
+      ],
+      "scope": "The course instantaneous-current answers are explicitly interpreted as La→0 electrical estimates, not exact finite-La switching values.",
+      "lecture_pages": [
+        6,
+        11,
+        12,
+        17,
+        18,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    {
+      "id": "C06-K13",
+      "section": "c06-recap",
+      "knowledge": "Solution checks: field topology, flux assumption, sign convention, SI units, power boundary, energy balance and operating constraints.",
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ],
+      "scope": "Derived engineering checklist from the cited equations, not an additional empirical claim.",
+      "lecture_pages": [
+        25,
+        28,
+        32,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "C06-M01",
+      "title": "Ideal rotating coil and split ring",
+      "formula": "rA=(r cos theta,r sin theta); vA=(-omega r sin theta,omega r cos theta); B=(B,0); motional emf toward viewer at A proportional to -cos theta; eAB/Epk=-cos theta; brush voltage/Epk=abs(cos theta)",
+      "parameters": "Dimensionless waveform, geometric drawing radius only; theta 0–360 degrees.",
+      "assumptions": "Uniform field, fixed positive speed, ideal zero-width brushes, zero commutation time, negligible coil resistance. Distinct from radial-field averaged model.",
+      "checks": [
+        "At theta=0: A emf into page, B out; positive left brush touches B.",
+        "At theta=180: coil emf reverses, positive left brush touches A.",
+        "At 90 and 270 degrees, emf is zero and contacts change.",
+        "Every brush emf value nonnegative."
+      ],
+      "sources": [
+        "C06-S03",
+        "C06-S04",
+        "C06-S01"
+      ]
+    },
+    {
+      "id": "C06-M02",
+      "title": "Signed motor/generator model",
+      "formula": "E=k*omega; I=(V-E)/R; T=k*I; Pin=V*I; Pconv=E*I; Pcu=I^2*R",
+      "parameters": "V=120 V,R=.3 ohm,k=.25 V s/rad; omega=0–600 rad/s.",
+      "assumptions": "Course ideal averaged machine; fixed field; no rotational, brush or excitation losses; reversible source.",
+      "checks": [
+        "omega432 => I40 A,T10 Nm,Pin4800 W,Pconv4320 W,Pcu480 W.",
+        "omega480 => I0.",
+        "omega516 => I-30 A,T-7.5 Nm,Pin-3600 W,Pconv-3870 W,Pcu270 W.",
+        "Pin−Pconv=Pcu throughout speed range."
+      ],
+      "sources": [
+        "C06-S01",
+        "C06-S02"
+      ]
+    },
+    {
+      "id": "C06-M03",
+      "title": "Excitation topology diagram",
+      "formula": "Motor shunt It=Ia+If; series If=Ia; long shunt series field carries Ia; short shunt series field carries It.",
+      "parameters": "Five selectable circuit topologies.",
+      "assumptions": "DC steady-state connectivity, resistances omitted visually in some field-topology drawings, field polarity not specified.",
+      "checks": [
+        "Short-shunt top node after series coil.",
+        "Long-shunt field node before series coil.",
+        "Separate excitation has two electrically distinct loops."
+      ],
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S05"
+      ]
+    },
+    {
+      "id": "C06-M04",
+      "title": "Illustrative self-excitation intersection",
+      "formula": "E(I,n)=(n/1000)*(3+120*tanh(1.4I)); equilibrium E=Rf*I, solved by bisection.",
+      "parameters": "Rf60–230 ohm,n400–1200 rpm. 3V residual,120V amplitude,1.4/A saturation scale explicitly chosen for teaching.",
+      "assumptions": "NOT measured data and NOT digitized course graph. Correct field polarity, no armature drop, steady state. Residual voltage makes high-R equilibrium small rather than identically zero.",
+      "checks": [
+        "Residual emf E(0,1000)=3 V.",
+        "Positive slope decreases with positive I.",
+        "Equilibrium residual below1e-8 V.",
+        "Halving speed at fixed field current halves emf; self-excited field current generally changes."
+      ],
+      "sources": [
+        "C06-S05",
+        "C06-S01"
+      ]
+    },
+    {
+      "id": "C06-M05",
+      "title": "Shunt power balance",
+      "formula": "Motor: E=100−.1I,Pin=100(I+.99),Pout=EI−596.4. Generator: E=100+.1I,Pin=EI+603.6,Pout=100(I−1.01). Pcu=.1I²; Pfield=100If; eta=Pout/Pin.",
+      "parameters": "I=6–120 A; k derived from99.4 V or100.6 V at1000 rpm.",
+      "assumptions": "Fixed field and constant rotational losses; no brush or stray-load losses; field included in total machine boundary.",
+      "checks": [
+        "Motor120A eta82.350607%; motor60A eta82.695524%.",
+        "Generator120A eta84.728987%; generator60A eta84.711931%.",
+        "Input−output−copper−field−rotational=0."
+      ],
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ]
+    },
+    {
+      "id": "C06-M06",
+      "title": "Torque-speed control",
+      "formula": "k=.25f; I=T/k; omega=(V−I(.3+Rs))/k; Padded=I²Rs.",
+      "parameters": "V60–120 V,f.6–1,Rs0–.9 ohm,T0–30 Nm; illustrative100 A limit.",
+      "assumptions": "Fixed selected field, no rotational loss; constant-load torque.100 A is an illustrative teaching constraint, not a nameplate rating.",
+      "checks": [
+        "Base V120,f1,Rs0,T10 => I40 A,omega432 rad/s.",
+        "At constant load, weakening field increases required current.",
+        "Points beyond100 A or negative speed are flagged."
+      ],
+      "sources": [
+        "C06-S01",
+        "C06-S02",
+        "C06-S06"
+      ]
+    },
+    {
+      "id": "C06-M07",
+      "title": "Starting resistance",
+      "formula": "Istart=120/(.3+Rs); Tstart=.25Istart; Rs,min=max(0,120/Ilimit−.3); I(omega)=(120−.25omega)/(.3+Rs).",
+      "parameters": "Rs0–1.2 ohm; current ceiling50–200 A.",
+      "assumptions": "Quasi-steady resistance-limited estimate, no time-domain simulation, no inferred inertia/inductance or resistor energy rating.",
+      "checks": [
+        "Rs0 => I400 A,T100 Nm.",
+        "Rs.9 => I100 A,T25 Nm.",
+        "For100 A limit Rs,min=.9 ohm."
+      ],
+      "sources": [
+        "C06-S01",
+        "C06-S03",
+        "C06-S06"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "C06-E01",
+      "title": "Single-loop starting, motor/generator and weakened field",
+      "given": "r.5m,l1m,B.25T,R.3ohm,V120V; torque10Nm opposing or7.5Nm driving; weakened B.2T.",
+      "result": "k.25;Istart400A;omega0=480;motoromega432,I40;generatoromega516,I=-30;weakened no-loadomega600 rad/s.",
+      "source": "C06-S01 pp17–20",
+      "verification": "Recomputed using k=2rlB, KVL and torque balance; separate energy balances4800=4320+480 and3870=3600+270. Assumed ideal radial-gap/averaged model."
+    },
+    {
+      "id": "C06-E02",
+      "title": "Generalized machine constant and increased driving torque",
+      "given": "Ka.5,Phi.5Wb,V120V,R.3ohm. External driving torque grows7.5→10Nm.",
+      "result": "k.25;generator I=-40A,E132V,omega528rad/s;no direction reversal.",
+      "source": "C06-S01 p26",
+      "verification": "New steady Te=-10Nm, I=-40A. Mechanical input5280W=electrical output4800W+copper480W."
+    },
+    {
+      "id": "C06-E03",
+      "title": "Shunt-generator magnetization graph",
+      "given": "100V1000rpm,Rfw80ohm,Ra.1ohm. Graph111V at80ohm line;100V atIf1A;tangent85V at.5A.",
+      "result": "Maximum approx111V;Rfc20ohm;Rfcrit170ohm and addedcritical90ohm.55.5V at500rpm only under fixed-flux assumption. At fixedIf1A,50V corresponds500rpm, but field circuit needs50ohm total.",
+      "source": "C06-S01 pp30–31; independent physical check C06-S05",
+      "verification": "Graph readings explicitly approximate. Corrected fixed-flux versus self-excited distinction; no numeric self-excited half-speed answer invented.50ohm requirement incompatible with80ohm winding plus nonnegative series rheostat."
+    },
+    {
+      "id": "C06-E04",
+      "title": "Shunt motor losses and loading",
+      "given": "V100,Ra.1,Rfw80,n01000,Ia0=6,graphIf.99;prescribed Ia120/60.",
+      "result": "E0=99.4,k=.94920008,Rfc21.0101,Prot596.4.120A:n885.3119,T113.9040,Pout9963.6,Pin12099,eta82.3506%.60A:n945.6740,T56.9520,Pout5043.6,Pin6099,eta82.6955%.180A startT170.8560Nm.",
+      "source": "C06-S01 pp33–36",
+      "verification": "Recomputed with full precision. Motor-output rating alone not used to infer120A. The source .4ohm half-load typo corrected to.1ohm; angular-speed unit corrected fromrpm torad/s."
+    },
+    {
+      "id": "C06-E05",
+      "title": "Shunt generator losses and loading",
+      "given": "V100,Ra.1,Rfw80,n01000,Ia06,mechanical input1200W,graphIf1.01;Ia120/60.",
+      "result": "E0=100.6,k=.96065924,Rfc19.0099,Prot603.6.120A:n1113.3201,T115.2791,Pout11899,Pin14043.6,eta84.72899%.60A:n1053.6779,T57.63955,Pout5899,Pin6963.6,eta84.71193%.",
+      "source": "C06-S01 pp37–40",
+      "verification": "Corrected1200−100.6×6=603.6W. Reference condition not called no-load becauseIL=6−1.01=4.99A. Complete power balance checked."
+    },
+    {
+      "id": "C06-E06",
+      "title": "Armature voltage step",
+      "given": "110V107.6A1500rpm,Ra.0824ohm;V105V;fixed load torque andflux.",
+      "result": "E0=101.13376;Iphysical0+=107.6A;Ifast46.920388A;Ifinal107.6A;Efinal96.13376V;nfinal1425.840787rpm.",
+      "source": "C06-S01 pp45–46; finite-inductance cross-check C06-S06",
+      "verification": "No premature rounding. Physical current continuity distinguished from zero-inductance fast estimate."
+    },
+    {
+      "id": "C06-E07",
+      "title": "Field weakening step",
+      "given": "220V40A1000rpm,Ra.5ohm;Phi reducedto.8Phi;fixed load torque.",
+      "result": "E0=200;Efast160;Iphysical0+=40A;Ifast120A;Ifinal50A;Efinal195;nfinal1218.75rpm.",
+      "source": "C06-S01 pp47–49; finite-inductance cross-check C06-S06",
+      "verification": "Torque constant ratio.8;steady I=40/.8;speed ratio195/(.8×200).Actual field also has a finite time constant."
+    },
+    {
+      "id": "C06-E08",
+      "title": "Added armature resistance",
+      "given": "110V107.6A1500rpm,Ra.0824ohm;Rs.1ohm;fixed load torque andflux.",
+      "result": "E0=101.13376;Iphysical0+=107.6A;Ifast48.60877193A;Ifinal107.6A;Efinal90.37376V;nfinal1340.409375rpm;Pres1157.776W.",
+      "source": "C06-S01 pp50–51; finite-inductance cross-check C06-S06",
+      "verification": "Full precision carried; source wording voltage reduced corrected to resistor inserted. Current continuity explicitly distinguished."
+    }
+  ],
+  "errata": [
+    {
+      "source": "C06-S01 pp11–12",
+      "issue": "Angular-acceleration symbol and constant-torque work expression need explicit scope.",
+      "resolution": "Covered in Chapter5; alpha=domega/dt and W=integral(T dtheta), reducing toTtheta for constant torque."
+    },
+    {
+      "source": "C06-S01 pp17–20",
+      "issue": "Constant2rlB machine coefficient can be confused with an isolated coil rotating in uniform field.",
+      "resolution": "Example explicitly uses ideal radial-gap/averaged model. Uniform-field commutator visualization has its own angle-dependent model."
+    },
+    {
+      "source": "C06-S01 p31(d)",
+      "issue": "55V after halving speed assumes unchanged flux, which is not generally true for fixed-resistance self-excitation.",
+      "resolution": "55.5V presented only as fixed-flux estimate; exact self-excited result requires new curve intersection and is not asserted."
+    },
+    {
+      "source": "C06-S01 p31(e)",
+      "issue": "KeepingIf1A at50V requires50ohm, below the80ohm field winding resistance.",
+      "resolution": "500rpm fixed-flux result is conditional on independent excitation or a changed field circuit."
+    },
+    {
+      "source": "C06-S01 pp33–36",
+      "issue": "Rated armature current120A is used by the worked solution although12kW output motor rating and100V do not alone establish that current.",
+      "resolution": "120A treated as an explicit exercise convention."
+    },
+    {
+      "source": "C06-S01 p36",
+      "issue": "Half-current line uses60×0.4 but states94V; correctRa is0.1ohm. Angular speed98.97 is labeledrpm.",
+      "resolution": "Use100−60×0.1=94V;speed945.67rpm or99.03rad/s. Use full precision for torque and efficiency."
+    },
+    {
+      "source": "C06-S01 p37",
+      "issue": "GeneratorIa6A,If≈1.01A condition called no-load.",
+      "resolution": "Treat as reference operating point: external current4.99A, not no-load."
+    },
+    {
+      "source": "C06-S01 p38",
+      "issue": "1200−100.6×6 incorrectly printed596.4W.",
+      "resolution": "Correct rotational loss603.6W and propagate to loaded efficiency."
+    },
+    {
+      "source": "C06-S01 pp45–51",
+      "issue": "Instantaneous current calculation omits inductance; roundedbackemf causes avoidable current/speed discrepancies.",
+      "resolution": "Show finite-La currentcontinuity and separately fast electrical estimates with unchangedspeed; carry full precision."
+    },
+    {
+      "source": "C06-S01 p50(a)",
+      "issue": "Copied wording says voltage reduced although change is series resistance addition.",
+      "resolution": "State0.1ohm resistor insertion at unchanged110V supply."
+    }
+  ],
+  "coverage": [
+    {
+      "pages": "1–2",
+      "coverage": "Title and introduction."
+    },
+    {
+      "pages": "3–13",
+      "coverage": "Foundational force, emf, linear-machine dynamics, rotation and the original loop exercise are covered in Chapter5; essential equations reviewed in Chapter6."
+    },
+    {
+      "pages": "14–16",
+      "coverage": "Sections01–02: construction, commutator and reversible operation."
+    },
+    {
+      "pages": "17–20",
+      "coverage": "Example1, signed operating-mode demonstration."
+    },
+    {
+      "pages": "21–25",
+      "coverage": "Section01 winding/ripple/electrical angle and Section02 averaged equations."
+    },
+    {
+      "pages": "26",
+      "coverage": "Example2 including increased driving torque."
+    },
+    {
+      "pages": "27–28",
+      "coverage": "Section03, five selectable circuit topologies."
+    },
+    {
+      "pages": "29–31",
+      "coverage": "Section04, self-excitation illustration and Example3, including corrected limitations."
+    },
+    {
+      "pages": "32–40",
+      "coverage": "Section05 power balance and complete Examples4–5."
+    },
+    {
+      "pages": "41–44",
+      "coverage": "Section06, torque-speed controls and current constraint."
+    },
+    {
+      "pages": "45–51",
+      "coverage": "Section07 and Examples6–8 with finite-inductance distinction."
+    },
+    {
+      "pages": "52",
+      "coverage": "Closing slide."
+    }
+  ],
+  "media": {
+    "external_images_used": [],
+    "external_video_used": [],
+    "note": "All engineering diagrams are original native SVG constructed from stated equations; no generated bitmap imagery or unlicensed media is included. External readings are linked only."
+  }
+}

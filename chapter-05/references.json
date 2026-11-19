@@ -1,0 +1,283 @@
+{
+  "sources": [
+    {
+      "id": "L05",
+      "title": "ELEE 4710 — DC Mahines, opening electromechanical-conversion material",
+      "author": "Jin Ye, University of Georgia, supplied 2020 material",
+      "url": "course-lecture.pdf",
+      "checked": "2026-11-15",
+      "license": "User-supplied course material, private study; no general redistribution license asserted."
+    },
+    {
+      "id": "SYL",
+      "title": "ELEE 4710 revised Spring 2020 syllabus",
+      "author": "University of Georgia",
+      "url": "course-syllabus.pdf",
+      "checked": "2026-11-15",
+      "license": "User-supplied course material."
+    },
+    {
+      "id": "OSM",
+      "title": "University Physics Volume 2, 13.3 — Motional EMF",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-3-motional-emf",
+      "checked": "2026-11-15",
+      "license": "CC BY-NC-SA 4.0; no copied figures."
+    },
+    {
+      "id": "OSF",
+      "title": "University Physics Volume 2, 11.4 — Magnetic Force on a Current-Carrying Conductor",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/11-4-magnetic-force-on-a-current-carrying-conductor",
+      "checked": "2026-11-15",
+      "license": "CC BY-NC-SA 4.0; no copied figures."
+    },
+    {
+      "id": "OST",
+      "title": "University Physics Volume 2, 11.5 — Force and Torque on a Current Loop",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/11-5-force-and-torque-on-a-current-loop",
+      "checked": "2026-11-15",
+      "license": "CC BY-NC-SA 4.0; no copied figures."
+    },
+    {
+      "id": "OSG",
+      "title": "University Physics Volume 2, 13.6 — Electric Generators and Back EMF",
+      "author": "OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-6-electric-generators-and-back-emf",
+      "checked": "2026-11-15",
+      "license": "CC BY-NC-SA 4.0; no copied figures."
+    },
+    {
+      "id": "MIT8",
+      "title": "6.061 Class Notes Chapter 8 — Electromagnetic Forces and Loss Mechanisms",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/c26f6204e05bd4c47875a96452982b6f_MIT6_061S11_ch8.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0; third-party steel figures not used."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C05-1",
+      "section": "chapter-scope",
+      "knowledge": "Fifth syllabus topic is Principles of Electromechanical Energy Conversion",
+      "sources": [
+        "SYL",
+        "L05"
+      ],
+      "scope": "The syllabus lists Chapter 5 separately. No standalone Chapter 5 lecture file was supplied. Pages 3–13 of the DC lecture provide the core material; its hardware and machine topics from page 14 onward are organized as Chapter 6."
+    },
+    {
+      "id": "C05-2",
+      "section": "c05-force",
+      "knowledge": "Motional EMF, conductor force and directions; ei=Fv",
+      "sources": [
+        "L05",
+        "OSM",
+        "OSF"
+      ],
+      "scope": "DC lecture pages 4–6. The scalar expressions assume a perpendicular, uniform field and the terminal, current and velocity references displayed in the diagram."
+    },
+    {
+      "id": "C05-3",
+      "section": "c05-linear",
+      "knowledge": "Linear machine KVL, motor/generator modes, unloaded ideal speed",
+      "sources": [
+        "L05",
+        "OSG"
+      ],
+      "scope": "DC lecture pages 6–10. The source changes its current arrow for generator operation; this chapter keeps one signed current reference throughout."
+    },
+    {
+      "id": "C05-4",
+      "section": "c05-start",
+      "knowledge": "Coupled KVL/Newton dynamics and energy balance",
+      "sources": [
+        "L05",
+        "MIT8"
+      ],
+      "scope": "Derived extension of DC lecture page 6 with finite inductance and viscous drag. Parameters are illustrative. RK4 evaluates the differential equations; the curves are not measurements."
+    },
+    {
+      "id": "C05-5",
+      "section": "c05-rotation",
+      "knowledge": "Speed units, Newton rotation, work/power and uniform-field coil",
+      "sources": [
+        "L05",
+        "OST",
+        "OSG"
+      ],
+      "scope": "DC lecture pages 11–12 provide rotational mechanics. The uniform-field loop is a separately verified extension, using a generated-EMF convention and an explicitly defined positive area normal."
+    },
+    {
+      "id": "C05-6",
+      "section": "c05-radial",
+      "knowledge": "Original active-conductor geometry and loop exercise",
+      "sources": [
+        "L05"
+      ],
+      "scope": "DC lecture page 13 was visually inspected. Radius, radial field and end-region assumptions are disclosed in the worked example. They are modeling conditions, not inferred measurements."
+    },
+    {
+      "id": "C05-7",
+      "section": "c05-energy",
+      "knowledge": "Energy/coenergy derivatives and linear overlap actuator",
+      "sources": [
+        "MIT8"
+      ],
+      "scope": "MIT Chapter 8, pages 2–5, supplies the energy/coenergy method. The original illustrative actuator geometry is evaluated with a linear reluctance model. No force dataset is claimed."
+    },
+    {
+      "id": "C05-8",
+      "section": "c05-summary",
+      "knowledge": "Electrical/mechanical conversion, storedenergy andloss balance",
+      "sources": [
+        "L05",
+        "MIT8"
+      ],
+      "scope": "DC lecture page 7 and the MIT energy-conversion treatment. Power is balanced across a consistently defined electrical, mechanical and storage boundary."
+    }
+  ],
+  "models": [
+    {
+      "id": "force",
+      "title": "Conductor force and motional EMF",
+      "formula": "e=Bℓv;F=Bℓi;ei=Fv",
+      "parameters": "Active length 0.50 m; adjustable signed B, i and v.",
+      "assumptions": "Uniform perpendicular field. Positive B is into the page, positive i down the bar and positive v to the right.",
+      "checks": "At the initial settings: e = 3.2 V, F = 1.2 N and ei = Fv = 9.6 W.",
+      "sources": [
+        "L05",
+        "OSM",
+        "OSF"
+      ]
+    },
+    {
+      "id": "linear",
+      "title": "Static linear DC machine",
+      "formula": "i=(12−.4v)/2;F=.4i;Pin=12i",
+      "parameters": "Supply 12 V; R = 2 ohm; k = 0.4 in SI units.",
+      "assumptions": "Externally imposed velocity. Negligible inductive voltage and friction. The source can absorb regenerated power.",
+      "checks": "At v = 20 m/s: input 24 W, conversion 16 W, heat 8 W. At 45 m/s: input −36 W, conversion −54 W, heat 18 W.",
+      "sources": [
+        "L05"
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Dynamic linear DC machine",
+      "formula": "di/dt=(12−2i−.4v)/.1;dv/dt=(.4i−.02v)/m",
+      "parameters": "Mass 0.1–1 kg; L = 0.1 H; b = 0.02 N s/m; V = 12 V; R = 2 ohm; k = 0.4.",
+      "assumptions": "Initial current and speed are zero. Parameters are constant. Fourth-order Runge–Kutta uses a 0.002 s step.",
+      "checks": "Steady speed is 24 m/s and current is 1.2 A. Independent audit compares the trajectory with the closed-form two-state solution and checks instantaneous energy balance.",
+      "sources": [
+        "L05",
+        "MIT8"
+      ]
+    },
+    {
+      "id": "loop",
+      "title": "Uniform-field rotating coil",
+      "formula": "λ=.4cosθ;e=.4ωsinθ;τ=−.4isinθ",
+      "parameters": "N = 40 turns; A = 0.02 m²; B = 0.5 T; angular speed 10 rad/s.",
+      "assumptions": "Positive current follows the positive area normal by the right-hand rule. Positive angular speed increases theta. No commutator is present.",
+      "checks": "Torque × angular speed + generated EMF × current = 0. EMF is zero at 0 degrees and has a 4 V peak at 90 degrees.",
+      "sources": [
+        "OST",
+        "OSG"
+      ]
+    },
+    {
+      "id": "radial",
+      "title": "Two active conductors in a radial gap",
+      "formula": "e=2Bℓrω;|τ|=2Bℓr|i|",
+      "parameters": "B = 1 T; active length 1 m; radius 0.5 m; current magnitude 1 A.",
+      "assumptions": "Both active sides are under opposite pole faces at the displayed instant. End conductors lie outside the active field.",
+      "checks": "At 6.28 rad/s: total EMF magnitude 6.28 V, torque magnitude 1 N m and speed 59.9696 rpm.",
+      "sources": [
+        "L05"
+      ]
+    },
+    {
+      "id": "overlap",
+      "title": "Linear coenergy overlap actuator",
+      "formula": "L=μ0N²wx/(2g);F=μ0N²wi²/(4g)",
+      "parameters": "N = 200 turns; depth 0.02 m; overlap 0.01–0.08 m; each gap 0.001–0.005 m.",
+      "assumptions": "Two equal air gaps, infinite core permeability, and negligible fringing, leakage and saturation. Position is imposed.",
+      "checks": "At x = 0.04 m, g = 0.002 m and i = 2 A: L = 0.01005309649 H and F = 0.5026548246 N. Force also matches the finite difference of coenergy at constant current.",
+      "sources": [
+        "MIT8"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "E05-1",
+      "title": "Moving conductor",
+      "given": "B = 0.8 T, length 0.5 m, speed 8 m/s, current 3 A.",
+      "result": "EMF 3.2 V; force 1.2 N; converted power 9.6 W.",
+      "source": "Derived from L05, pages 4–5.",
+      "verification": "EMF × current equals force × velocity."
+    },
+    {
+      "id": "E05-2",
+      "title": "Motor and generator operation",
+      "given": "Supply 12 V, R = 2 ohm, k = 0.4; speeds 20 and 45 m/s.",
+      "result": "At 20 m/s: current 2 A, converted power 16 W. At 45 m/s: current −3 A, converted power −54 W.",
+      "source": "Derived from L05, pages 8–10.",
+      "verification": "Electrical input − copper loss − mechanical conversion = 0."
+    },
+    {
+      "id": "E05-3",
+      "title": "Steady operating point after a linear start",
+      "given": "V = 12 V, R = 2 ohm, k = 0.4, b = 0.02 N s/m, L = 0.1 H.",
+      "result": "Speed 24 m/s; current 1.2 A; input 14.4 W = copper loss 2.88 W + drag loss 11.52 W.",
+      "source": "Derived from L05 page 6 and the MIT8 energy balance.",
+      "verification": "KVL and force balance agree. Initial current remains zero with finite inductance."
+    },
+    {
+      "id": "E05-4",
+      "title": "Original rotating-loop exercise",
+      "given": "Angular speed 6.28 rad/s; current 1 A; B = 1 T; three specified sides each 1 m.",
+      "result": "Mechanical frequency 0.999493043 Hz; speed 59.96958256 rpm; two 1 N forces; 1 N m torque magnitude; 6.28 V total EMF magnitude.",
+      "source": "L05, page 13.",
+      "verification": "Conditional on radius 0.5 m and the radial-gap model. Torque and EMF are calculated independently from conductor laws. Reversing current does not change prescribed-motion EMF."
+    },
+    {
+      "id": "E05-5",
+      "title": "Coenergy actuator",
+      "given": "N = 200, depth 0.02 m, overlap 0.04 m, each gap 0.002 m, current 2 A.",
+      "result": "L = 10.05309649 mH; stored energy 20.10619298 mJ; force 0.5026548246 N.",
+      "source": "Derived from MIT8 and the linear magnetic reluctance relation.",
+      "verification": "Finite difference of coenergy with overlap at fixed current agrees with the analytic force."
+    }
+  ],
+  "errata": [
+    {
+      "source": "L05, page 9",
+      "issue": "The ideal no-load speed V/(B length) can be mistaken for a loaded operating point.",
+      "correction": "It assumes zero opposing mechanical load and friction. The dynamic laboratory separately includes viscous drag."
+    },
+    {
+      "source": "L05, page 10",
+      "issue": "The generator equation switches to a positive outgoing-current reference.",
+      "correction": "A single signed current reference is retained; generator operation has negative current."
+    },
+    {
+      "source": "L05, page 12",
+      "issue": "Work = torque × angle is shown without a constant-torque condition.",
+      "correction": "General work is the integral of torque with angle. The product applies for constant torque."
+    },
+    {
+      "source": "L05, page 13",
+      "issue": "Radius and the end-field approximation are implicit, and terminal signs need defined references.",
+      "correction": "State the 1 m span as a diameter, the ideal radial-gap field and inactive end conductors. Maintain the prescribed rotation when discussing current reversal."
+    },
+    {
+      "source": "L05, pages 6 and 9",
+      "issue": "Inductance is omitted, so the immediate current V/R is idealized.",
+      "correction": "Keep the zero-inductance case as a static approximation. With finite L, initial current is continuous and its initial derivative is V/L."
+    }
+  ]
+}

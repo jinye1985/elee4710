@@ -1,0 +1,6 @@
+IPEM Lab | ELEE 4710 — Chapter 02
+
+Verified in the complete course on 2026-11-15.
+Direct-file browser loading, initial values, control changes, animation pause/resume, equation rendering, and 390/1100/1440/1920 px layouts checked.
+Knowledge sources, model assumptions, worked results and source clarifications are recorded in references.html and references.json.
+See the course-level VALIDATION.txt for the integration checks.

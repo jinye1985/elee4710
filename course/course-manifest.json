@@ -1,0 +1,58 @@
+[
+  {
+    "number": 1,
+    "title": "Introduction to Power Engineering",
+    "sections": 9,
+    "labs": 5,
+    "examples": 1
+  },
+  {
+    "number": 2,
+    "title": "Magnetic Circuit Analysis",
+    "sections": 9,
+    "labs": 8,
+    "examples": 7
+  },
+  {
+    "number": 3,
+    "title": "Review of AC Circuit Analysis",
+    "sections": 8,
+    "labs": 8,
+    "examples": 9
+  },
+  {
+    "number": 4,
+    "title": "Operational Characteristics of Transformers",
+    "sections": 10,
+    "labs": 9,
+    "examples": 6
+  },
+  {
+    "number": 5,
+    "title": "Principles of Electromechanical Energy Conversion",
+    "sections": 7,
+    "labs": 6,
+    "examples": 5
+  },
+  {
+    "number": 6,
+    "title": "DC Machines",
+    "sections": 8,
+    "labs": 7,
+    "examples": 8
+  },
+  {
+    "number": 7,
+    "title": "Induction Machines",
+    "sections": 7,
+    "labs": 5,
+    "examples": 3
+  },
+  {
+    "number": 8,
+    "title": "Synchronous Machines",
+    "sections": 7,
+    "labs": 5,
+    "examples": 4
+  }
+]

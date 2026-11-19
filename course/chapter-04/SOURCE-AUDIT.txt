@@ -1,0 +1,73 @@
+CHAPTER 04 — TRANSFORMERS
+IPEM Lab / ELEE 4710
+Audit date: 2026-11-15
+
+SOURCE COVERAGE
+All 38 pages of the supplied Transformers.pdf were extracted and read.
+Rendered source pages: 8–15, 22, 28, 30–33, 35–37. Numerical and figure pages were visually checked; blank question/solution divider pages add no separate knowledge.
+
+Lecture pages 1–2: title/context -> chapter title and introduction.
+Pages 3–4: Faraday and Lenz -> section01, derivative/sign explanation, flux/voltage animation.
+Pages 5–7: ideal transformer -> sections01–02, voltage/current ratio and power conservation.
+Page8: reflected impedance/120V example -> section02, Example01, ideal-transformer interactive.
+Pages9–11: speaker matching -> section03, Example02, impedance/power-curve interactive.
+Pages12–15: complex-load example -> section04, Example03, all three load cases, rms/time-domain conversion, phasors and power triangle.
+Pages16–19: nonideal transformer/equivalent circuit -> section05; all loss/leakage/magnetizing elements, exact branch location in text, approximate circuit and reference-side interactive.
+Pages20–25: OC/SC tests -> section06, Example04, original test data, referred parameters and meter interactive.
+Pages26–27: laboratory/application photographs -> test apparatus represented by original circuit drawings; no third-party photograph redistributed.
+Page28: polarity and erroneous parallel connection -> section07, relative-dot references, open-terminal voltage comparator, circulating-current explanation without invented fault-current data.
+Pages29–33: regulation -> section08, Example05, lagging/leading and source/loaded voltage distinction, complete phasor-sum interactive.
+Pages34–37: efficiency/maximum efficiency -> section09, Example06, loss curve and optimum derived from the source model.
+Page38: closing -> section10 provides synthesis and self-checks.
+
+EXTERNAL PRIMARY-SOURCE VERIFICATION
+OpenStax University Physics2 §15.6: independent voltage/current ratios, ideal power relation and transmission-line loss rationale. Current footer states CC BY-NC-SA; no source text, original artwork or exercises reproduced.
+MIT OCW6.061 Kirtley Chapter3 §5 pp.11–12: ideal terminal constraints, sign conventions, conservation of power, square impedance transformation.
+MIT OCW6.061 Kirtley Chapter6: supplementary primary magnetic-circuit reference.
+Eaton TC202001EN pp.3–4: relative polarity, matching ratios/taps and parallel compatibility/circulating current.
+Exact URLs, author attribution, access date, licenses and source-to-claim mappings are in references.json.
+No optional video added; no license-uncertain external media copied.
+
+NUMERICAL RECOMPUTATION
+Example01: a=.5,V2=240V,I1=12A,I2=6A,Zin10ohm,P1440W.
+Example02: direct9W; matched25W load plus25W internal source loss; ideal source supplies50W. Source-to-load efficiency50% at match.
+Example03: R50 -> I2=2A,I1=4A,P200W,Q0,|S|200VA. R50/X+/-50 -> I2=sqrt2A,I1=2sqrt2A,P100W,Q+/-100var,|S|141.421356VA,PF1/sqrt2.
+Example04: OC LV Rc484ohm,Xm89.4916316577ohm; HV Rc48400ohm,Xm8949.16316577ohm. SC HV Req10.3852191764ohm,Zeq32.9670329670ohm,Xeq31.2885360045ohm.
+Example05: with rounded provided Req10.4ohm,Xeq31.3ohm and exact rated current10000/2200A, lagging E2306.911980V,VR4.859635%; leading E2137.906192V,VR-2.822446%.
+Example06: Pout4500W,Pcu120.8677686W,eta95.3214583%. Rated copper loss214.8760331W; optimum load fraction0.6821910402 gives copper loss100W, equal to core loss.
+
+SOURCE CORRECTIONS/CLARIFICATIONS
+SC impedance expression V/I, not the printed V/R.
+OC magnetizing-current magnitude found by orthogonal component subtraction, not scalar magnitude subtraction.
+Faraday induced-EMF sign separated from passive terminal-voltage reference.
+Reactive power denoted Q; complex power denoted S=P+jQ; magnitudes use rms values.
+Original99.7W/var values arise from early rounding of exact100W/var results.
+Full-precision Xm differs from original8940ohm early-rounded value; the approximate circuit inspector explicitly uses the stated rounded parameter set. Regulation/efficiency retain the given rounded series values.
+Measured SC4.55A preserved for extraction; exact nameplate rated current4.5454545A used for current-fraction load examples.
+The two regulation cases hold loaded secondary220V but require different primary supply voltages. Within each case the loaded/unloaded comparison holds that supply fixed.
+
+MODEL HONESTY
+All graphs are calculated engineering models, not fabricated experimental curves.
+Flux animation is slowed and normalized. Winding-loop artwork is symbolic.
+The test-level slider is a clearly identified constant-parameter scaling; only100% reproduces original measured readings.
+Speaker model is the provided9ohm resistive approximation, not a real frequency-dependent loudspeaker measurement.
+Equivalent-circuit, regulation and efficiency models explicitly omit nonlinear saturation, transients, temperature dependence and specified secondary losses.
+Polarity diagram shows an open high-impedance voltage comparison; no prospective fault current is invented.
+
+LOCAL VERIFICATION
+Playwright/Chrome loaded preview directly via file:// with local MathJax.
+1440px desktop: document scroll width1440;390px mobile: document scroll width390.
+10 sections,9 interactive laboratories,6 worked examples; all theory groups labeled Knowledge Point.
+113 MathJax expressions initially; zero MathJax errors and zero page JavaScript errors.
+All nine authored SVG bounding boxes remained within their viewBoxes, including tested control extremes.
+Every slider and all control groups exercised. Numeric model assertions cover source answers, power conservation sweep and optimum equal-loss condition; all passed.
+Desktop regulator, test and polarity diagrams and mobile flux, efficiency and worked-test example screenshots visually inspected.
+Long multi-part display equations split into vertically stacked lines for mobile readability.
+FINAL BUNDLE VERIFICATION
+The actual assembled outputs/elee4710-complete-course/chapter-04/index.html was tested via file:// in Chrome after combining shared navigation, IPEM Lab header/footer and local export tools.
+No page overflow at390,1100,1440 or1920px; scrollWidth equals viewport width in every case.
+115 MathJax expressions, zero rendering errors, zero JavaScript errors, no Chinese visible text, fonts fully loaded.
+All11 sliders checked at both minimum and maximum; all24 chapter control buttons exercised; no NaN,Infinity or undefined outputs.
+Default model readouts match verified calculations:240V/6A/12A ideal,25W matched speaker,484ohm/89.49ohm LV excitation,4.860% regulation and95.321% efficiency.
+Global Pause freezes the flux animation and Resume restarts it. Reduced-motion media preference initializes the global pause state correctly.
+qa-final.json records results; final-390/1100/1440/1920-ideal.png and final-regulation.png,final-tests.png,final-mobile-example.png retain reviewed screenshots.

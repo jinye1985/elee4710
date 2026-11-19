@@ -1,0 +1,198 @@
+{
+  "sources": [
+    {
+      "id": "C07-S1",
+      "title": "ELEE 4710: Induction Mahines.pdf — supplied course lecture, 16 pages",
+      "author": "Jin Ye, University of Georgia",
+      "url": "",
+      "checked": "2026-11-15",
+      "license": "User-provided course material. No public redistribution license asserted; original rendered slides are not embedded in the lesson."
+    },
+    {
+      "id": "C07-S2",
+      "title": "6.061 Chapter 10: Analytic Design Evaluation of Induction Machines",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/01f878366fe651f1b95e9ed7fc24c644_MIT6_061S11_ch10.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0, subject to material-specific notices. Used to verify equations; no source artwork or code copied."
+    },
+    {
+      "id": "C07-S3",
+      "title": "6.061 Chapter 9: Synchronous Machine and Winding Models — winding and three-phase conventions",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/f99554aa923748fa210a30a874ee5fc8_MIT6_061S11_ch9.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0, subject to material-specific notices. Mathematical cross-check only."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C07-K01",
+      "section": "c07-architecture",
+      "knowledge": "Stator/rotor construction; cage and wound rotors; induction mechanism; electrical versus mechanical angle; star/delta line-to-phase quantities.",
+      "sources": [
+        "C07-S1",
+        "C07-S2",
+        "C07-S3"
+      ],
+      "scope": "Lecture pp. 3, 6; MIT Chapter 10 pp. 1–4; Chapter 9 pp. 5, 9–10 for balanced winding/line conventions. Standard balanced sinusoidal fundamental model."
+    },
+    {
+      "id": "C07-K02",
+      "section": "c07-field",
+      "knowledge": "Three phase currents with 120-degree spatial/time displacement; resultant MMF magnitude 1.5 times one phase peak; direction changes with phase sequence.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 4–5; MIT Chapter 10 equations 5–12. The displayed vector identity is independently summed in code for both phase sequences."
+    },
+    {
+      "id": "C07-K03",
+      "section": "c07-kinematics",
+      "knowledge": "ns=120f/p; slip; rotor speed; rotor-frequency magnitude; signed relative field speed and addition of reference-frame speeds.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 6–9; MIT Chapter 10 equations 12, 33–34. p means total poles here; MIT uses p for pole pairs. This notation difference is explicitly reconciled."
+    },
+    {
+      "id": "C07-K04",
+      "section": "c07-emf",
+      "knowledge": "Faraday law; sinusoidal RMS winding EMF; winding factors and effective turns ratio; standstill and running rotor EMF; negative-slip sequence reversal.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 5–6. MIT Chapter 10 equations 12, 33 and 37 support rotor frequency and effective winding ratio. 4.44 is the conventional rounded sinusoidal coefficient."
+    },
+    {
+      "id": "C07-K05",
+      "section": "c07-circuit",
+      "knowledge": "Per-phase stator-referred circuit and resistance split; three-phase air-gap power and torque; zero-slip limiting branch.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 10–11; MIT Chapter 10 equations 37–50 and torque-speed listing pp. 8–9. The course includes Rc; the implementation solves that full parallel magnetizing branch."
+    },
+    {
+      "id": "C07-K05b",
+      "section": "c07-circuit",
+      "knowledge": "Constant-load intersections and the local restoring torque criterion near synchronous speed.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture p. 9 supplies the operating torque-speed picture; MIT Chapter 10 pp. 1, 8–9 supplies the steady torque-speed model. Local sign of Te−Tload under a small speed perturbation is a derived check, not a transient or thermal stability prediction."
+    },
+    {
+      "id": "C07-K06",
+      "section": "c07-power",
+      "knowledge": "Input, stator loss, air-gap, rotor copper, converted mechanical and shaft powers; shaft and developed torque; rotor conversion fraction versus overall efficiency.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 11–15; MIT Chapter 10 equations 50–57 and adjacent torque-speed listing. Powers in this chapter are total three phase. Rotor core loss neglected."
+    },
+    {
+      "id": "C07-K07",
+      "section": "c07-regions",
+      "knowledge": "Signed motoring, generating and plugging regimes; copper loss remains positive; zero-slip and net-export qualifications.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ],
+      "scope": "Lecture pp. 9, 13; MIT Chapter 10 pp. 7–8. The signs follow from Pag=3|I2|²R2/s and Pconv=(1−s)Pag. All closing checks and comparison claims reuse these relations."
+    }
+  ],
+  "models": [
+    {
+      "id": "C07-M1",
+      "title": "Balanced rotating MMF",
+      "formula": "Fk=cos(theta−sequence*alpha_k)[cos(alpha_k),sin(alpha_k)]; F=sum(Fk).",
+      "parameters": "Phase axes 0, +120, −120 degrees; normalized phase current peak 1.",
+      "assumptions": "Two-pole electrical cross section; balanced sinusoidal currents; no saturation, harmonics or slot effects.",
+      "checks": "720 angle/sequence combinations: norm(F)=1.5; Fx=1.5 cos(theta); Fy=sequence*1.5 sin(theta).",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ]
+    },
+    {
+      "id": "C07-M2",
+      "title": "Rotor/field kinematics",
+      "formula": "ns=120f/p; n=(1−s)ns; f2=abs(s)f; n_field_relative_rotor=s ns.",
+      "parameters": "f=50 or 60 Hz; p=2,4,6,8; s from −0.30 to 1.50.",
+      "assumptions": "Prescribed steady speeds; common display slowdown; no acceleration or torque transient model.",
+      "checks": "ns=n+s ns for all settings; examples: 60 Hz/four poles gives 1800 rpm, 5% slip gives 1710 rpm and 3 Hz.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ]
+    },
+    {
+      "id": "C07-M3",
+      "title": "Rotor induced EMF",
+      "formula": "E20=4.44 f N Phi kw; E2s=abs(s)E20; f2=abs(s)f; e2=sqrt(2)E2s sin(2pi f2 t).",
+      "parameters": "f=60 Hz; N=100 rotor turns; kw=.95; Phi=5–25 mWb; s=0–1.",
+      "assumptions": "Specified sinusoidal air-gap flux; induced open-circuit rotor EMF, not a loaded terminal voltage.",
+      "checks": "s=0 gives zero EMF and rotor frequency; s=1 gives standstill EMF; waveform peak is sqrt(2) times RMS.",
+      "sources": [
+        "C07-S1"
+      ]
+    },
+    {
+      "id": "C07-M4",
+      "title": "Exact complex per-phase circuit and torque",
+      "formula": "Ymag=1/Rc−j/Xm; Y2=1/(R2/s+jX2); E=V/[1+(R1+jX1)(Ymag+Y2)]; I2=EY2; Pag=3|I2|²R2/s; Te=Pag/omega_s.",
+      "parameters": "Illustrative 460 V line-to-line, Y, 60 Hz, four poles; R1=.35, X1=.7, X2=.7, Xm=20, Rc=300 ohm; R2=.10–.80 ohm.",
+      "assumptions": "Balanced RMS steady-state linear model; fixed frequency; rotor quantities stator-referred; parameter values selected for teaching, not a named machine; no saturation, skin effect or heating; load=100 N m is illustrative.",
+      "checks": "Checked signed slips −.25 through 1.4, including exactly zero and one: Pin=Pag+Pcu1+Pcore, Pag=Pcu2+Pconv, Te*omega_m=Pconv; Pcu2 nonnegative. At s=0 evaluate open rotor branch directly.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ]
+    },
+    {
+      "id": "C07-M5",
+      "title": "Total three-phase power accounting",
+      "formula": "Pin=Pag+Pcu1+Pcore; Pcu2=sPag; Pconv=(1−s)Pag; Pshaft=Pconv−Pfw; eta=Pshaft/Pin.",
+      "parameters": "Pag=5–25 kW; s=.01–.30; illustrative Pcu1=450 W, Pcore=300 W, Pfw=750 W.",
+      "assumptions": "Independent specified losses demonstrate accounting only; not a physical efficiency map or a fit to Example 2.",
+      "checks": "Input equals all losses plus shaft output; rotor loss plus converted power equals air-gap power; limits are nonnegative throughout the control domain.",
+      "sources": [
+        "C07-S1",
+        "C07-S2"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "C07-E1",
+      "title": "Original Example 1: 460 V / 100 hp motor",
+      "given": "Three-phase, 60 Hz, four poles, s=.05; stator:rotor turns=1:.5.",
+      "result": "ns=1800 rpm; n=1710 rpm; slip speed=90 rpm; rotor frequency=3 Hz; rotor field relative to rotor/stator/stator field=90/1800/0 rpm; E2s=6.639528 V/phase.",
+      "source": "C07-S1, pp. 7–8",
+      "verification": "Recomputed using explicit Y stator, equal winding factors and negligible stator drop. A delta stator would give 11.50 V/phase. 100 hp is unused for the requested quantities."
+    },
+    {
+      "id": "C07-E2",
+      "title": "Original Example 2: full-load power and torque",
+      "given": "15 hp, 460 V, four poles, 60 Hz, 1728 rpm, friction+windage=750 W; 1 hp=746 W per course.",
+      "result": "Pshaft=11190 W; Pconv=11940 W; s=.04; Pag=12437.5 W; Pcu2=497.5 W; omega_m=180.95573685 rad/s; Te=65.98298682 N m; Tshaft=61.83832685 N m.",
+      "source": "C07-S1, pp. 14–15",
+      "verification": "All original numbers recalculated. Developed torque and shaft torque are both supplied because the prompt says mechanical torque without defining it; the source solution omitted torque. Stator losses are unknown, so no overall efficiency is invented."
+    }
+  ],
+  "errata": [
+    "Lecture p. 8 implicitly divides line voltage by sqrt(3) without specifying the stator connection. The lesson declares Y and the approximation E1≈Vphase, and gives the alternative delta result.",
+    "Lecture p. 11 mixes a three-phase flow diagram with equations written without the factor of 3. This chapter consistently uses total three-phase powers with RMS phase currents.",
+    "Lecture p. 12 writes eta=1−s under simplified losses. The lesson identifies 1−s as rotor conversion fraction and states the loss assumptions needed for it to equal total efficiency.",
+    "Lecture Example 2 asks for torque, but p. 15 stops after rotor copper loss. Both electromagnetic and shaft torque are completed and distinguished.",
+    "MIT Chapter 10 equation 55 displays Pout=Pag−Pw although adjacent equations and its MATLAB listing subtract rotor copper loss before shaft losses. The internally consistent relation Pshaft=(1−s)Pag−Pfw is used and numerically checked.",
+    "All lesson motor cutaways, circuits and canvases are newly authored explanatory renderings of cited machine principles. No measured characteristic or external photo is fabricated or implied. No optional video was required for coverage."
+  ]
+}

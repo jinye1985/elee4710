@@ -1,0 +1,1203 @@
+{
+  "title": "ELEE 4710 — Chapter 1: References and verification",
+  "edition": "Improved offline chapter",
+  "verified_on": "2026-11-11",
+  "scope": "A map from chapter explanations, equations, interactive behavior, review answers and visuals to inspected sources. Illustrative parameter choices and derived arithmetic are identified explicitly.",
+  "verification_method": "Source passages and figures identified below were inspected; formulas were transcribed or derived under the declared assumptions. Stated arithmetic checks and selected numerical model checks support internal consistency. This is educational verification, not expert accreditation, hardware testing or validation of real equipment.",
+  "course_source": "course-lecture.pdf",
+  "reader_note": "The chapter works offline. Reference links open external sources only when selected; no external widgets or live data are loaded by this reference file. Source-location details are collected here rather than displayed as small captions in the chapter.",
+  "source_count": 23,
+  "claim_count": 35,
+  "sources": [
+    {
+      "id": "LOCAL-INTRO",
+      "title": "Introduction to power engineering",
+      "author": "Jin Ye, University of Georgia",
+      "url": "course-lecture.pdf",
+      "publication_year": 2020,
+      "accessed": "2026-11-11",
+      "checked": "Supplied 37-page PDF and matching PPTX; visible slides 1–37",
+      "supported_claims": [
+        "Course introduction covers power electronics, power systems and electric machines.",
+        "Converter categories and application examples appear on slides 3–15.",
+        "Slide 21 specifies 300 kWh input, 187 kWh thermal losses, 6 kWh plant use, 8 kWh network losses, and 99 kWh delivered.",
+        "Slide 27 shows electrical-to-mechanical motor operation and the reverse direction for a generator.",
+        "Slides 13 and 34 show a particular gearbox–generator–rectifier–DC link–inverter–transformer wind architecture."
+      ],
+      "verification": "User-supplied PDF text, all rendered pages, and PPTX image/text mapping were inspected in prior source audit; actual energy-flow graphic was visually checked.",
+      "local_file": "course-lecture.pdf",
+      "usage_license": null,
+      "scope_note": "User-provided teaching material. Historical figures are not automatically current facts. Exact 300 kWh accounting is a course example, not a measured modern fleet average."
+    },
+    {
+      "id": "MIT-INTRO",
+      "title": "6.622 Power Electronics, Lecture 1: Introduction",
+      "author": "David Perreault, MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/mit6_622_s23_lec01.pdf",
+      "publication_year": 2023,
+      "accessed": "2026-11-11",
+      "checked": "PDF pp. 2–3, 6–11, 14, 18, 22, 25",
+      "supported_claims": [
+        "Power electronics processes and controls electrical energy.",
+        "Application areas include power supplies, lighting, appliances, transportation and renewable energy.",
+        "A power electronic system can include input filtering, a power stage, output filtering and control."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Knowledge reference only. Many images inside this MIT PDF are explicitly excluded from its Creative Commons license; do not assume they are freely reusable."
+    },
+    {
+      "id": "MIT-BUCK",
+      "title": "6.622 Power Electronics, Lecture 5: Intro to DC/DC, Part 1",
+      "author": "David Perreault, MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/mit6_622_s23_lec05.pdf",
+      "publication_year": 2023,
+      "accessed": "2026-11-11",
+      "checked": "PDF pp. 1–3, ideal buck topology and periodic steady-state volt-second balance",
+      "supported_claims": [
+        "Under ideal continuous-conduction, periodic-steady-state and large-L/C assumptions, the buck output average is D times the input voltage.",
+        "During the switch-off interval, inductor current has a freewheel diode path."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Do not label D Vin as a universal DC–DC formula. It is the ideal buck model. Switching ripple and transient behavior require additional equations."
+    },
+    {
+      "id": "MIT-INV",
+      "title": "6.622 Power Electronics, Lecture 17: Inverters, Part 1",
+      "author": "David Perreault, MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/mit6_622_s23_lec172.pdf",
+      "publication_year": 2023,
+      "accessed": "2026-11-11",
+      "checked": "PDF pp. 2–4, Inverter structure and waveform/filter discussion",
+      "supported_claims": [
+        "A bridge of switches can synthesize an AC voltage from a DC source.",
+        "Different bridge states produce positive, negative or zero output voltage.",
+        "The raw switching waveform and its desired low-frequency component are distinct; filtering removes unwanted components."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Switch labels in the webpage must be checked against its own wiring. Physical diagonal pairs, not blindly copied S-number pairs, determine ±Vdc. Never display a direct short of the DC source."
+    },
+    {
+      "id": "ADI-BRIDGE",
+      "title": "Full Bridge Rectifier",
+      "author": "Analog Devices",
+      "url": "https://www.analog.com/en/resources/glossary/full-bridge-rectifier.html",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "Definition; How does a bridge rectifier work?; Why do we use four diodes?",
+      "supported_claims": [
+        "A diode bridge provides full-wave rectification.",
+        "Two alternate conduction paths operate on opposite AC half-cycles while load polarity remains fixed.",
+        "Without output smoothing, the result is pulsating DC, not a flat constant voltage."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Knowledge source from the device manufacturer. No permission to reuse diagrams was inferred; independent circuit drawings may illustrate the verified function."
+    },
+    {
+      "id": "CUP-ACAC",
+      "title": "Principles of Power Electronics, Chapter 11: AC/AC Converters",
+      "author": "John G. Kassakian, David J. Perreault, George C. Verghese and Martin F. Schlecht; Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/principles-of-power-electronics/acac-converters/C322B2B6076A82717054EB712D36A2EA",
+      "publication_year": 2023,
+      "accessed": "2026-11-11",
+      "checked": "Publisher-provided chapter summary, chapter pp. 289–310; DOI 10.1017/9781009023894.013",
+      "supported_claims": [
+        "AC/AC conversion transfers power between AC systems whose waveform amplitude, frequency or phase can differ.",
+        "AC/AC is a functional category broader than a cycloconverter; a transformer is a common AC voltage conversion device."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Only the openly available publisher summary and metadata were read, not the access-controlled chapter body. Do not cite uninspected detailed topologies from this source."
+    },
+    {
+      "id": "TI-DRIVE",
+      "title": "TIDA-01496: Single-Layer, 12-V, Programmable, 3-Phase BLDC Motor Driver With Speed Regulation Reference Design",
+      "author": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ug/tidudd8/tidudd8.pdf",
+      "publication_year": 2018,
+      "accessed": "2026-11-11",
+      "checked": "PDF p. 6, section 2.4.1 and Figures 2–3; p. 2 system description",
+      "supported_claims": [
+        "The controller compares a desired motor speed with feedback to form an error.",
+        "The feedback loop updates the command sent to the motor drive.",
+        "The power driver supplies the motor; the controller and speed feedback form a separate information path."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "The source is a particular BLDC drive. Use it to support the control-loop structure, not to assign its exact gains or transient behavior to every motor."
+    },
+    {
+      "id": "DOE-SOLAR",
+      "title": "Solar Integration: Inverters and Grid Services Basics",
+      "author": "U.S. Department of Energy, Solar Energy Technologies Office",
+      "url": "https://www.energy.gov/cmei/systems/solar-integration-inverters-and-grid-services-basics",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "What are Inverters?; Grid Services and Inverters",
+      "supported_claims": [
+        "PV panels generate DC; an inverter converts DC to AC.",
+        "Electronic switches reverse connections rapidly; filters and other circuitry can shape a sinusoidal voltage.",
+        "Grid-interactive inverters can support monitoring, communication and selected grid services."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Avoid implying all inverters provide all grid services or backup/islanding capabilities. DC in the animation means an ideal constant input; practical DC can contain ripple."
+    },
+    {
+      "id": "EIA-GRID",
+      "title": "Electricity explained: How electricity is delivered to consumers",
+      "author": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "The electric power grid; Delivering electricity; U.S. electrical system interconnections; Balancing authorities",
+      "supported_claims": [
+        "The grid connects generation and customers using substations, transformers and power lines.",
+        "High-voltage transmission carries power over long distances; distribution delivers at lower voltage.",
+        "Transformers step voltage up or down between network stages.",
+        "System operators coordinate supply and demand; interconnection enables sharing and alternate paths."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "No historical grid-mileage or control-area counts are reused as current data."
+    },
+    {
+      "id": "DOE-SMART",
+      "title": "Grid Modernization and the Smart Grid",
+      "author": "U.S. Department of Energy, Office of Electricity",
+      "url": "https://www.energy.gov/oe/grid-modernization-and-smart-grid",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "Paragraphs on two-way communication, sensors, automated equipment and storage",
+      "supported_claims": [
+        "Smart-grid functions combine sensing, two-way communication, control and computing.",
+        "Digital meters and sensors provide information to customers and operators.",
+        "Storage can shift available electrical energy over time; communication and control support operation with renewable resources."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "Illustrative arrows distinguish information exchange from electrical energy flow; they do not depict electricity following a data packet."
+    },
+    {
+      "id": "DOE-WIND",
+      "title": "How Do Wind Turbines Work?",
+      "author": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/cmei/systems/how-do-wind-turbines-work",
+      "publication_year": 2020,
+      "accessed": "2026-11-11",
+      "checked": "Opening explanation; aerodynamic conversion; rotor-generator connection",
+      "supported_claims": [
+        "Wind acts on turbine blades, producing rotor motion that drives a generator.",
+        "A geared turbine uses a gearbox to adapt rotational speed; direct-drive designs omit the gearbox.",
+        "The generator converts mechanical input into electrical output."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null,
+      "scope_note": "The supplied chapter's full-converter chain is one architecture. Do not state all turbines contain the same gearbox and AC–DC–AC arrangement."
+    },
+    {
+      "id": "EIA-WIND",
+      "title": "Wind explained: Electricity generation from wind",
+      "author": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/energyexplained/wind/electricity-generation-from-wind.php",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "How wind turbines work; diagram attribution",
+      "supported_claims": [
+        "A wind turbine rotor drives a shaft and electrical generator.",
+        "The educational component diagram is attributed to NREL/U.S. DOE and explicitly marked public domain."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": "The wind-turbine component diagram is explicitly labeled public domain by EIA.",
+      "scope_note": "The license statement applies to that identified diagram, not all page photos or unrelated material."
+    },
+    {
+      "id": "EIA-ENERGY",
+      "title": "What is energy? Laws of energy",
+      "author": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/energyexplained/what-is-energy/laws-of-energy.php",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "Energy is neither created nor destroyed; Converting one form of energy into another",
+      "supported_claims": [
+        "Energy changes form rather than disappearing.",
+        "Useful output is only part of input energy when some energy is converted into less useful forms such as heat.",
+        "Energy accounting must include both useful delivery and other energy flows."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null
+    },
+    {
+      "id": "EIA-UNITS",
+      "title": "Electricity explained: Measuring electricity",
+      "author": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "Electricity is measured in Watts and kilowatts; Electricity use over time is measured in Watthours",
+      "supported_claims": [
+        "W and kW measure power, whereas Wh and kWh measure energy over time.",
+        "One kW equals 1000 W; one kWh is the energy associated with one kW maintained for one hour."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": null
+    },
+    {
+      "id": "OS-POWER",
+      "title": "University Physics Volume 2, Section 9.5: Electrical Energy and Power",
+      "author": "Samuel J. Ling, William Moebs and Jeff Sanny; OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/9-5-electrical-energy-and-power",
+      "publication_year": 2016,
+      "accessed": "2026-11-11",
+      "checked": "Equations 9.12–9.13 and discussion of energy transfer",
+      "supported_claims": [
+        "Power is the rate of energy transfer.",
+        "For circuit quantities with consistent sign convention, instantaneous electrical power is p = vi.",
+        "Resistive heating power is I²R for DC, or Irms²R for a resistor under AC.",
+        "Losses change energy form; they do not violate conservation."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": "Current web edition: CC BY-NC-SA 4.0, verified in Preface; no artwork copied by this research task.",
+      "license_url": "https://openstax.org/books/university-physics-volume-2/pages/preface"
+    },
+    {
+      "id": "OS-TR",
+      "title": "University Physics Volume 2, Section 15.6: Transformers",
+      "author": "Samuel J. Ling, William Moebs and Jeff Sanny; OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers",
+      "publication_year": 2016,
+      "accessed": "2026-11-11",
+      "checked": "Opening paragraphs; Figure 15.22; Equations 15.20–15.22",
+      "supported_claims": [
+        "At a given real power with unity power factor, raising RMS voltage lowers RMS current and I²R line loss.",
+        "Two windings share changing magnetic flux in the ideal transformer model.",
+        "Vs/Vp = Ns/Np; Is/Ip = Np/Ns for ideal operation.",
+        "Step-up changes voltage and current inversely; the ideal model conserves power and does not create energy."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": "Current web edition: CC BY-NC-SA 4.0, verified in Preface; no artwork copied by this research task.",
+      "license_url": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "scope_note": "Shared core flux and neglected winding/core losses are idealizations. Use RMS voltage/current consistently and state unity power factor for P = VI in the grid demonstration."
+    },
+    {
+      "id": "OS-GEN",
+      "title": "University Physics Volume 2, Section 13.6: Electric Generators and Back Emf",
+      "author": "Samuel J. Ling, William Moebs and Jeff Sanny; OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/13-6-electric-generators-and-back-emf",
+      "publication_year": 2016,
+      "accessed": "2026-11-11",
+      "checked": "Electric Generators; Equations 13.16–13.18; Figures 13.28–13.29",
+      "supported_claims": [
+        "A coil rotating uniformly in a uniform magnetic field has sinusoidal induced emf.",
+        "With N turns, coil area A, field B and angular speed ω, ε = NBAω sin(ωt).",
+        "The peak emf is NBAω and f = ω/(2π).",
+        "Generators receive mechanical input; a motor's energy conversion direction is reversed."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": "Current web edition: CC BY-NC-SA 4.0, verified in Preface; no artwork copied by this research task.",
+      "license_url": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "scope_note": "This is a pedagogical rotating-coil model, not the detailed geometry of every generator. Do not reuse Example 13.9's average-value wording for the instantaneous formula."
+    },
+    {
+      "id": "OS-TORQUE",
+      "title": "University Physics Volume 2, Section 11.5: Force and Torque on a Current Loop",
+      "author": "Samuel J. Ling, William Moebs and Jeff Sanny; OpenStax, Rice University",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/11-5-force-and-torque-on-a-current-loop",
+      "publication_year": 2016,
+      "accessed": "2026-11-11",
+      "checked": "Opening motor explanation; Figure 11.15; Equations 11.19–11.22",
+      "supported_claims": [
+        "Magnetic forces on a current-carrying loop can exert torque, converting electrical energy into mechanical work.",
+        "A simple DC motor reverses loop current at appropriate positions to sustain rotation.",
+        "For a planar N-turn current loop, magnetic moment is NIA times its normal, with torque μ×B."
+      ],
+      "verification": "Opened and read with web tool; paraphrases and equations checked against indicated passages.",
+      "usage_license": "Current web edition: CC BY-NC-SA 4.0, verified in Preface; no artwork copied by this research task.",
+      "license_url": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "scope_note": "A rotating graphic without a commutation model is a conceptual energy-direction illustration, not a complete DC motor simulation."
+    },
+    {
+      "id": "CV-MIT-RECTIFIERS",
+      "title": "6.334 Power Electronics, Chapter 2: Introduction to Rectifiers",
+      "author": "David Perreault",
+      "publisher": "Massachusetts Institute of Technology OpenCourseWare",
+      "publication_year": 2007,
+      "url": "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/0628c2bcc2c6922aa21b9f5145708dd9_chp2.pdf",
+      "accessed": "2026-11-11",
+      "checked": "PDF page 7, Figure 2.8 full-bridge rectifier; pages 2–6 discuss idealization and commutation effects",
+      "supported_claims": [
+        "A full-bridge rectifier uses four diodes to keep output polarity fixed across both input half-cycles.",
+        "For ideal diodes, zero source impedance, and an unfiltered resistive load, the load voltage follows the absolute value of the input voltage.",
+        "Source inductance and diode nonidealities change real waveforms."
+      ],
+      "verification": "Opened primary PDF and checked the full-bridge topology; the displayed absolute-value equation follows by ideal-diode conduction in the two half-cycles.",
+      "scope_note": "Topology and elementary ideal-diode case redrawn for a resistive load. No source figure copied."
+    },
+    {
+      "id": "CV-PU-ACAC",
+      "title": "Power Electronics: Single Phase AC-AC Converters",
+      "author": "Firas Obeidat",
+      "publisher": "Faculty of Engineering, Philadelphia University",
+      "publication_year": null,
+      "url": "https://www.philadelphia.edu.jo/academics/fobeidat/uploads/Power%20Electronic%20Course/10%20Single%20phase%20AC-AC%20converters.pdf",
+      "accessed": "2026-11-11",
+      "checked": "PDF pages 3–7, especially page 6 resistive-load waveform and RMS expression",
+      "supported_claims": [
+        "An AC voltage controller can use antiparallel thyristors to permit current in both directions.",
+        "For a resistive load, each thyristor conducts after firing until the half-cycle current reaches zero.",
+        "The output equals the supply during conduction and is zero otherwise.",
+        "RMS output equals Vpeak/sqrt(2) × sqrt(1 − alpha/pi + sin(2alpha)/(2pi))."
+      ],
+      "verification": "Opened primary university lecture PDF; checked piecewise waveform, thyristor orientation, and RMS formula.",
+      "scope_note": "Equations interpreted and topology newly drawn. No source figure copied."
+    },
+    {
+      "id": "CV-ST-HBRIDGE",
+      "title": "AN4892: VIPower M0-5 H-bridges – hardware design guide, revision 2",
+      "author": "STMicroelectronics",
+      "publisher": "STMicroelectronics",
+      "publication_year": 2016,
+      "url": "https://www.st.com/resource/en/application_note/an4892-vipower-m05-hbridges--hardware-design-guide-stmicroelectronics.pdf",
+      "accessed": "2026-11-11",
+      "checked": "PDF pages 17–18 and 45, cross-conduction and internal dead-time discussion",
+      "supported_claims": [
+        "Opposite diagonal switch pairs establish opposite load-current directions.",
+        "Turning on both switches in one bridge leg creates a short across the supply.",
+        "Practical gate-driver timing and dead time prevent overlapping conduction."
+      ],
+      "verification": "Opened manufacturer's original application note and checked section 5.2 plus cross-conduction discussion.",
+      "scope_note": "Paraphrased engineering principle only; no source figure copied."
+    },
+    {
+      "id": "DOE-EV",
+      "title": "How Do All-Electric Cars Work?",
+      "author": "U.S. Department of Energy, Alternative Fuels Data Center",
+      "url": "https://afdc.energy.gov/vehicles/how-do-all-electric-cars-work",
+      "publication_year": null,
+      "accessed": "2026-11-11",
+      "checked": "Key Components of an All-Electric Car: traction battery pack, electric traction motor, power electronics controller, DC/DC converter",
+      "supported_claims": [
+        "The traction battery supplies electric propulsion through power electronics and a traction motor.",
+        "A DC/DC converter supplies lower-voltage auxiliary loads."
+      ],
+      "verification": "Official explanatory page opened and component descriptions inspected.",
+      "scope_note": "The webpage depicts an EV with an AC traction motor as one application; the source does not establish that all electric vehicles use an identical motor or converter topology."
+    },
+    {
+      "id": "NIST-SG",
+      "title": "NIST Framework and Roadmap for Smart Grid Interoperability Standards, Release 4.0",
+      "author": "Avi Gopstein, Cuong Nguyen, Cheyney O’Fallon, Nelson Hastings and David A. Wollman",
+      "publisher": "National Institute of Standards and Technology",
+      "publication_year": 2021,
+      "publication_date": "2021-02-18",
+      "url": "https://www.nist.gov/publications/nist-framework-and-roadmap-smart-grid-interoperability-standards-release-40",
+      "accessed": "2026-11-11",
+      "checked": "Publication abstract: cybersecurity practices and tools; interoperability profiles, testing and certification",
+      "supported_claims": [
+        "Connected smart-grid equipment requires compatible interfaces and cybersecurity."
+      ],
+      "verification": "Official NIST publication abstract opened and inspected.",
+      "scope_note": "Supports the introductory interoperability and security concept; no claim that a particular standard is mandatory."
+    }
+  ],
+  "claims": [
+    {
+      "id": "OV01",
+      "section": "Overview and opening energy chain",
+      "knowledge": "Power electronics processes electrical power; power systems connect generation and users; motors and generators exchange electrical and mechanical energy, while transformers transfer energy through magnetic coupling.",
+      "sources": [
+        "LOCAL-INTRO",
+        "MIT-INTRO",
+        "EIA-GRID",
+        "OS-TR",
+        "OS-GEN",
+        "OS-TORQUE"
+      ],
+      "verification_and_scope": "Course grouping follows lecture slides 1–3 and 27. Newly drawn opening icons and arrows summarize these roles. Course identity and instructor follow the supplied lecture; this adaptation is not a new institutional publication.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV01",
+      "section": "Power converters: Converter-category buttons and conversion header",
+      "knowledge": "Converter category follows DC/AC input and output, while the chosen circuit is one example of that category.",
+      "sources": [
+        "MIT-INV",
+        "MIT-BUCK",
+        "CV-MIT-RECTIFIERS",
+        "CV-PU-ACAC"
+      ],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV02",
+      "section": "Power converters: H-bridge circuit, active switch pairs and square-wave output",
+      "knowledge": "Q1+Q4 produces positive A-to-B voltage; Q3+Q2 reverses it for the specific labels shown.",
+      "sources": [
+        "MIT-INV",
+        "CV-ST-HBRIDGE"
+      ],
+      "verification_and_scope": "Labels are assigned in this drawing; source figures may number switches differently.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV03",
+      "section": "Power converters: Inverter waveform assumption and bridge disclosure",
+      "knowledge": "This mode represents ideal resistive-load square-wave operation, not a sinusoidal PWM inverter; practical bridges need suitable gate timing.",
+      "sources": [
+        "MIT-INV",
+        "CV-ST-HBRIDGE"
+      ],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV04",
+      "section": "Power converters: Rectifier circuit, diode-state captions and positive waveform",
+      "knowledge": "Ideal unfiltered resistive-load rectification gives vout=abs(vin); alternating diode pairs maintain the same load-current direction.",
+      "sources": [
+        "CV-MIT-RECTIFIERS"
+      ],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV05",
+      "section": "Power converters: Buck circuit, duty control, output and switch-node traces",
+      "knowledge": "In the stated ideal CCM periodic-steady-state model, output average is D×Vin, and inductor current freewheels during the controlled switch off interval.",
+      "sources": [
+        "MIT-BUCK"
+      ],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV06",
+      "section": "Power converters: AC controller circuit, firing angle and RMS readout",
+      "knowledge": "The R-load controller passes each half-sine after alpha; RMS follows the cited analytic expression while the waveform retains supply-cycle repetition.",
+      "sources": [
+        "CV-PU-ACAC"
+      ],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "CV07",
+      "section": "Power converters: All illustration voltages, parameter ranges and animation timing",
+      "knowledge": "48 V examples, slider ranges, and a six-second displayed cycle are instructional design choices, not measurements or quoted source examples.",
+      "sources": [],
+      "verification_and_scope": "See the corresponding model record for idealizations, parameters and arithmetic checks.",
+      "classification": "Explicit illustrative assumptions; not empirical claims"
+    },
+    {
+      "id": "APP01",
+      "section": "Applications: overview and component explorer",
+      "knowledge": "Solar PV, adjustable-speed drives and electric vehicles use power conversion; source and load determine the converter role.",
+      "sources": [
+        "MIT-INTRO",
+        "DOE-SOLAR",
+        "TI-DRIVE",
+        "DOE-EV"
+      ],
+      "verification_and_scope": "General examples are supported by the listed sources; photographs illustrate equipment, not measured performance.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "APP02",
+      "section": "Applications: Solar PV selection",
+      "knowledge": "PV supplies DC; a grid-connected inverter converts it to AC, using switching control and filtering to shape its output.",
+      "sources": [
+        "DOE-SOLAR",
+        "MIT-INV"
+      ],
+      "verification_and_scope": "The diagram is a functional chain. It omits protection, synchronization, control implementation and detailed filters; it does not imply every inverter supports every grid service.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "APP03",
+      "section": "Applications: Motor drive selection and feedback path",
+      "knowledge": "A reference is compared with measured feedback; a controller adjusts the converter supplying a motor.",
+      "sources": [
+        "LOCAL-INTRO",
+        "TI-DRIVE"
+      ],
+      "verification_and_scope": "Lecture application chain and TI section 2.4.1 support the architecture. The TI example verifies speed feedback; the general chapter mentions speed or position. No gains, settling time or closed-loop dynamics are simulated.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "APP04",
+      "section": "Applications: Electric vehicle selection",
+      "knowledge": "For the selected EV with an AC traction motor, a DC battery feeds an inverter and motor; other converters serve auxiliary low-voltage loads.",
+      "sources": [
+        "LOCAL-INTRO",
+        "MIT-INV",
+        "DOE-EV"
+      ],
+      "verification_and_scope": "An example architecture, not a universal claim about all vehicles. Auxiliary converter function is supported by DOE; DC-to-AC function by MIT.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "GRID01",
+      "section": "Power systems: network chain and high-voltage explanation",
+      "knowledge": "Generators, transformers, transmission, distribution and users form an electricity-delivery system. Raising voltage at fixed delivered power reduces current and resistive line heating.",
+      "sources": [
+        "EIA-GRID",
+        "OS-POWER",
+        "OS-TR"
+      ],
+      "verification_and_scope": "EIA supports the network arrangement; textbook power and transformer relations support the stated unity-power-factor model. The diagram has symbolic devices and is not a geographic network.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "GRID02",
+      "section": "Power systems: slider, numerical readouts, graph and doubling-voltage answer",
+      "knowledge": "I=Pload/Vreceive; Ploss=I²R; Vsend=Vreceive+IR; Psend=Pload+Ploss. At fixed Pload and R, doubling receiving voltage quarters line loss.",
+      "sources": [
+        "OS-POWER",
+        "OS-TR"
+      ],
+      "verification_and_scope": "The last identities follow from series resistance and power balance. All selected values are illustrative. A resistive equivalent is used; reactive effects, generation losses and nonideal transformers are excluded.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "EN01",
+      "section": "Energy accounting: units and conservation",
+      "knowledge": "Power is the rate of energy transfer; kWh measures energy. An energy budget includes delivered energy and all other destinations.",
+      "sources": [
+        "OS-POWER",
+        "EIA-ENERGY",
+        "EIA-UNITS"
+      ],
+      "verification_and_scope": "No energy is destroyed by a loss: the word refers to energy unavailable in the intended useful output.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "EN02",
+      "section": "Energy accounting: original numerical branches and destination captions",
+      "knowledge": "The course example allocates 300 kWh to 187 kWh thermal losses, 6 kWh plant use, 8 kWh network losses and 99 kWh delivered electricity.",
+      "sources": [
+        "LOCAL-INTRO"
+      ],
+      "verification_and_scope": "Exact figures and branch identities were checked against lecture slide 21. Plant use is separate from thermal and network losses. This is a particular thermal-generation example, not a modern fleet average.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "EN03",
+      "section": "Energy accounting: scaled ribbon values and delivered percentage",
+      "knowledge": "The slider multiplies all four original branches by input/300; 99/300=33%. The four fractions always total one.",
+      "sources": [
+        "LOCAL-INTRO",
+        "EIA-ENERGY"
+      ],
+      "verification_and_scope": "Scaling is an explicit mathematical teaching assumption, not a plant performance model. Ribbon widths represent fractions; scaling total input changes labels while preserving fractions. Real efficiency need not remain fixed when load changes.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "SG01",
+      "section": "Smart grid: measurements, resources and interoperability cards",
+      "knowledge": "Sensors, communication and controls coordinate resources; storage and responsive loads alter the balance. Connected equipment requires interoperability and cybersecurity.",
+      "sources": [
+        "DOE-SMART",
+        "EIA-GRID",
+        "NIST-SG"
+      ],
+      "verification_and_scope": "DOE supports sensing, communication, control and storage; NIST abstract supports the interfaces and security sentence. No mandatory standard or cybersecurity implementation is asserted.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "SG02",
+      "section": "Smart grid: import/export labels, arrows and signed equation",
+      "knowledge": "Pgrid + Psolar + Pbattery = Pload. Positive battery power means discharge; negative means charge. Grid import is positive and export negative.",
+      "sources": [
+        "EIA-ENERGY",
+        "OS-POWER",
+        "DOE-SMART"
+      ],
+      "verification_and_scope": "An instantaneous, lossless conservation model with chosen sign conventions. Arrows show power direction; zero-power branches stop. Storage energy, elapsed time, state of charge, ratings, voltage and network constraints are not computed.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "MX01",
+      "section": "Electric machines: section grouping",
+      "knowledge": "Motors convert electrical input to mechanical output; generators reverse the energy direction; transformers transfer electrical energy through changing magnetic flux.",
+      "sources": [
+        "LOCAL-INTRO",
+        "OS-TORQUE",
+        "OS-GEN",
+        "OS-TR"
+      ],
+      "verification_and_scope": "Umbrella mapping for the section. Individual motor, generator and transformer claims are M01–M06 and T01–T04.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M01",
+      "section": "Machines: motor and generator energy directions",
+      "knowledge": "Electrical-to-mechanical conversion is motor operation; mechanical-to-electrical conversion is generator operation.",
+      "sources": [
+        "LOCAL-INTRO",
+        "OS-TORQUE",
+        "OS-GEN"
+      ],
+      "verification_and_scope": "Lecture slide 27 and textbook introductions establish the energy directions; illustrations are newly drawn.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M02",
+      "section": "Machines: motor force arrows",
+      "knowledge": "Opposite current directions on opposite coil sides experience forces that form a torque.",
+      "sources": [
+        "OS-TORQUE"
+      ],
+      "verification_and_scope": "In the shown cross section B points right; left current comes out of the page and force points up; right current enters the page and force points down, producing clockwise torque. Arrows are an instantaneous force diagram, not a dynamic simulation.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M03",
+      "section": "Machines: magnetic moment and torque equations",
+      "knowledge": "For N turns, magnetic moment is μ=NIA n; torque is τ=μ×B.",
+      "sources": [
+        "OS-TORQUE"
+      ],
+      "verification_and_scope": "Section 11.5, equations 11.21–11.22. The normal vector sets the moment direction. No acceleration, inertia, friction or motor performance is inferred.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M04",
+      "section": "Machines: commutator explanation",
+      "knowledge": "In a simple DC motor, a commutator reverses coil current at appropriate positions so the torque can continue to drive rotation.",
+      "sources": [
+        "OS-TORQUE"
+      ],
+      "verification_and_scope": "Section 11.5 motor discussion. This statement concerns the simple commutated DC example, not all motor types.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M05",
+      "section": "Machines: generator flux diagram and readout",
+      "knowledge": "For a planar coil in uniform B, flux per turn is Φ=BA cos θ, with θ measured from the field to the coil normal.",
+      "sources": [
+        "OS-GEN"
+      ],
+      "verification_and_scope": "Section 13.6, equation 13.16. The displayed per-turn flux differs from the N-turn flux linkage NΦ.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "M06",
+      "section": "Machines: generator EMF, speed slider and graph",
+      "knowledge": "A uniformly rotating N-turn coil has ε=NBAω sin θ, with ω=2πf. Doubling rotational frequency doubles the ideal EMF peak.",
+      "sources": [
+        "OS-GEN"
+      ],
+      "verification_and_scope": "Section 13.6, equations 13.17–13.18. Uniform field, fixed coil area, open-circuit ideal coil and constant speed are assumed. Displayed animation is slowed; no loaded-generator behavior is predicted.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "T01",
+      "section": "Transformer: shared-flux drawing",
+      "knowledge": "Alternating primary excitation establishes changing core flux linking two windings; energy transfers without a rotating shaft.",
+      "sources": [
+        "OS-TR"
+      ],
+      "verification_and_scope": "Opening discussion and Figure 15.22. Both windings link the idealized common flux; geometry and drawn winding strokes are symbolic.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "T02",
+      "section": "Transformer: turns-ratio equation and voltage readouts",
+      "knowledge": "Vs/Vp=Ns/Np for an ideal transformer; the two electrical waveforms have the same frequency.",
+      "sources": [
+        "OS-TR"
+      ],
+      "verification_and_scope": "Equations 15.20–15.21 derive both EMFs from the same changing flux. RMS values are used. Winding polarity is chosen consistently for the comparison.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "T03",
+      "section": "Transformer: current and power balance",
+      "knowledge": "For a lossless ideal transformer, VpIp=VsIs and Is/Ip=Np/Ns. Increasing voltage alone does not create power.",
+      "sources": [
+        "OS-TR"
+      ],
+      "verification_and_scope": "Equation 15.22 and ideal power discussion. The interactive load is resistive and adjusted for each ratio to keep output power at 240 W.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "T04",
+      "section": "Transformer: ratio control and numerical values",
+      "knowledge": "The selected ratios 0.5, 1, 2 and 3 generate the displayed turns, voltage, current and load-resistance values from the ideal relations.",
+      "sources": [
+        "OS-TR"
+      ],
+      "verification_and_scope": "120 Vrms, 100 primary turns, 60 Hz and 240 W are declared teaching parameters, not source measurements. Physical frequency is 60 Hz; displayed common-flux motion is slowed to 0.3 Hz.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "WIND01",
+      "section": "Wind: complete energy-conversion architecture",
+      "knowledge": "The selected geared, full-converter chain is rotor → gearbox → generator → rectifier → DC link → inverter → transformer → grid.",
+      "sources": [
+        "LOCAL-INTRO",
+        "DOE-WIND",
+        "EIA-WIND",
+        "MIT-INV",
+        "OS-TR"
+      ],
+      "verification_and_scope": "Lecture slides 13 and 34 support this particular chain. It is not the architecture of every wind turbine. The rotor and moving markers do not model output power or aerodynamic efficiency.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "WIND02",
+      "section": "Wind: rotor, gearbox and generator selections",
+      "knowledge": "Aerodynamic lift and drag produce rotor torque. A gearbox adapts slow rotor speed to higher generator speed; direct-drive designs omit it. A generator converts mechanical input to electrical output.",
+      "sources": [
+        "DOE-WIND",
+        "EIA-WIND",
+        "OS-GEN"
+      ],
+      "verification_and_scope": "DOE describes the rotor-generator connection and geared/direct-drive alternatives. No numerical speed ratio, wind-speed curve or efficiency is claimed.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "WIND03",
+      "section": "Wind: rectifier, inverter and transformer selections",
+      "knowledge": "Rectification supplies a DC link, inversion supplies the AC grid side, and a transformer changes AC voltage for the connection.",
+      "sources": [
+        "LOCAL-INTRO",
+        "CV-MIT-RECTIFIERS",
+        "MIT-INV",
+        "DOE-SOLAR",
+        "OS-TR"
+      ],
+      "verification_and_scope": "Functional explanations only. Practical conversion, filtering and grid-interface control details are omitted and not simulated.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "REV01",
+      "section": "Review: all three questions and feedback",
+      "knowledge": "DC-to-AC requires an inverter; doubling voltage quarters I²R loss at fixed power and resistance; a mechanically driven source of electrical output acts as a generator.",
+      "sources": [
+        "MIT-INV",
+        "CV-MIT-RECTIFIERS",
+        "OS-POWER",
+        "OS-TR",
+        "OS-GEN"
+      ],
+      "verification_and_scope": "Answer feedback directly reuses the verified converter, line-loss and machine models; the transformer option is excluded because changing flux is required.",
+      "classification": "Sourced concept or stated derivation"
+    },
+    {
+      "id": "REV02",
+      "section": "Review: 600 kWh worked example",
+      "knowledge": "Scaling the course budget by two gives 374+12+16+198=600 kWh, with 33% delivered.",
+      "sources": [
+        "LOCAL-INTRO"
+      ],
+      "verification_and_scope": "Arithmetic derived from slide 21 under the same fixed-fraction assumption as the energy slider.",
+      "classification": "Sourced concept or stated derivation"
+    }
+  ],
+  "models": [
+    {
+      "id": "inverter",
+      "title": "Ideal square-wave H-bridge",
+      "formula": "vout=+Vdc for 0≤phase<0.5; vout=−Vdc for 0.5≤phase<1.",
+      "parameters": "Vdc: 12–96 V; default 48 V. Phase repeats over one electrical cycle.",
+      "assumptions": [
+        "Purely resistive load; ideal switches; square-wave operation.",
+        "Q1 is upper left, Q2 lower left, Q3 upper right, Q4 lower right. Q1+Q4 is positive; Q3+Q2 is negative.",
+        "Same-leg pairs are never active together. Real gate timing and dead time are required but are not simulated.",
+        "Current-path dashes indicate conventional current direction, not electron speed."
+      ],
+      "checks": [
+        "At phase 0.25 and 48 V, vout=+48 V. At phase 0.75, vout=−48 V.",
+        "The output is labeled square-wave AC, not sinusoidal filtered AC."
+      ],
+      "sources": [
+        "MIT-INV",
+        "CV-ST-HBRIDGE"
+      ]
+    },
+    {
+      "id": "rectifier",
+      "title": "Ideal diode bridge",
+      "formula": "vin=Vpeak sin(2π phase); vout=|vin|.",
+      "parameters": "Vpeak: 12–96 V; default 48 V.",
+      "assumptions": [
+        "Four ideal diodes; zero source impedance; resistive load; no smoothing capacitor.",
+        "Alternating diode pairs keep the same load polarity; output is pulsating DC.",
+        "A wire jump marks the AC/DC wire crossing with no connection."
+      ],
+      "checks": [
+        "At phase 0.25, vin=48 V and vout=48 V. At phase 0.75, vin=−48 V and vout=48 V.",
+        "At zero crossings, vout=0 and no current path is highlighted."
+      ],
+      "sources": [
+        "CV-MIT-RECTIFIERS",
+        "ADI-BRIDGE"
+      ]
+    },
+    {
+      "id": "buck",
+      "title": "Ideal averaged buck converter",
+      "formula": "Vout,avg=D Vin; switch-node voltage is Vin during on-time and 0 during off-time.",
+      "parameters": "Vin=48 V; duty ratio D=0.20–0.80, default 0.50.",
+      "assumptions": [
+        "Periodic steady state, continuous inductor current and sufficiently large L and C.",
+        "The on-state connects input to the inductor; the off-state uses the freewheel diode.",
+        "Output is an averaged model; ripple, startup, discontinuous current and component sizing are not calculated."
+      ],
+      "checks": [
+        "D=0.20 → 9.6 V; D=0.50 → 24 V; D=0.80 → 38.4 V."
+      ],
+      "sources": [
+        "MIT-BUCK"
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Resistive-load AC voltage controller",
+      "formula": "Let θ=2π phase and α be firing angle in radians. Pass Vpeak sin θ when θ mod π ≥ α; otherwise output 0. Vrms=(Vpeak/√2)√[1−α/π+sin(2α)/(2π)].",
+      "parameters": "Vpeak=48 V; α=0–150°, default 60°.",
+      "assumptions": [
+        "Ideal antiparallel thyristors and purely resistive load; each conducting device turns off at current zero.",
+        "Same supply-cycle repetition; RMS control is not frequency conversion.",
+        "Only one example of the broader AC–AC category."
+      ],
+      "checks": [
+        "At α=0°, Vrms≈33.941 V. At α=90°, Vrms=24 V.",
+        "Independent midpoint numerical integration at α=0°,30°,60°,90°,120°,150° agreed with the analytic RMS to better than 0.000001 V."
+      ],
+      "sources": [
+        "CV-PU-ACAC",
+        "CUP-ACAC"
+      ]
+    },
+    {
+      "id": "grid",
+      "title": "Resistive transmission equivalent",
+      "formula": "I=Pload/Vreceive; Ploss=I²R; Vsend=Vreceive+IR; Psend=Pload+Ploss.",
+      "parameters": "Pload=100 kW; total R=2 Ω; Vreceive=1–20 kV, default 10 kV.",
+      "assumptions": [
+        "Single-phase, unity-power-factor resistive equivalent; voltage and current are RMS values. Transformers are ideal; reactive effects and generation losses are excluded.",
+        "Voltage is the receiving-end RMS voltage of the single-phase equivalent; the sending value includes the resistive drop.",
+        "At constant useful power and R, loss varies with the inverse square of receiving voltage."
+      ],
+      "checks": [
+        "At 1 kV: I=100 A, Ploss=20 kW, Vsend=1.2 kV.",
+        "At 10 kV: I=10 A, Ploss=0.20 kW, Vsend=10.02 kV.",
+        "At 20 kV: I=5 A, Ploss=0.05 kW, Vsend=20.01 kV.",
+        "Vsend×I=Pload+Ploss for every displayed input."
+      ],
+      "sources": [
+        "OS-POWER",
+        "OS-TR"
+      ]
+    },
+    {
+      "id": "energy",
+      "title": "Fixed-fraction course energy budget",
+      "formula": "(Ethermal,Eplant,Enetwork,Edelivered)=Ein×(187,6,8,99)/300.",
+      "parameters": "Ein=150–900 kWh; default 300 kWh.",
+      "assumptions": [
+        "The original 300 kWh allocation comes from lecture slide 21.",
+        "Other slider inputs scale the same proportions; they are not measured operating data.",
+        "The 201/300 remainder comprises thermal losses, plant use and network losses; it is not all network loss."
+      ],
+      "checks": [
+        "187+6+8+99=300 kWh.",
+        "At 600 kWh: 374+12+16+198=600 kWh.",
+        "Delivered fraction: 99/300=0.33."
+      ],
+      "sources": [
+        "LOCAL-INTRO",
+        "EIA-ENERGY",
+        "EIA-UNITS"
+      ]
+    },
+    {
+      "id": "smart",
+      "title": "Instantaneous local power balance",
+      "formula": "Pgrid=Pload−Psolar−Pbattery.",
+      "parameters": "Load=20–100 kW (default 60); solar=0–80 kW (default 35); battery=+20 kW discharge, 0 standby, or −20 kW charge.",
+      "assumptions": [
+        "Lossless instantaneous balance, not an energy-duration simulation.",
+        "Positive grid power means import; negative means export.",
+        "No battery capacity, state of charge, inverter limits, voltage or network constraints."
+      ],
+      "checks": [
+        "Default: grid=60−35−0=25 kW import.",
+        "Load 20, solar 80, battery +20: grid=−80 kW (export).",
+        "Load 100, solar 0, battery −20: grid=120 kW (import)."
+      ],
+      "sources": [
+        "EIA-ENERGY",
+        "OS-POWER",
+        "DOE-SMART"
+      ]
+    },
+    {
+      "id": "motor",
+      "title": "Instantaneous motor force diagram",
+      "formula": "μ=NIA n; τ=μ×B.",
+      "parameters": "Uniform B directed right; left current out of page and right current into page.",
+      "assumptions": [
+        "Left conductor force points up and right force points down, giving clockwise torque.",
+        "This is an instantaneous cross section, with no angular-acceleration or performance model.",
+        "Commutation explanation applies to a simple DC motor."
+      ],
+      "checks": [
+        "The two force arrows agree with the right-hand rule for I l×B."
+      ],
+      "sources": [
+        "OS-TORQUE"
+      ]
+    },
+    {
+      "id": "generator",
+      "title": "Ideal rotating-coil generator",
+      "formula": "Φ=BA cos θ per turn; ε=NBA(2πf) sin θ.",
+      "parameters": "N=100; B=0.50 T; A=0.020 m²; f=0.5–2 Hz, default 1 Hz.",
+      "assumptions": [
+        "Uniform field, planar coil, constant rotational frequency, open-circuit ideal EMF.",
+        "θ is the coil-normal-to-field angle, not the angle between the field and the coil plane.",
+        "Animation runs at one quarter of the stated physical cycle rate for inspection."
+      ],
+      "checks": [
+        "At f=1 Hz, EMF peak=2π V≈6.283 V.",
+        "At θ=0°, flux per turn=0.010 Wb and EMF=0. At θ=90°, flux=0 and EMF is positive peak.",
+        "Doubling f doubles EMF peak; flux amplitude stays fixed."
+      ],
+      "sources": [
+        "OS-GEN"
+      ]
+    },
+    {
+      "id": "transformer",
+      "title": "Ideal transformer at constant power",
+      "formula": "r=Ns/Np; Vs=r Vp; Ip=P/Vp; Is=P/Vs; Rload=Vs²/P.",
+      "parameters": "Vp=120 Vrms; Np=100; f=60 Hz; P=240 W. r=0.5,1,2,3.",
+      "assumptions": [
+        "Ideal lossless transformer; both windings share common changing flux.",
+        "Load resistance changes with ratio to hold output power at 240 W.",
+        "No saturation, leakage, copper loss or core loss; winding strokes are symbolic.",
+        "Physical frequency is 60 Hz on both sides; flux animation is slowed to 0.3 Hz."
+      ],
+      "checks": [
+        "Ratios 0.5,1,2,3 give Ns=50,100,200,300 and Vs=60,120,240,360 Vrms.",
+        "Ip=2 Arms; Is=4,2,1,0.666667 Arms.",
+        "Rload=15,60,240,540 Ω; VpIp=VsIs=240 W."
+      ],
+      "sources": [
+        "OS-TR"
+      ]
+    }
+  ],
+  "external_assets": [
+    {
+      "id": "IMG-SOLAR",
+      "filename": "solar-panels.jpg",
+      "title": "Solar Panels",
+      "creator": "Jessica K Robertson, U.S. Geological Survey",
+      "source_page": "https://www.usgs.gov/media/images/solar-panels",
+      "file_url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/Energy_Trip_145.jpg",
+      "license": "Public domain",
+      "license_evidence": "The media page explicitly states Sources/Usage: Public Domain and identifies Jessica K Robertson as photographer.",
+      "attribution": "Solar Panels — Jessica K Robertson / USGS. Public domain.",
+      "verified_description": "The USGS description identifies the location as Colorado.",
+      "dimensions": [
+        3888,
+        2592
+      ],
+      "format": "JPEG",
+      "sha256": "2bb65d68058af1c5423b5c59785220cdad20cca155282a65945cdc23032efb96",
+      "bytes": 5984934,
+      "web_filename": "solar-panels-web.jpg",
+      "web_dimensions": [
+        1200,
+        800
+      ],
+      "web_bytes": 177623,
+      "web_sha256": "cd913bc9dda0374802f512ec9fa757f11f35153c6ea5d0081a22362099a31f6d",
+      "modifications": "Web copy resized proportionally to 1200 px width and JPEG re-encoded at quality 85. No crop or content changes. Original retained separately.",
+      "delivered_filename": "solar-panels-web.jpg",
+      "accessed": "2026-11-11",
+      "display_note": "The chapter may crop the visible frame through CSS object-fit; the saved image content is unchanged apart from the stated resizing and encoding."
+    },
+    {
+      "id": "IMG-GRID",
+      "filename": "transmission-lines.jpg",
+      "title": "Transmission lines",
+      "creator": "Bob Wick, Bureau of Land Management",
+      "source_page": "https://www.usgs.gov/media/images/transmission-lines",
+      "file_url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/transmission-lines-1.jpg",
+      "license": "Public domain",
+      "license_evidence": "The USGS media page explicitly states Sources/Usage: Public Domain and credits Bob Wick, Bureau of Land Management.",
+      "attribution": "Transmission lines — Bob Wick / Bureau of Land Management, via USGS. Public domain.",
+      "dimensions": [
+        2000,
+        1333
+      ],
+      "format": "JPEG",
+      "sha256": "f07f21e3eed6e6e82a416c0a6b399f4a6f06bae3873f3349227468a66423f750",
+      "bytes": 1138721,
+      "web_filename": "transmission-lines-web.jpg",
+      "web_dimensions": [
+        1200,
+        800
+      ],
+      "web_bytes": 306580,
+      "web_sha256": "def03c64642495a2131dab36c17174ef4dcd1039800d2333a7c57751824936e2",
+      "modifications": "Web copy resized proportionally to 1200 px width and JPEG re-encoded at quality 85. No crop or content changes. Original retained separately.",
+      "delivered_filename": "transmission-lines-web.jpg",
+      "accessed": "2026-11-11",
+      "display_note": "The chapter may crop the visible frame through CSS object-fit; the saved image content is unchanged apart from the stated resizing and encoding."
+    },
+    {
+      "id": "IMG-WIND-PHOTO",
+      "filename": "wind-turbine.jpg",
+      "title": "Wind turbine",
+      "creator": "U.S. Fish and Wildlife Service",
+      "date_created": "2024-10-20",
+      "source_page": "https://www.fws.gov/media/wind-turbine-2",
+      "file_url": "https://www.fws.gov/sites/default/files/styles/max_1300x1300/public/images/2024-10/windturbine_dsc05025.jpg?itok=gdmdcel1",
+      "license": "Public domain",
+      "license_evidence": "The FWS media page explicitly labels Media Usage Rights/License: Public Domain; Photo By/Credit: USFWS.",
+      "attribution": "Wind turbine — USFWS, October 20, 2024. Public domain.",
+      "dimensions": [
+        1300,
+        867
+      ],
+      "format": "JPEG",
+      "sha256": "0b48af4bbe89d7d50d782057b675be624265a4d20bb448c0b40dcf747c482222",
+      "bytes": 828145,
+      "web_filename": "wind-turbine-web.jpg",
+      "web_dimensions": [
+        1200,
+        800
+      ],
+      "web_bytes": 156247,
+      "web_sha256": "2b2371ba082473f4ff1b668e8515140943ed5c1041564a76e9fe787ecf13758e",
+      "modifications": "Web copy resized proportionally to 1200 px width and JPEG re-encoded at quality 85. No crop or content changes. Original retained separately.",
+      "delivered_filename": "wind-turbine-web.jpg",
+      "accessed": "2026-11-11",
+      "display_note": "The chapter may crop the visible frame through CSS object-fit; the saved image content is unchanged apart from the stated resizing and encoding."
+    },
+    {
+      "id": "IMG-WIND-CUTAWAY",
+      "filename": "wind-turbine-components.gif",
+      "title": "Diagram of wind turbine components",
+      "creator": "National Renewable Energy Laboratory, U.S. Department of Energy",
+      "source_page": "https://www.eia.gov/energyexplained/wind/electricity-generation-from-wind.php",
+      "file_url": "https://www.eia.gov/energyexplained/wind/images/illust_turbine_sm.gif",
+      "license": "Public domain",
+      "license_evidence": "EIA's caption identifies National Renewable Energy Laboratory, U.S. Department of Energy and explicitly adds public domain. Asset-specific permission is used because EIA's generic policy warns that some other photographs may be licensed.",
+      "attribution": "Wind turbine components — NREL / U.S. Department of Energy, via U.S. EIA. Public domain.",
+      "dimensions": [
+        245,
+        194
+      ],
+      "format": "GIF",
+      "sha256": "62c272f07cf6eac543a1d003e0d04bdc487d82c190a424a0749bd84993dc3d61",
+      "bytes": 19929,
+      "web_filename": "wind-turbine-components.png",
+      "modifications": "Lossless GIF-to-PNG conversion for browser embedding. No crop or content changes.",
+      "web_bytes": 43614,
+      "web_dimensions": [
+        245,
+        194
+      ],
+      "web_sha256": "2761854ee824024741bbe99a389754c5a7b9b151f70358fe7afb6ec947d99db2",
+      "delivered_filename": "wind-turbine-components.png",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "IMG-GRID-DIAGRAM",
+      "filename": "electricity-delivery.jpg",
+      "title": "Electricity generation, transmission and distribution",
+      "creator": "National Energy Education Development Project; adapted by U.S. Energy Information Administration",
+      "source_page": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php",
+      "file_url": "https://www.eia.gov/energyexplained/electricity/images/transmission.jpg",
+      "license": "Public domain",
+      "license_url": "https://www.eia.gov/about/copyrights_reuse.php",
+      "license_evidence": "The image footer explicitly states: Adapted from National Energy Education Development Project (public domain). This was visually checked after download. EIA reuse policy also permits its information products with acknowledgment.",
+      "attribution": "Electricity generation, transmission, and distribution — U.S. EIA, adapted from National Energy Education Development Project. Public domain. Accessed November 11, 2026.",
+      "dimensions": [
+        635,
+        317
+      ],
+      "format": "JPEG",
+      "sha256": "eba47fcbb52ab0af9dedfaa2673fd32cd06d6439cfddaa037de4e9e826be7c6d",
+      "bytes": 39599,
+      "delivered_filename": "electricity-delivery.jpg",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "new_artwork": [
+    {
+      "id": "ART-CV",
+      "item": "Converter device icons, full circuits, highlighted paths and waveforms",
+      "provenance": "Newly drawn SVG and analytical plots; no textbook or manufacturer figure copied.",
+      "sources": [
+        "MIT-INV",
+        "MIT-BUCK",
+        "CV-MIT-RECTIFIERS",
+        "CV-PU-ACAC",
+        "CV-ST-HBRIDGE"
+      ],
+      "scope": "Functional device symbols are simplified. Moving dashes show conventional-current direction; cycle timing is slowed and is not propagation time."
+    },
+    {
+      "id": "ART-SYSTEMS",
+      "item": "Opening chain, application chains, grid experiment and local power-balance diagram",
+      "provenance": "Newly drawn symbolic SVG diagrams based on the mapped concepts.",
+      "sources": [
+        "LOCAL-INTRO",
+        "MIT-INTRO",
+        "DOE-SOLAR",
+        "TI-DRIVE",
+        "DOE-EV",
+        "EIA-GRID",
+        "DOE-SMART"
+      ],
+      "scope": "Symbols identify components; arrows indicate net energy or power transfer, not instantaneous AC current or a detailed wiring design. Motor feedback is information flow."
+    },
+    {
+      "id": "ART-ENERGY",
+      "item": "Four-branch energy ribbons",
+      "provenance": "Newly drawn proportional diagram using the original course values.",
+      "sources": [
+        "LOCAL-INTRO"
+      ],
+      "scope": "Widths show the fixed energy fractions. Numerical scaling is declared as a teaching assumption."
+    },
+    {
+      "id": "ART-MACHINES",
+      "item": "Motor cross section, rotating-coil generator and transformer flux diagrams",
+      "provenance": "Newly drawn vector teaching graphics and plots derived from the cited equations; no OpenStax figure copied.",
+      "sources": [
+        "OS-TORQUE",
+        "OS-GEN",
+        "OS-TR"
+      ],
+      "scope": "No literal winding count or real-time electromagnetic field simulation is claimed. The static force diagram and the ideal analytical models are distinguished."
+    },
+    {
+      "id": "ART-WIND",
+      "item": "Interactive wind architecture and rotor",
+      "provenance": "Newly drawn schematic based on the course architecture and DOE turbine description.",
+      "sources": [
+        "LOCAL-INTRO",
+        "DOE-WIND",
+        "OS-GEN",
+        "MIT-INV",
+        "OS-TR"
+      ],
+      "scope": "A geared full-converter example. Moving markers indicate net energy transfer, not instantaneous AC current. Rotor animation communicates rotation and is not an aerodynamic or turbine-performance model."
+    }
+  ],
+  "general_animation_scope": "Animation rates, colors, positions and chosen slider ranges are instructional design choices. Moving markers show direction or state, not electron velocity, electromagnetic propagation speed, time-accurate switching, measured efficiency or turbine performance.",
+  "license_note": "Public-domain claims apply only to the five identified external assets and their stated evidence. Knowledge references are not blanket image-reuse permissions. No MIT, manufacturer or OpenStax source figure is reproduced in the newly drawn diagrams. OpenStax web-edition license details are retained in the relevant source entries."
+}

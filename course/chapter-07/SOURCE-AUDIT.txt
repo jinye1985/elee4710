@@ -1,0 +1,31 @@
+CHAPTER 07 — SOURCE AND TECHNICAL AUDIT
+Checked: 2026-11-15
+Primary supplied source: Induction Mahines.pdf, 16 pages, Jin Ye.
+Every PDF page rendered locally at 1300 px and visually reviewed in contact sheet; formula/example pages checked against visible originals. The PDF text layer alone is incomplete because most engineering content is image based.
+
+Coverage by original page:
+1–2: title/course identification, retained as chapter identity rather than repeated teaching pages.
+3: stator/rotor construction, three-phase winding, Y/delta connections -> section 01.
+4: three-phase rotating MMF derivation -> section 02 and vector-sum lab.
+5: sinusoidal winding flux linkage and EMF -> section 04 and waveform lab.
+6: standstill EMF, winding ratio, synchronous speed, slip and rotor frequency -> sections 03–04.
+7–8: 460 V / 100 hp Example 1 -> complete Example 1 with connection assumptions disclosed.
+9: generating, motoring and plugging -> sections 03, 05 and 07.
+10: referred equivalent circuit -> section 05 and full complex circuit model.
+11: total power flow -> section 06; factor-of-three inconsistency resolved.
+12: simplified efficiency -> section 06; rotor fraction versus motor efficiency clarified.
+13: operating-mode power flow -> section 07.
+14–15: 15 hp Example 2 -> section 06 with both requested torque interpretations completed.
+16: closing identification -> common IPEM Lab footer.
+
+External checks:
+MIT OCW Kirtley Chapter 10: slip-frequency identity, effective turns ratio, circuit, air-gap power, rotor dissipation, torque-speed model and sign conventions. MIT Chapter 9: electrical-angle and winding conventions. Public primary PDFs opened, including equations and model scopes. MIT source equation 55 contains a likely omission; resolved against its own surrounding equations and code, recorded in references.json.
+
+Validation:
+node --check chapter.js passed.
+verify_models.js checks analytic field vector identity across 720 angle/sequence cases, exact power conservation across motoring/generating/plugging and boundary s=0/s=1, both original examples, and Chapter 08 numeric models. Combined assertions: 4149 passed.
+No external runtime imports or fetch; diagrams are local inline SVG/canvas. No source-location captions in the lesson. Knowledge points, original examples and illustrative model parameters are explicitly distinguished.
+
+Browser QA update: direct file previews verified at 1440 and 390 px with no JavaScript errors, MathJax errors, HTTP requests, overflow, duplicate IDs, initial NaN/Infinity or empty readouts. All range boundaries, select options and preset buttons exercised. Global animation pause/resume verified. Small-display canvas text enlarged and redrawn on resize. Final course-wrapper checks also cover 1100 and 1920 px; the consolidated final-bundle-qa.json records the final bundle state.
+
+FINAL BUNDLED-PAGE QA PASSED (2026-11-15): 390/1100/1440/1920 px, initial finite readouts, no duplicate IDs, no page overflow, zero JavaScript or MathJax errors, no HTTP requests, all controls exercised, global toolbar pause/resume, numerical examples and mobile references verified. Responsive canvas code confirmed present in bundled HTML. See final-bundle-qa.json.

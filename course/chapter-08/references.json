@@ -1,0 +1,238 @@
+{
+  "sources": [
+    {
+      "id": "C08-S1",
+      "title": "ELEE 4710: Synchronous Mahines.pdf — supplied course lecture, 9 pages",
+      "author": "Jin Ye, University of Georgia",
+      "url": "",
+      "checked": "2026-11-15",
+      "license": "User-provided course material. No public redistribution license asserted; original slide images are not embedded."
+    },
+    {
+      "id": "C08-S2",
+      "title": "6.061 Chapter 9: Synchronous Machine and Winding Models",
+      "author": "James L. Kirtley Jr., MIT OpenCourseWare",
+      "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/f99554aa923748fa210a30a874ee5fc8_MIT6_061S11_ch9.pdf",
+      "checked": "2026-11-15",
+      "license": "MIT OCW CC BY-NC-SA 4.0, subject to material-specific notices. Used for equation/convention checks; no source artwork or code copied."
+    },
+    {
+      "id": "C08-S3",
+      "title": "Electrical Machines II, Section 3: Synchronous Generator Operation",
+      "author": "Krishna Vasudevan, G. Sridhara Rao and P. Sasidhara Rao; IIT Madras / NPTEL",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/2_3.pdf",
+      "checked": "2026-11-15",
+      "license": "Publicly accessible primary university notes. No open-media license asserted; linked for verification, no figures or prose copied."
+    },
+    {
+      "id": "C08-S4",
+      "title": "Electrical Machines II, Section 6: Synchronous Motor",
+      "author": "Krishna Vasudevan, G. Sridhara Rao and P. Sasidhara Rao; IIT Madras / NPTEL",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108106072/pdf/2_6.pdf",
+      "checked": "2026-11-15",
+      "license": "Publicly accessible primary university notes. Linked for verification; no source figures or prose copied."
+    },
+    {
+      "id": "C08-S5",
+      "title": "Voltage and Power Flow Control, Lecture 17: Reactive Power and Voltage Control",
+      "author": "NPTEL, Electrical Engineering",
+      "url": "https://archive.nptel.ac.in/content/storage2/courses/108101040/module%204/html/l1_s1.htm",
+      "checked": "2026-11-15",
+      "license": "Publicly accessible primary course page. Linked for verification; no source media copied."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C08-K01",
+      "section": "c08-construction",
+      "knowledge": "Three-phase stator armature, DC rotor field, salient versus cylindrical rotors, slip-ring excitation and motor/generator energy direction.",
+      "sources": [
+        "C08-S1",
+        "C08-S2",
+        "C08-S3"
+      ],
+      "scope": "Lecture p. 3. MIT Chapter 9 pp. 1–6, 10–11; NPTEL Section 3.2 supports why a single reactance is insufficient for general saliency. Brushless/PM variants are mentioned only to delimit this wound-field chapter."
+    },
+    {
+      "id": "C08-K02",
+      "section": "c08-lock",
+      "knowledge": "Synchronous speed, electrical/mechanical angle, equal steady rotor and field speeds; load-angle and generator/motor direction convention.",
+      "sources": [
+        "C08-S1",
+        "C08-S2"
+      ],
+      "scope": "Lecture pp. 4, 6. MIT Chapter 9 pp. 5–7 and 10. MIT initially uses peak amplitudes and motor current reference; lesson converts to RMS and outgoing generator current."
+    },
+    {
+      "id": "C08-K03",
+      "section": "c08-emf",
+      "knowledge": "Sinusoidal winding EMF, three-phase displacement, open-circuit equality and saturation of the excitation characteristic.",
+      "sources": [
+        "C08-S1",
+        "C08-S2"
+      ],
+      "scope": "Lecture p. 4. EMF equation uses RMS per-phase voltage and the conventional rounded coefficient 4.44. Qualitative OCC has no numeric axes or purported measured data."
+    },
+    {
+      "id": "C08-K04",
+      "section": "c08-phasors",
+      "knowledge": "Armature reaction, resultant MMF and linear flux superposition; leakage plus armature-reaction reactance equals synchronous reactance.",
+      "sources": [
+        "C08-S1",
+        "C08-S3"
+      ],
+      "scope": "Lecture pp. 5, 8. NPTEL Section 3.1 and 3.2. Magnetic superposition requires linearity; a constant-Xs round-rotor model is an approximation."
+    },
+    {
+      "id": "C08-K05",
+      "section": "c08-phasors",
+      "knowledge": "Generator and motor KVL; RMS complex power; current phase and perpendicular jXsI drop; copper loss and conversion power.",
+      "sources": [
+        "C08-S1",
+        "C08-S3",
+        "C08-S4"
+      ],
+      "scope": "Lecture p. 8 uses outgoing current. NPTEL generator equations 24, 32–35 and motor equations 58–61 agree when current directions are reconciled. Three-phase power is three times per-phase power."
+    },
+    {
+      "id": "C08-K06",
+      "section": "c08-power",
+      "knowledge": "Lossless round-rotor P and Q equations, current from phasors, excitation and reactive exchange, unity-power-factor condition and torque/power relation.",
+      "sources": [
+        "C08-S2",
+        "C08-S3",
+        "C08-S5"
+      ],
+      "scope": "Explicit extension beyond the supplied nine-page lecture. Derived from the lecture equivalent circuit, checked against MIT pp. 6–10 and NPTEL equation 35. Positive output means exported P/Q; RMS magnitudes replace MIT initial peak phasors."
+    },
+    {
+      "id": "C08-K07",
+      "section": "c08-power",
+      "knowledge": "Ideal maximum at 90 electrical degrees; local power-angle slope; salient-pole limitation; calculated P-Q locus is not a thermal capability curve.",
+      "sources": [
+        "C08-S2",
+        "C08-S3"
+      ],
+      "scope": "MIT Chapter 9 pp. 10–12; NPTEL Section 3.2. These are model limits, not a rated operating-envelope claim or transient assessment."
+    },
+    {
+      "id": "C08-K08",
+      "section": "c08-start",
+      "knowledge": "Zero average synchronous torque for a stationary excited rotor; variable-frequency controlled start and damper-cage induction start; ideal cage current disappears at synchronous speed.",
+      "sources": [
+        "C08-S1",
+        "C08-S4",
+        "C08-S2"
+      ],
+      "scope": "Lecture pp. 6–7. NPTEL sections 6.1 and 6.2.1/6.2.3, MIT Chapter 9 p. 10. Starting sequence and timing are schematic; no pull-in transient prediction is claimed."
+    },
+    {
+      "id": "C08-K09",
+      "section": "c08-check",
+      "knowledge": "Induction/synchronous comparison; DC versus slip-frequency rotor current; zero real power does not require zero reactive current; consistent voltage and sign conventions.",
+      "sources": [
+        "C08-S1",
+        "C08-S2",
+        "C08-S4"
+      ],
+      "scope": "Summary uses the cited chapter relations; induction comparison is also grounded in Chapter 7 source audit. P=0, Q≠0 is checked directly from the lossless phasor model."
+    }
+  ],
+  "models": [
+    {
+      "id": "C08-M1",
+      "title": "Synchronous pole-axis animation",
+      "formula": "ns=120f/p; mechanical displacement=delta/(p/2).",
+      "parameters": "f=50 or 60 Hz; total poles=2,4,6,8; electrical delta=−60 to +60 degrees.",
+      "assumptions": "Steady synchronized round-rotor, negligible-resistance interpretation. Common slowdown for both fields. The delta slider selects steady states; no swing equation is solved.",
+      "checks": "Rotor and field have identical animated angular speed for every setting; six-pole 50 Hz speed=1000 rpm.",
+      "sources": [
+        "C08-S1",
+        "C08-S2"
+      ]
+    },
+    {
+      "id": "C08-M2",
+      "title": "Three-phase specified-flux EMF",
+      "formula": "Ephase=4.44 f N Phi kw; Eline=sqrt(3)Ephase for Y; e_k=sqrt(2)Ephase sin(2pi f t+alpha_k).",
+      "parameters": "N=120, kw=.95, f=20–80 Hz, Phi=5–30 mWb.",
+      "assumptions": "Sinusoidal prescribed flux. No field-current-to-flux or saturation model. Fixed voltage axis allows honest amplitude comparison.",
+      "checks": "Example gives Ephase=506.16 V, Eline=876.69483676 V; three instantaneous phase voltages sum to zero analytically.",
+      "sources": [
+        "C08-S1"
+      ]
+    },
+    {
+      "id": "C08-M3",
+      "title": "Head-to-tail generator phasor",
+      "formula": "I=Iabs exp(j phi); Ef=V+(Ra+jXs)I; Sout=3V conj(I); Pcu=3I²Ra.",
+      "parameters": "V=230 V/phase; Ra=.20 ohm; Xs=2 ohm; I=0–50 A; outgoing current angle=−75 to +75 degrees.",
+      "assumptions": "RMS phase quantities, balanced steady-state, illustrative fixed parameters. Current arrow uses direction-only scale and is labeled accordingly.",
+      "checks": "At 30 A and 0.8 lagging: I=24−j18 A, Ef=270.8+j44.4 V, P=16560 W, Q=12420 var, copper loss=540 W.",
+      "sources": [
+        "C08-S1",
+        "C08-S3"
+      ]
+    },
+    {
+      "id": "C08-M4",
+      "title": "Power-angle and P-Q locus",
+      "formula": "I=(Ef exp(j delta)−V)/(jXs); P=3VEf sin(delta)/Xs; Q=3V(Ef cos(delta)−V)/Xs.",
+      "parameters": "V=230 V/phase, Xs=2 ohm, Ra=0; Ef=160–360 V/phase, delta=−85 to +85 degrees.",
+      "assumptions": "Lossless cylindrical rotor; ideal stiff bus; illustrative parameters; saliency, saturation, thermal, protection and transient limits omitted. P-Q arc is a model locus, not a capability rating.",
+      "checks": "385 E/delta points checked: S magnitude=3V|I|; P(−delta)=−P(delta); Q(−delta)=Q(delta). At E=V and delta=0, I=0 and PF undefined. At E=280 V, delta=0: P=0, Q=17250 var.",
+      "sources": [
+        "C08-S2",
+        "C08-S3",
+        "C08-S5"
+      ]
+    },
+    {
+      "id": "C08-M5",
+      "title": "Conceptual starting sequence",
+      "formula": "Stationary synchronous torque normalized as sin(relative electrical angle). VFD uses prescribed n=ns ramp; cage start prescribes n/ns increasing before capture.",
+      "parameters": "Display ramp 10 s, illustrative cage progression 9 s; displayed durations are animation timing only.",
+      "assumptions": "Not a mechanical dynamic model or a real starting-time prediction. No inertia, load torque, current regulator, excitation transient or pull-in calculation.",
+      "checks": "Fixed-rotor torque integrates to zero over 2pi; VFD view maintains equal rotor and field speeds; cage field/slip distinction is shown and changes at conceptual capture.",
+      "sources": [
+        "C08-S1",
+        "C08-S4"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "C08-E1",
+      "title": "Derived teaching example: generated voltage",
+      "given": "Six poles; 50 Hz; N=120; kw=.95; Phi=.020 Wb; Y; open circuit.",
+      "result": "n=1000 rpm; Ef=506.16 V/phase; Eline=876.69483676 V.",
+      "source": "C08-S1 p. 4 equations; selected teaching input values.",
+      "verification": "Computed independently from the speed and EMF relations. No numerical exercise was present in the original nine-page lecture."
+    },
+    {
+      "id": "C08-E2",
+      "title": "Derived teaching example: lagging-load phasor",
+      "given": "V=230 V/phase; I=30 A at 0.8 lagging; Ra=.20 ohm; Xs=2 ohm.",
+      "result": "Ef=270.8+j44.4 V=274.41574299 angle 9.31129127 degrees; Pout=16.56 kW; Qout=12.42 kvar; Pcu=540 W; Pconv=17.10 kW.",
+      "source": "C08-S1 p. 8; C08-S3 equations 24, 32–35; selected teaching input values.",
+      "verification": "Complex multiplication and 3VI* independently checked; I²R conversion/input distinction retained."
+    },
+    {
+      "id": "C08-E3",
+      "title": "Derived teaching example: unity power factor",
+      "given": "Pout=20 kW; Qout=0; V=230 V/phase; Xs=2 ohm; Ra=0.",
+      "result": "Ef=237.19325142 V, delta=14.14662346 degrees, I=28.98550725 A.",
+      "source": "C08-S2 pp. 6–10; C08-S3 equation 35; selected teaching input values.",
+      "verification": "Reverse substitution into the independently implemented P/Q functions returns 20000 W and zero var within 1e−7."
+    }
+  ],
+  "errata": [
+    "The supplied synchronous lecture contains no worked numeric examples. All three added examples are explicitly labeled derived teaching examples with selected values.",
+    "MIT Chapter 9 begins with peak-amplitude phasors and a motor current reference. The lesson uses RMS phase magnitudes and outgoing generator current, hence factors of 3 rather than 3/2 and reversed power signs.",
+    "MIT Chapter 9 p. 10 per-unit reactive-power line appears to contain sin(delta); its earlier derived reactive-power equation uses cos(delta). The cosine form is independently obtained from 3VI* and used here.",
+    "NPTEL Section 3 equation 24 is displayed with an omitted I in one preceding typeset line; the explicit V=Et−IZs equation and diagram establish the intended KVL. The full complex product is used here.",
+    "The qualitative open-circuit characteristic has no claimed numeric calibration. Starting ramps/capture are conceptual, not fabricated measured trajectories.",
+    "The primary starting notes describe a torque reversal each half cycle. This chapter states the unambiguous sinusoidal torque and zero cycle average without treating the reversal count as a doubled sinusoidal frequency.",
+    "All circuits, rotor sketches, inverter symbol and plotted data are original explanatory renderings driven by cited relationships. No copied figure, unverified machine performance data or purported experimental video is included."
+  ]
+}

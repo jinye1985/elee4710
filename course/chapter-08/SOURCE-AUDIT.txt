@@ -1,0 +1,31 @@
+CHAPTER 08 — SOURCE AND TECHNICAL AUDIT
+Checked: 2026-11-15
+Primary supplied source: Synchronous Mahines.pdf, 9 pages, Jin Ye.
+Every page rendered locally at 1300 px and visually reviewed; the equivalent-circuit page was inspected at full rendered resolution. Image-only source content means the PDF text layer does not capture the lecture equations.
+
+Coverage by original page:
+1–2: course and chapter identification -> chapter identity.
+3: three-phase stator; salient and cylindrical rotors; DC rotor field -> section 01.
+4: synchronous speed, winding EMF and open-circuit saturation characteristic -> sections 02–03.
+5: armature-reaction MMF/flux vector superposition -> section 04.
+6: non-self-starting synchronous torque picture -> section 06 and fixed-rotor torque animation.
+7: variable-frequency and induction/damper starting methods -> section 06 with inverter symbol and conceptual sequence.
+8: armature-reaction + leakage reactances, armature resistance and outgoing-current equivalent circuit -> section 04.
+9: closing identification -> common IPEM Lab footer.
+
+Extension scope:
+The original has no numerical exercises. Three added exercises use selected teaching values and are labeled accordingly. Power-angle, real/reactive power and operating-limit sections are verified extensions of the original equivalent circuit, not falsely attributed original lecture examples.
+
+External checks:
+MIT OCW Kirtley Chapter 9, primary PDF: classical round-rotor circuit, phasors, motor/generator direction, RMS versus initial peak values, P/Q expressions, excitation, starting and saliency limits.
+IIT Madras/NPTEL Electrical Machines II Sections 3 and 6, primary university PDFs: generator KVL, conversion/copper loss, power-angle approximation, armature reaction, salient-pole qualification, non-self-starting behavior, VFD and damper starting.
+NPTEL Lecture 17 primary page: reactive-power supply/absorption by field excitation.
+Notation and apparent source typographical errors are recorded in references.json; none were copied blindly.
+
+Validation:
+node --check chapter.js passed. Combined model verification with Chapter 07: 4149 assertions, including 385 excitation/angle combinations, complex apparent-power identity, P odd/Q even symmetry, zero-current boundary, maximum ideal power at 90 degrees and reverse substitution of unity-power-factor example.
+No imported media, no external JavaScript dependency and no server requirement. OCC is explicitly qualitative. Starting ramp/capture times are labeled animation-only, not simulation predictions.
+
+Browser QA update: direct file previews verified at 1440 and 390 px with no JavaScript errors, MathJax errors, HTTP requests, overflow, duplicate IDs, initial NaN/Infinity or empty readouts. All range boundaries, select options and preset buttons exercised. Global animation pause/resume verified. Small-display canvas text enlarged and redrawn on resize. Final course-wrapper checks also cover 1100 and 1920 px; the consolidated final-bundle-qa.json records the final bundle state.
+
+FINAL BUNDLED-PAGE QA PASSED (2026-11-15): 390/1100/1440/1920 px, initial finite readouts, no duplicate IDs, no page overflow, zero JavaScript or MathJax errors, no HTTP requests, all controls exercised, global toolbar pause/resume, numerical examples and mobile references verified. Responsive canvas code confirmed present in bundled HTML. See final-bundle-qa.json.
